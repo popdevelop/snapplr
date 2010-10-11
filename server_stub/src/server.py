@@ -24,6 +24,8 @@ class Application(tornado.web.Application):
         self.graph = graph.Graph()
         handlers = [
             (r"/", MainHandler),
+            (r"/auth/login", AuthLoginHandler),
+            (r"/auth/logout", AuthLogoutHandler),
             (r"/trains", TrainHandler),
         ]
         settings = dict(
@@ -35,12 +37,35 @@ class Application(tornado.web.Application):
         )
         tornado.web.Application.__init__(self, handlers, **settings)
 
+class BaseHandler(tornado.web.RequestHandler):
+    def get_current_user(self):
+        username = self.get_secure_cookie("user")
+        if not username: return None
+        return username
 
-class MainHandler(tornado.web.RequestHandler):
+class MainHandler(BaseHandler):
     @tornado.web.authenticated
     def get(self):
-        self.render("index.html", messages=MessageMixin.cache)
+        self.render("index.html")
 
+class AuthLoginHandler(BaseHandler, tornado.auth.GoogleMixin):
+    @tornado.web.asynchronous
+    def get(self):
+        if self.get_argument("openid.mode", None):
+            self.get_authenticated_user(self.async_callback(self._on_auth))
+            return
+        self.authenticate_redirect(ax_attrs=["name"])
+
+    def _on_auth(self, user):
+        if not user:
+            raise tornado.web.HTTPError(500, "Google auth failed")
+        self.set_secure_cookie("user", user["name"])
+        self.redirect("/")
+
+class AuthLogoutHandler():
+    def get(self):
+        self.clear_cookie("user")
+        self.write("You are now logged out")
 
 class JsonResponse():
     def writejson(self, json):
