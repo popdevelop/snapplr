@@ -33,7 +33,6 @@ import org.neo4j.gis.spatial.geotools.data.StyledImageExporter;
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.neo4j.kernel.EmbeddedGraphDatabase;
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
@@ -60,40 +59,42 @@ public class ImportRoutesTest {
 
 	@Test
 	public void importRoutes() throws Exception {
-		EditableLayer layer = importSegments();
-		EditableLayer stationLayer = importStations();
+		database.beginTx();
+		EditableLayer layer = (EditableLayer) db
+				.getOrCreateEditableLayer("railway");
+		String[] names = new String[] { "railway", "name" };
+		((DefaultLayer) layer).setExtraPropertyNames(names);
+		assertNotNull(layer);
+
+		importSegments(layer);
+		importStations(layer);
 
 		ShapefileExporter exporter = new ShapefileExporter(database);
 		exporter.setExportDir("target/export");
 		StyledImageExporter imageExporter = new StyledImageExporter(database);
 		imageExporter.setExportDir("target/export");
-		imageExporter.setZoom(3.0);
+		imageExporter.setZoom(1.0);
 		imageExporter.setSize(1024, 768);
-		imageExporter.saveLayerImage(layer.getName(), "neo.sld.xml");
-
+		imageExporter.saveLayerImage(layer.getName(), "geosnappr.sld.xml");
+		
 		exporter.exportLayer(layer.getName());
-		exporter.exportLayer(stationLayer.getName());
-		ArrayList<PointAndGeom> edges = new SpatialTopologyUtils()
-				.findClosestEdges(
-						layer.getGeometryFactory().createPoint(
-								new Coordinate(60, 16)), layer, 0.1);
-		System.out.println("test");
-		Iterator<PointAndGeom> iterator = edges.iterator();
-		while (iterator.hasNext()) {
-			PointAndGeom next = iterator.next();
-			System.out.println("found " + next.getKey() + next.getValue());
-
-		}
+//		ArrayList<PointAndGeom> edges = new SpatialTopologyUtils()
+//				.findClosestEdges(
+//						layer.getGeometryFactory().createPoint(
+//								new Coordinate(60, 16)), layer, 0.1);
+//		System.out.println("test");
+//		Iterator<PointAndGeom> iterator = edges.iterator();
+//		while (iterator.hasNext()) {
+//			PointAndGeom next = iterator.next();
+//			System.out.println("found " + next.getValue()
+//					+ next.getValue().getClass());
+//
+//		}
 	}
 
-	private EditableLayer importSegments() throws FileNotFoundException,
+	private void importSegments(EditableLayer layer) throws FileNotFoundException,
 			IOException {
 		database.beginTx();
-		EditableLayer layer = (EditableLayer) db
-				.getOrCreateEditableLayer("railway");
-		String[] names = new String[] {"railway", "name"};
-		((DefaultLayer)layer).setExtraPropertyNames(names );
-		assertNotNull(layer);
 		try {
 			InputStreamReader in = new InputStreamReader(new FileInputStream(
 					"rail-points.csv"));
@@ -105,13 +106,13 @@ public class ImportRoutesTest {
 
 			ArrayList<Coordinate> coordinates = new ArrayList<Coordinate>();
 			while ((line = buf.readLine()) != null) {
-				//System.out.println(line);
+				// System.out.println(line);
 				StringTokenizer tokens = new StringTokenizer(line, ",");
 				int currentTrainId = Integer.parseInt(tokens.nextToken());
 				if (!(currentTrainId == trainId)) {
 					Coordinate[] coords = new Coordinate[coordinates.size()];
 					coordinates.toArray(coords);
-					//System.out.println(coords);
+					// System.out.println(coords);
 					if (coords.length > 1) {
 
 						String[] keys = { "name", "railway" };
@@ -125,10 +126,8 @@ public class ImportRoutesTest {
 					System.out.println("inserted train" + trainId);
 					coordinates.clear();
 				} else {
-					double lat = Double.parseDouble(tokens
-							.nextToken());
-					double lon = Double.parseDouble(tokens
-							.nextToken());
+					double lat = Double.parseDouble(tokens.nextToken());
+					double lon = Double.parseDouble(tokens.nextToken());
 					coordinates.add(new Coordinate(lat, lon, 0));
 
 				}
@@ -136,15 +135,10 @@ public class ImportRoutesTest {
 			in.close();
 		} finally {
 		}
-		return layer;
 	}
 
-	private EditableLayer importStations() throws FileNotFoundException,
+	private void importStations(EditableLayer layer) throws FileNotFoundException,
 			IOException {
-		EditableLayer layer = (EditableLayer) db
-				.getOrCreateEditableLayer("stations");
-		String[] names = new String[] {"name"};
-		((DefaultLayer)layer).setExtraPropertyNames(names );
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		Document dom = null;
 		try {
@@ -155,14 +149,12 @@ public class ImportRoutesTest {
 			// parse using builder to get DOM representation of the XML file
 			dom = db.parse("Transportverkets_koordinater.kml");
 
-			NodeList placemarks = dom.getElementsByTagName("Placemark");
-			// for(int i = 0; i < placemarks.getLength(); i++) {
-			// Node pm = placemarks.item(i);
 			XPath xpath = XPathFactory.newInstance().newXPath();
 			NodeList nodes = (NodeList) xpath.evaluate("//Placemark", dom,
 					XPathConstants.NODESET);
 			for (int i = 0; i < nodes.getLength(); i++) {
 				Node station = nodes.item(i);
+
 				String name = (String) xpath.evaluate("name", station,
 						XPathConstants.STRING);
 				StringTokenizer coord = new StringTokenizer(
@@ -170,10 +162,15 @@ public class ImportRoutesTest {
 								XPathConstants.STRING), ",");
 				Double lon = Double.parseDouble(coord.nextToken());
 				Double lat = Double.parseDouble(coord.nextToken());
-				SpatialDatabaseRecord record = layer.add(layer
-						.getGeometryFactory().createPoint(
-								new Coordinate(lat, lon)));
+				String[] keys = new String[] { "name" };
+				Object[] values = new String[] { name };
+				SpatialDatabaseRecord record = layer.add(
+						layer.getGeometryFactory().createPoint(
+								new Coordinate(lat, lon)), keys, values);
 
+				layer.add(
+						layer.getGeometryFactory().createPoint(
+								new Coordinate(lat, lon)), keys, values);
 			}
 
 			// }
@@ -185,10 +182,6 @@ public class ImportRoutesTest {
 		} catch (Exception ioe) {
 			ioe.printStackTrace();
 		}
-		// Coordinate[] coords = new Coordinate[coordinates.size()];
-		// coordinates.toArray(coords);
-		return layer;
 	}
-	
-	
+
 }

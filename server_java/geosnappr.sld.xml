@@ -15,6 +15,18 @@
 							<CssParameter name="stroke-width">1</CssParameter>
 						</Stroke>
 					</LineSymbolizer>
+					<PointSymbolizer>
+						<Graphic>
+							<Mark>
+								<Fill>
+									<!-- CssParameters allowed are fill (the color) and fill-opacity -->
+									<CssParameter name="fill">#FF0000</CssParameter>
+									<CssParameter name="fill-opacity">1</CssParameter>
+								</Fill>
+							</Mark>
+						</Graphic>
+					</PointSymbolizer>
+					
 				</Rule>
 			</FeatureTypeStyle>
 			<FeatureTypeStyle>
@@ -39,6 +51,33 @@
 							<CssParameter name="stroke-dasharray">4</CssParameter>
 						</Stroke>
 					</LineSymbolizer>
+					<TextSymbolizer>
+						<Label>
+							<ogc:PropertyName>name</ogc:PropertyName>
+						</Label>
+
+						<Font>
+							<CssParameter name="font-family">Times New Roman</CssParameter>
+							<CssParameter name="font-style">Normal</CssParameter>
+							<CssParameter name="font-size">14</CssParameter>
+							<CssParameter name="font-weight">bold</CssParameter>
+						</Font>
+
+						<Halo>
+							<Radius>
+								<ogc:Literal>2</ogc:Literal>
+							</Radius>
+							<Fill>
+								<CssParameter name="fill">#FFFFBB</CssParameter>
+								<CssParameter name="fill-opacity">0.85</CssParameter>
+							</Fill>
+						</Halo>
+
+						<Fill>
+							<CssParameter name="fill">#0000FF</CssParameter>
+						</Fill>
+					</TextSymbolizer>
+
 				</Rule>
 			</FeatureTypeStyle>
 		</UserStyle>
