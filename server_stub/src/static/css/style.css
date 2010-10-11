@@ -1,7 +1,22 @@
+h1, ul, li, body, html { margin: 0; padding: 0; }
+
 body {
     font-family: Helvetica,Arial,sans-serif;
 }
 
+h1 {
+    font-size: 18px;
+    background-color: #ABF;
+    padding: 10px 10px;
+}
+
 #trains li {
     cursor: pointer;
+    list-style-type: none;
+    padding: 5px 10px;
+    border-bottom: 1px solid #CCC;
+}
+
+#trains li:hover {
+    background-color: #EEE;
 }
