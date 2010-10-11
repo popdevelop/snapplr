@@ -53,7 +53,14 @@ class TrainHandler(tornado.web.RequestHandler, JsonResponse):
         lon = self.get_argument("lon", None)
         lat = self.get_argument("lat", None)
         print "got lon:%s lat:%s" % (lon,lat)  
-        trains = {'0':'joel', '1':'peter', '2':'seb'}
+        trains = [{'name':'joel','id':'233'},
+                  {'name':'peter','id':'213'},
+                  {'name':'brissmyr','id':'223'},
+                  {'name':'achaido','id':'243'},
+                  {'name':'jacob','id':'283'},
+                  {'name':'sebastian','id':'211'},
+                  {'name':'brissmyr','id':'211'}]
+
         self.writejson(trains)
 
 class MessageMixin(object):
