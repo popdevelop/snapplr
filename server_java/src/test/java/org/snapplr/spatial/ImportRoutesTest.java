@@ -5,11 +5,19 @@ import static org.junit.Assert.assertNotNull;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.StringTokenizer;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathFactory;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Before;
@@ -22,6 +30,11 @@ import org.neo4j.gis.spatial.SpatialTopologyUtils;
 import org.neo4j.gis.spatial.SpatialTopologyUtils.PointAndGeom;
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.neo4j.kernel.EmbeddedGraphDatabase;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 import com.vividsolutions.jts.geom.Coordinate;
 
@@ -35,8 +48,7 @@ public class ImportRoutesTest {
 	public void setUp() {
 		try {
 			FileUtils.deleteDirectory(new File(directoryName));
-			database = new EmbeddedGraphDatabase(
-					directoryName);
+			database = new EmbeddedGraphDatabase(directoryName);
 			db = new SpatialDatabaseService(database);
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
@@ -46,6 +58,33 @@ public class ImportRoutesTest {
 
 	@Test
 	public void importRoutes() throws Exception {
+		EditableLayer layer = importSegments();
+		EditableLayer stationLayer = importStations();
+
+		ShapefileExporter exporter = new ShapefileExporter(database);
+		exporter.setExportDir("target/export");
+
+		exporter.exportLayer(layer.getName());
+		exporter.exportLayer(stationLayer.getName());
+		ArrayList<PointAndGeom> edges = new SpatialTopologyUtils()
+				.findClosestEdges(
+						layer.getGeometryFactory().createPoint(
+								new Coordinate(60, 16)), layer, 0.1);
+		System.out.println("test");
+		Iterator<PointAndGeom> iterator = edges.iterator();
+		while (iterator.hasNext()) {
+			PointAndGeom next = iterator.next();
+			System.out.println("found " + next.getKey() + next.getValue());
+
+		}
+		// edges = new
+		// SpatialTopologyUtils().findClosestEdges(layer.getGeometryFactory().createPoint(new
+		// Coordinate(60, 15)), layer, 100);
+		// System.out.println("test");
+	}
+
+	private EditableLayer importSegments() throws FileNotFoundException,
+			IOException {
 		EditableLayer layer = (EditableLayer) db
 				.getOrCreateEditableLayer("trains");
 		assertNotNull(layer);
@@ -67,42 +106,83 @@ public class ImportRoutesTest {
 					Coordinate[] coords = new Coordinate[coordinates.size()];
 					coordinates.toArray(coords);
 					System.out.println(coords);
-					if(coords.length > 1) {
-						
-						String[] names = {"name"};
-						
-						String[] values = {"train "+ trainId};
+					if (coords.length > 1) {
+
+						String[] names = { "name" };
+
+						String[] values = { "train " + trainId };
 						SpatialDatabaseRecord record = layer.add(layer
-								.getGeometryFactory().createLineString(
-										coords), names , values );
+								.getGeometryFactory().createLineString(coords),
+								names, values);
 					}
 					trainId = currentTrainId;
 					System.out.println("inserted train" + trainId);
 					coordinates.clear();
 				} else {
-					coordinates.add(new Coordinate(Double.parseDouble(tokens
-							.nextToken()), Double.parseDouble(tokens
-							.nextToken()), 0));
+					double lat = Double.parseDouble(tokens
+							.nextToken());
+					double lon = Double.parseDouble(tokens
+							.nextToken());
+					coordinates.add(new Coordinate(lat, lon, 0));
 
 				}
 			}
 			in.close();
 		} finally {
 		}
-		ShapefileExporter exporter = new ShapefileExporter( database );
-        exporter.setExportDir( "target/export" );
-
-        exporter.exportLayer( layer.getName() );
-        ArrayList<PointAndGeom> edges = new SpatialTopologyUtils().findClosestEdges(layer.getGeometryFactory().createPoint(new Coordinate(60, 16)), layer, 0.1);
-        System.out.println("test");
-        Iterator<PointAndGeom> iterator = edges.iterator();
-        while (iterator.hasNext() ) {
-        	PointAndGeom next = iterator.next();
-        	System.out.println("found " + next.getKey() + next.getValue());
-        	
-        }
-//        edges = new SpatialTopologyUtils().findClosestEdges(layer.getGeometryFactory().createPoint(new Coordinate(60, 15)), layer, 100);
-//        System.out.println("test");
+		return layer;
 	}
 
+	private EditableLayer importStations() throws FileNotFoundException,
+			IOException {
+		EditableLayer layer = (EditableLayer) db
+				.getOrCreateEditableLayer("stations");
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		Document dom = null;
+		try {
+
+			// Using factory get an instance of document builder
+			DocumentBuilder db = dbf.newDocumentBuilder();
+
+			// parse using builder to get DOM representation of the XML file
+			dom = db.parse("Transportverkets_koordinater.kml");
+
+			NodeList placemarks = dom.getElementsByTagName("Placemark");
+			// for(int i = 0; i < placemarks.getLength(); i++) {
+			// Node pm = placemarks.item(i);
+			XPath xpath = XPathFactory.newInstance().newXPath();
+			NodeList nodes = (NodeList) xpath.evaluate("//Placemark", dom,
+					XPathConstants.NODESET);
+			for (int i = 0; i < nodes.getLength(); i++) {
+				Node station = nodes.item(i);
+				String name = (String) xpath.evaluate("name", station,
+						XPathConstants.STRING);
+				StringTokenizer coord = new StringTokenizer(
+						(String) xpath.evaluate("Point/coordinates", station,
+								XPathConstants.STRING), ",");
+				Double lon = Double.parseDouble(coord.nextToken());
+				Double lat = Double.parseDouble(coord.nextToken());
+				System.out.println(lon);
+				String[] names = { "name" };
+
+				String[] values = { name };
+				SpatialDatabaseRecord record = layer.add(layer
+						.getGeometryFactory().createPoint(
+								new Coordinate(lat, lon)));
+
+			}
+
+			// }
+
+		} catch (ParserConfigurationException pce) {
+			pce.printStackTrace();
+		} catch (SAXException se) {
+			se.printStackTrace();
+		} catch (Exception ioe) {
+			ioe.printStackTrace();
+		}
+		// Coordinate[] coords = new Coordinate[coordinates.size()];
+		// coordinates.toArray(coords);
+		return layer;
+	}
 }
