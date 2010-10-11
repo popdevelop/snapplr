@@ -11,6 +11,8 @@ import tornado.options
 import tornado.web
 import os.path
 import uuid
+import database
+import graph
 from models import Message
 
 from tornado.options import define, options
@@ -19,6 +21,7 @@ define("port", default=12000, help="run on the given port", type=int)
 
 class Application(tornado.web.Application):
     def __init__(self):
+        self.graph = graph.Graph()
         handlers = [
             (r"/", MainHandler),
             (r"/trains", TrainHandler),
@@ -52,7 +55,7 @@ class TrainHandler(tornado.web.RequestHandler, JsonResponse):
     def get(self):
         lon = self.get_argument("lon", None)
         lat = self.get_argument("lat", None)
-        print "got lon:%s lat:%s" % (lon,lat)  
+        print "got lon:%s lat:%s" % (lon,lat)
         trains = [{'name':'joel','id':'233'},
                   {'name':'peter','id':'213'},
                   {'name':'brissmyr','id':'223'},
