@@ -110,9 +110,9 @@ public class ImportRoutesTest {
 					//System.out.println(coords);
 					if (coords.length > 1) {
 
-						String[] names = { "name" };
+						String[] names = { "name", "railway" };
 
-						String[] values = { "train " + trainId };
+						String[] values = { "train " + trainId, "true" };
 						SpatialDatabaseRecord record = layer.add(layer
 								.getGeometryFactory().createLineString(coords),
 								names, values);
