@@ -28,6 +28,7 @@ import org.neo4j.gis.spatial.SpatialDatabaseRecord;
 import org.neo4j.gis.spatial.SpatialDatabaseService;
 import org.neo4j.gis.spatial.SpatialTopologyUtils;
 import org.neo4j.gis.spatial.SpatialTopologyUtils.PointAndGeom;
+import org.neo4j.gis.spatial.geotools.data.StyledImageExporter;
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.neo4j.kernel.EmbeddedGraphDatabase;
 import org.w3c.dom.Document;
@@ -63,6 +64,11 @@ public class ImportRoutesTest {
 
 		ShapefileExporter exporter = new ShapefileExporter(database);
 		exporter.setExportDir("target/export");
+		StyledImageExporter imageExporter = new StyledImageExporter(database);
+		imageExporter.setExportDir("target/export");
+		imageExporter.setZoom(3.0);
+		imageExporter.setSize(1024, 768);
+		imageExporter.saveLayerImage(layer.getName(), "neo.sld.xml");
 
 		exporter.exportLayer(layer.getName());
 		exporter.exportLayer(stationLayer.getName());
@@ -77,16 +83,12 @@ public class ImportRoutesTest {
 			System.out.println("found " + next.getKey() + next.getValue());
 
 		}
-		// edges = new
-		// SpatialTopologyUtils().findClosestEdges(layer.getGeometryFactory().createPoint(new
-		// Coordinate(60, 15)), layer, 100);
-		// System.out.println("test");
 	}
 
 	private EditableLayer importSegments() throws FileNotFoundException,
 			IOException {
 		EditableLayer layer = (EditableLayer) db
-				.getOrCreateEditableLayer("trains");
+				.getOrCreateEditableLayer("railway");
 		assertNotNull(layer);
 		try {
 			InputStreamReader in = new InputStreamReader(new FileInputStream(
@@ -99,13 +101,13 @@ public class ImportRoutesTest {
 
 			ArrayList<Coordinate> coordinates = new ArrayList<Coordinate>();
 			while ((line = buf.readLine()) != null) {
-				System.out.println(line);
+				//System.out.println(line);
 				StringTokenizer tokens = new StringTokenizer(line, ",");
 				int currentTrainId = Integer.parseInt(tokens.nextToken());
 				if (!(currentTrainId == trainId)) {
 					Coordinate[] coords = new Coordinate[coordinates.size()];
 					coordinates.toArray(coords);
-					System.out.println(coords);
+					//System.out.println(coords);
 					if (coords.length > 1) {
 
 						String[] names = { "name" };
@@ -162,7 +164,7 @@ public class ImportRoutesTest {
 								XPathConstants.STRING), ",");
 				Double lon = Double.parseDouble(coord.nextToken());
 				Double lat = Double.parseDouble(coord.nextToken());
-				System.out.println(lon);
+				//System.out.println(lon);
 				String[] names = { "name" };
 
 				String[] values = { name };
@@ -185,4 +187,6 @@ public class ImportRoutesTest {
 		// coordinates.toArray(coords);
 		return layer;
 	}
+	
+	
 }
