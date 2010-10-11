@@ -39,7 +39,7 @@ var DEFAULT_PAGE = "trains";
         }
         $("#"+TRAIN_VIEW+ " li").live("click", function() {
             var id = $(this).data('id');
-            Chat.load(id);
+            Chat.show(id);
         });
         $(document).bind("trains.page", function() {
             fetch();
@@ -49,11 +49,58 @@ var DEFAULT_PAGE = "trains";
 
 // Chat view
 var Chat = (function() {
-    function load(id) {
-        alert(id);
+    var currentId = false;
+    var $view = false,
+        $backbtn = false,
+        $input = false,
+        $title = false;
+    function show(id) {
+        currentId = id;
+        Page.set("chat");
+        load();
     }
+    function load() {
+        $title.text("Chat on train " + currentId);
+        Server.follow(currentId);
+        $view.html($("<li>").text("Loading messages"));        
+    }
+    
+    function error() {
+        Server.unfollow();
+        $view.html($("<li>").text("Failed to get messages"));
+    }
+
+    function post() {
+        alert("Post!" + $input.val() + "_" + currentId);
+    }
+
+    function draw(r) {
+        // Append messages
+    }
+
+    $(document).ready(function() {
+        $view = $('#messagelist');
+        $title = $('#chat_title');
+        $backbtn = $('#chat_back');
+        $input = $('#chat_input');
+        //
+        $backbtn.click(function() {
+            Server.unfollow();
+            Page.set("trains");
+            return false;
+        });
+
+        $input.bind("keydown", function(e) {
+            if(e.keyCode === 13) {
+                post();
+            }
+        });
+
+        $(document).bind("error.server", error);
+        $(document).bind("connected.server", load);
+    });
     return {
-        load: load
+        show: show
     };
 })();
 
@@ -86,6 +133,7 @@ var Page = (function(){
     var listeners = { all: []};
     var API = {
         getTrains: "trains",
+        postMessage: "message"
     };
     var defParams = {
         type: "GET",
@@ -114,11 +162,9 @@ var Page = (function(){
     }
 
     function follow(id) {
-        if(updater) {
-            updater.stop();
-        }
+        unfollow();
         var pushOpts = {
-            url: "train"+id+"/updates",
+            url: "train/"+id+"/updates",
             success: pushSuccess,
             error: pushError
         };
@@ -126,6 +172,11 @@ var Page = (function(){
         updater.start();
     }
 
+    function unfollow() {
+        if(updater) {
+            updater.stop();
+        }
+    }
 
     function send(cmd, params) {
         if( !(cmd in API) ) {
@@ -150,6 +201,8 @@ var Page = (function(){
     }
     window.Server = {
         send: send,
+        follow: follow,
+        unfollow: unfollow,
         listen: registerListener
     };
 })();
