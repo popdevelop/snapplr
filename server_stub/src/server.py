@@ -14,7 +14,7 @@ import uuid
 from models import Message
 
 from tornado.options import define, options
-define("port", default=11000, help="run on the given port", type=int)
+define("port", default=12000, help="run on the given port", type=int)
 
 
 class Application(tornado.web.Application):
@@ -33,18 +33,25 @@ class Application(tornado.web.Application):
         tornado.web.Application.__init__(self, handlers, **settings)
 
 
-class BaseHandler(tornado.web.RequestHandler):
-    def get_current_user(self):
-        user_json = self.get_secure_cookie("user")
-        if not user_json: return None
-        return tornado.escape.json_decode(user_json)
-
-
-class MainHandler(BaseHandler):
+class MainHandler(tornado.web.RequestHandler):
     @tornado.web.authenticated
     def get(self):
         self.render("index.html", messages=MessageMixin.cache)
 
+
+class JsonResponse():
+    def writejson(self, json):
+        jsonstr = str(json)
+        self.set_header("Content-Length", len(jsonstr))
+        self.set_header("Content-Type", "application/json; charset=utf-8")
+        print json
+        self.write(jsonstr)
+        self.finish()
+
+class TrainHandler(tornado.web.RequestHandler, JsonResponse):
+    def get(self):
+        trains = {'0':'joel', '1':'peter', '2':'seb'}
+        self.writejson(trains)
 
 class MessageMixin(object):
     waiters = []
@@ -76,58 +83,6 @@ class MessageMixin(object):
         cls.cache.extend(messages)
         if len(cls.cache) > self.cache_size:
             cls.cache = cls.cache[-self.cache_size:]
-
-
-class MessageNewHandler(BaseHandler, MessageMixin):
-    @tornado.web.authenticated
-    def post(self):
-        message = {
-            "id": str(uuid.uuid4()),
-            "from": self.current_user["first_name"],
-            "body": self.get_argument("body"),
-        }
-        message["html"] = self.render_string("message.html", message=message)
-        if self.get_argument("next", None):
-            self.redirect(self.get_argument("next"))
-        else:
-            self.write(message)
-        self.new_messages([message])
-
-
-class MessageUpdatesHandler(BaseHandler, MessageMixin):
-    @tornado.web.authenticated
-    @tornado.web.asynchronous
-    def post(self):
-        cursor = self.get_argument("cursor", None)
-        self.wait_for_messages(self.async_callback(self.on_new_messages),
-                               cursor=cursor)
-
-    def on_new_messages(self, messages):
-        # Closed client connection
-        if self.request.connection.stream.closed():
-            return
-        self.finish(dict(messages=messages))
-
-
-class AuthLoginHandler(BaseHandler, tornado.auth.GoogleMixin):
-    @tornado.web.asynchronous
-    def get(self):
-        if self.get_argument("openid.mode", None):
-            self.get_authenticated_user(self.async_callback(self._on_auth))
-            return
-        self.authenticate_redirect(ax_attrs=["name"])
-    
-    def _on_auth(self, user):
-        if not user:
-            raise tornado.web.HTTPError(500, "Google auth failed")
-        self.set_secure_cookie("user", tornado.escape.json_encode(user))
-        self.redirect("/")
-
-
-class AuthLogoutHandler(BaseHandler):
-    def get(self):
-        self.clear_cookie("user")
-        self.write("You are now logged out")
 
 
 def main():
