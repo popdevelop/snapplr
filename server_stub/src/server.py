@@ -66,7 +66,7 @@ class AuthLoginHandler(BaseHandler, tornado.auth.GoogleMixin):
         self.set_secure_cookie("user", user["name"])
         self.redirect("/")
 
-class AuthLogoutHandler():
+class AuthLogoutHandler(BaseHandler):
     def get(self):
         self.clear_cookie("user")
         self.write("You are now logged out")
