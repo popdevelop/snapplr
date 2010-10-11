@@ -113,7 +113,7 @@ class MessageNewHandler(BaseHandler, MessageMixin):
     def post(self):
         message = {
             "id": str(uuid.uuid4()),
-            "from": self.current_user["first_name"],
+            "from": self.current_user,
             "body": self.get_argument("body"),
         }
         message["html"] = self.render_string("message.html", message=message)
