@@ -50,6 +50,9 @@ class JsonResponse():
 
 class TrainHandler(tornado.web.RequestHandler, JsonResponse):
     def get(self):
+        lon = self.get_argument("lon", None)
+        lat = self.get_argument("lat", None)
+        print "got lon:%s lat:%s" % (lon,lat)  
         trains = {'0':'joel', '1':'peter', '2':'seb'}
         self.writejson(trains)
 
