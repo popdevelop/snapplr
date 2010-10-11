@@ -22,6 +22,7 @@ import javax.xml.xpath.XPathFactory;
 import org.apache.commons.io.FileUtils;
 import org.junit.Before;
 import org.junit.Test;
+import org.neo4j.gis.spatial.DefaultLayer;
 import org.neo4j.gis.spatial.EditableLayer;
 import org.neo4j.gis.spatial.ShapefileExporter;
 import org.neo4j.gis.spatial.SpatialDatabaseRecord;
@@ -87,8 +88,11 @@ public class ImportRoutesTest {
 
 	private EditableLayer importSegments() throws FileNotFoundException,
 			IOException {
+		database.beginTx();
 		EditableLayer layer = (EditableLayer) db
 				.getOrCreateEditableLayer("railway");
+		String[] names = new String[] {"railway", "name"};
+		((DefaultLayer)layer).setExtraPropertyNames(names );
 		assertNotNull(layer);
 		try {
 			InputStreamReader in = new InputStreamReader(new FileInputStream(
@@ -110,12 +114,12 @@ public class ImportRoutesTest {
 					//System.out.println(coords);
 					if (coords.length > 1) {
 
-						String[] names = { "name", "railway" };
+						String[] keys = { "name", "railway" };
 
 						String[] values = { "train " + trainId, "true" };
 						SpatialDatabaseRecord record = layer.add(layer
 								.getGeometryFactory().createLineString(coords),
-								names, values);
+								keys, values);
 					}
 					trainId = currentTrainId;
 					System.out.println("inserted train" + trainId);
@@ -139,6 +143,8 @@ public class ImportRoutesTest {
 			IOException {
 		EditableLayer layer = (EditableLayer) db
 				.getOrCreateEditableLayer("stations");
+		String[] names = new String[] {"name"};
+		((DefaultLayer)layer).setExtraPropertyNames(names );
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		Document dom = null;
 		try {
@@ -164,10 +170,6 @@ public class ImportRoutesTest {
 								XPathConstants.STRING), ",");
 				Double lon = Double.parseDouble(coord.nextToken());
 				Double lat = Double.parseDouble(coord.nextToken());
-				//System.out.println(lon);
-				String[] names = { "name" };
-
-				String[] values = { name };
 				SpatialDatabaseRecord record = layer.add(layer
 						.getGeometryFactory().createPoint(
 								new Coordinate(lat, lon)));
