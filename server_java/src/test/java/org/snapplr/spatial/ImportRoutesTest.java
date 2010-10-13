@@ -93,13 +93,8 @@ public class ImportRoutesTest {
 		imageExporter.setSize(3000, 3000);
 		String[] layerNames = new String[] { rails.getName(),
 				stations.getName(), results.getName() };
-		// String[] layerNames = new String[] { results.getName() };
-		DataStore store = new Neo4jSpatialDataStore(database);
-		SimpleFeatureSource featureSource = store.getFeatureSource(rails
-				.getName());
-
 		imageExporter.saveLayerImage(layerNames, "geosnappr.sld.xml", new File(
-				"all.png"), featureSource.getBounds());
+				"all.png"), null);
 
 	}
 
