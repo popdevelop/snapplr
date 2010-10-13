@@ -9,7 +9,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.StringTokenizer;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -27,8 +26,6 @@ import org.neo4j.gis.spatial.EditableLayer;
 import org.neo4j.gis.spatial.ShapefileExporter;
 import org.neo4j.gis.spatial.SpatialDatabaseRecord;
 import org.neo4j.gis.spatial.SpatialDatabaseService;
-import org.neo4j.gis.spatial.SpatialTopologyUtils;
-import org.neo4j.gis.spatial.SpatialTopologyUtils.PointAndGeom;
 import org.neo4j.gis.spatial.geotools.data.StyledImageExporter;
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.neo4j.kernel.EmbeddedGraphDatabase;
