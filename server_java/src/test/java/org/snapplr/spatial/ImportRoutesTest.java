@@ -23,9 +23,13 @@ import org.junit.Before;
 import org.junit.Test;
 import org.neo4j.gis.spatial.DefaultLayer;
 import org.neo4j.gis.spatial.EditableLayer;
+import org.neo4j.gis.spatial.EditableLayerImpl;
+import org.neo4j.gis.spatial.Layer;
 import org.neo4j.gis.spatial.ShapefileExporter;
 import org.neo4j.gis.spatial.SpatialDatabaseRecord;
 import org.neo4j.gis.spatial.SpatialDatabaseService;
+import org.neo4j.gis.spatial.SpatialTopologyUtils;
+import org.neo4j.gis.spatial.SpatialTopologyUtils.PointResult;
 import org.neo4j.gis.spatial.geotools.data.StyledImageExporter;
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.neo4j.kernel.EmbeddedGraphDatabase;
@@ -35,6 +39,8 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import com.vividsolutions.jts.geom.Coordinate;
+import com.vividsolutions.jts.geom.GeometryFactory;
+import com.vividsolutions.jts.geom.Point;
 
 public class ImportRoutesTest {
 
@@ -57,40 +63,82 @@ public class ImportRoutesTest {
 	@Test
 	public void importRoutes() throws Exception {
 		database.beginTx();
-		EditableLayer layer = (EditableLayer) db
+		EditableLayer rails = (EditableLayer) db
 				.getOrCreateEditableLayer("railway");
-		String[] names = new String[] { "railway", "name" };
-		((DefaultLayer) layer).setExtraPropertyNames(names);
-		assertNotNull(layer);
+		EditableLayer stations = (EditableLayer) db
+				.getOrCreateEditableLayer("stations");
+		String[] names = new String[] { "name", "railway" };
+		((DefaultLayer) stations).setExtraPropertyNames(names);
+		((DefaultLayer) rails).setExtraPropertyNames(names);
 
-		importSegments(layer);
-		importStations(layer);
-
+		importSegments(rails);
+		importStations(stations);
+		snap(rails);
 		ShapefileExporter exporter = new ShapefileExporter(database);
 		exporter.setExportDir("target/export");
+		exporter.exportLayer(rails.getName());
+		exporter.exportLayer(stations.getName());
 		StyledImageExporter imageExporter = new StyledImageExporter(database);
 		imageExporter.setExportDir("target/export");
 		imageExporter.setZoom(1.0);
 		imageExporter.setSize(1024, 768);
-		imageExporter.saveLayerImage(layer.getName(), "geosnappr.sld.xml");
-		
-		exporter.exportLayer(layer.getName());
-//		ArrayList<PointAndGeom> edges = new SpatialTopologyUtils()
-//				.findClosestEdges(
-//						layer.getGeometryFactory().createPoint(
-//								new Coordinate(60, 16)), layer, 0.1);
-//		System.out.println("test");
-//		Iterator<PointAndGeom> iterator = edges.iterator();
-//		while (iterator.hasNext()) {
-//			PointAndGeom next = iterator.next();
-//			System.out.println("found " + next.getValue()
-//					+ next.getValue().getClass());
-//
-//		}
+		imageExporter.saveLayerImage(rails.getName(), "geosnappr.sld.xml");
+
+		// ArrayList<PointAndGeom> edges = new SpatialTopologyUtils()
+		// .findClosestEdges(
+		// layer.getGeometryFactory().createPoint(
+		// new Coordinate(60, 16)), layer, 0.1);
+		// System.out.println("test");
+		// Iterator<PointAndGeom> iterator = edges.iterator();
+		// while (iterator.hasNext()) {
+		// PointAndGeom next = iterator.next();
+		// System.out.println("found " + next.getValue()
+		// + next.getValue().getClass());
+		//
+		// }
 	}
 
-	private void importSegments(EditableLayer layer) throws FileNotFoundException,
-			IOException {
+	private void snap(EditableLayer layer2) {
+		// Now test snapping to a layer
+		GeometryFactory factory = layer2.getGeometryFactory();
+		EditableLayerImpl results = (EditableLayerImpl) db
+				.getOrCreateEditableLayer("testSnapping_results");
+		String[] fieldsNames = new String[] { "snap-id", "description",
+				"distance" };
+		results.setExtraPropertyNames(fieldsNames);
+		Coordinate coordinate_malmo_c = new Coordinate(13.0029899,55.6095057);
+		Point malmo_c = factory.createPoint(coordinate_malmo_c);
+		results.add(malmo_c, fieldsNames,
+				new Object[] { 0L, "Point to snap", 0L });
+		for (String layerName : new String[] { "railway" }) {
+			Layer layer = db.getLayer(layerName);
+			assertNotNull("Missing layer: " + layerName, layer);
+			System.out.println("Closest features in " + layerName
+					+ " to point " + malmo_c + ":");
+			//Coordinate[] dummy = new Coordinate[]{coordinate_malmo_c, coordinate_malmo_c};
+			for (PointResult result : SpatialTopologyUtils.findClosestEdges(
+					malmo_c, layer)) {
+				System.out.println("\t" + result);
+				results.add(result.getKey(), fieldsNames, new Object[] {
+						result.getValue().getGeomNode().getId(),
+						"Snapped point to layer " + layerName + ": "
+								+ result.getValue().getGeometry().toString(),
+						(long) (1000000 * result.getDistance()) });
+			}
+		}
+		ShapefileExporter shpExporter = new ShapefileExporter(database);
+		shpExporter.setExportDir("target/export");
+		try {
+			shpExporter.exportLayer(results.getName());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	private void importSegments(EditableLayer layer)
+			throws FileNotFoundException, IOException {
 		database.beginTx();
 		try {
 			InputStreamReader in = new InputStreamReader(new FileInputStream(
@@ -125,7 +173,7 @@ public class ImportRoutesTest {
 				} else {
 					double lat = Double.parseDouble(tokens.nextToken());
 					double lon = Double.parseDouble(tokens.nextToken());
-					coordinates.add(new Coordinate(lat, lon, 0));
+					coordinates.add(new Coordinate(lon, lat, 0));
 
 				}
 			}
@@ -134,8 +182,8 @@ public class ImportRoutesTest {
 		}
 	}
 
-	private void importStations(EditableLayer layer) throws FileNotFoundException,
-			IOException {
+	private void importStations(EditableLayer layer)
+			throws FileNotFoundException, IOException {
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		Document dom = null;
 		try {
@@ -161,13 +209,9 @@ public class ImportRoutesTest {
 				Double lat = Double.parseDouble(coord.nextToken());
 				String[] keys = new String[] { "name" };
 				Object[] values = new String[] { name };
-				SpatialDatabaseRecord record = layer.add(
-						layer.getGeometryFactory().createPoint(
-								new Coordinate(lat, lon)), keys, values);
-
 				layer.add(
 						layer.getGeometryFactory().createPoint(
-								new Coordinate(lat, lon)), keys, values);
+								new Coordinate(lon, lat)), keys, values);
 			}
 
 			// }
