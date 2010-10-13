@@ -19,6 +19,8 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathFactory;
 
 import org.apache.commons.io.FileUtils;
+import org.geotools.data.DataStore;
+import org.geotools.data.simple.SimpleFeatureSource;
 import org.junit.Before;
 import org.junit.Test;
 import org.neo4j.gis.spatial.DefaultLayer;
@@ -30,6 +32,7 @@ import org.neo4j.gis.spatial.SpatialDatabaseRecord;
 import org.neo4j.gis.spatial.SpatialDatabaseService;
 import org.neo4j.gis.spatial.SpatialTopologyUtils;
 import org.neo4j.gis.spatial.SpatialTopologyUtils.PointResult;
+import org.neo4j.gis.spatial.geotools.data.Neo4jSpatialDataStore;
 import org.neo4j.gis.spatial.geotools.data.StyledImageExporter;
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.neo4j.kernel.EmbeddedGraphDatabase;
@@ -67,64 +70,65 @@ public class ImportRoutesTest {
 				.getOrCreateEditableLayer("railway");
 		EditableLayer stations = (EditableLayer) db
 				.getOrCreateEditableLayer("stations");
-		String[] names = new String[] { "name", "railway" };
+		String[] names = new String[] { "name", "railway", "description" };
 		((DefaultLayer) stations).setExtraPropertyNames(names);
 		((DefaultLayer) rails).setExtraPropertyNames(names);
 
+		EditableLayerImpl results = (EditableLayerImpl) db
+				.getOrCreateEditableLayer("testSnapping_results");
+		String[] fieldsNames = new String[] { "name", "description",
+				"distance", "railway" };
+		results.setExtraPropertyNames(fieldsNames);
+
 		importSegments(rails);
 		importStations(stations);
-		snap(rails);
+		snap(rails, results, fieldsNames);
 		ShapefileExporter exporter = new ShapefileExporter(database);
 		exporter.setExportDir("target/export");
 		exporter.exportLayer(rails.getName());
-		exporter.exportLayer(stations.getName());
+		// exporter.exportLayer(stations.getName());
 		StyledImageExporter imageExporter = new StyledImageExporter(database);
 		imageExporter.setExportDir("target/export");
 		imageExporter.setZoom(1.0);
-		imageExporter.setSize(1024, 768);
-		imageExporter.saveLayerImage(rails.getName(), "geosnappr.sld.xml");
+		imageExporter.setSize(3000, 3000);
+		String[] layerNames = new String[] { rails.getName(),
+				stations.getName(), results.getName() };
+		// String[] layerNames = new String[] { results.getName() };
+		DataStore store = new Neo4jSpatialDataStore(database);
+		SimpleFeatureSource featureSource = store.getFeatureSource(rails
+				.getName());
 
-		// ArrayList<PointAndGeom> edges = new SpatialTopologyUtils()
-		// .findClosestEdges(
-		// layer.getGeometryFactory().createPoint(
-		// new Coordinate(60, 16)), layer, 0.1);
-		// System.out.println("test");
-		// Iterator<PointAndGeom> iterator = edges.iterator();
-		// while (iterator.hasNext()) {
-		// PointAndGeom next = iterator.next();
-		// System.out.println("found " + next.getValue()
-		// + next.getValue().getClass());
-		//
-		// }
+		imageExporter.saveLayerImage(layerNames, "geosnappr.sld.xml", new File(
+				"all.png"), featureSource.getBounds());
+
 	}
 
-	private void snap(EditableLayer layer2) {
+	private void snap(EditableLayer layer2, EditableLayer results,
+			String[] fieldsNames) {
 		// Now test snapping to a layer
 		GeometryFactory factory = layer2.getGeometryFactory();
-		EditableLayerImpl results = (EditableLayerImpl) db
-				.getOrCreateEditableLayer("testSnapping_results");
-		String[] fieldsNames = new String[] { "snap-id", "description",
-				"distance" };
-		results.setExtraPropertyNames(fieldsNames);
-		Coordinate coordinate_malmo_c = new Coordinate(13.0029899,55.6095057);
+
+		Coordinate coordinate_malmo_c = new Coordinate(13.0029899, 55.6095057);
 		Point malmo_c = factory.createPoint(coordinate_malmo_c);
-		results.add(malmo_c, fieldsNames,
-				new Object[] { 0L, "Point to snap", 0L });
-		for (String layerName : new String[] { "railway" }) {
-			Layer layer = db.getLayer(layerName);
-			assertNotNull("Missing layer: " + layerName, layer);
-			System.out.println("Closest features in " + layerName
-					+ " to point " + malmo_c + ":");
-			//Coordinate[] dummy = new Coordinate[]{coordinate_malmo_c, coordinate_malmo_c};
-			for (PointResult result : SpatialTopologyUtils.findClosestEdges(
-					malmo_c, layer)) {
-				System.out.println("\t" + result);
-				results.add(result.getKey(), fieldsNames, new Object[] {
-						result.getValue().getGeomNode().getId(),
-						"Snapped point to layer " + layerName + ": "
-								+ result.getValue().getGeometry().toString(),
-						(long) (1000000 * result.getDistance()) });
-			}
+		results.add(malmo_c, fieldsNames, new Object[] { 0L, "Point to snap",
+				0L, "" });
+		String layerName = layer2.getName();
+		Layer layer = db.getLayer(layerName);
+		assertNotNull("Missing layer: " + layerName, layer);
+		System.out.println("Closest features in " + layerName + " to point "
+				+ malmo_c + ":");
+		// Coordinate[] dummy = new Coordinate[]{coordinate_malmo_c,
+		// coordinate_malmo_c};
+		for (PointResult result : SpatialTopologyUtils.findClosestEdges(
+				malmo_c, layer)) {
+			System.out.println("\t" + result);
+			long dist = (long) (1000000 * result.getDistance());
+			results.add(result.getKey(), fieldsNames, new Object[] {
+					"Snap, " + "dist=" + dist + ", Geo="
+							+ result.getValue().getGeomNode().getId(),
+					"Snapped point to layer " + layerName + ": "
+							+ result.getValue().getGeometry().toString(), dist,
+					"" });
 		}
 		ShapefileExporter shpExporter = new ShapefileExporter(database);
 		shpExporter.setExportDir("target/export");
