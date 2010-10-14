@@ -19,9 +19,11 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathFactory;
 
 import org.apache.commons.io.FileUtils;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.neo4j.gis.spatial.DefaultLayer;
+import org.neo4j.gis.spatial.DynamicLayer;
 import org.neo4j.gis.spatial.EditableLayer;
 import org.neo4j.gis.spatial.EditableLayerImpl;
 import org.neo4j.gis.spatial.Layer;
@@ -30,8 +32,10 @@ import org.neo4j.gis.spatial.SpatialDatabaseRecord;
 import org.neo4j.gis.spatial.SpatialDatabaseService;
 import org.neo4j.gis.spatial.SpatialTopologyUtils;
 import org.neo4j.gis.spatial.SpatialTopologyUtils.PointResult;
+import org.neo4j.gis.spatial.encoders.SimpleGraphEncoder;
 import org.neo4j.gis.spatial.geotools.data.StyledImageExporter;
 import org.neo4j.graphdb.GraphDatabaseService;
+import org.neo4j.graphdb.Transaction;
 import org.neo4j.kernel.EmbeddedGraphDatabase;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -47,6 +51,7 @@ public class ImportRoutesTest {
 	private String directoryName = "target/db";
 	private SpatialDatabaseService db;
 	private GraphDatabaseService database;
+	private Transaction tx;
 
 	@Before
 	public void setUp() {
@@ -54,17 +59,23 @@ public class ImportRoutesTest {
 			FileUtils.deleteDirectory(new File(directoryName));
 			database = new EmbeddedGraphDatabase(directoryName);
 			db = new SpatialDatabaseService(database);
+			tx = database.beginTx();
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
 		}
 
 	}
+	
+	@After
+	public void shuttdown() {
+		tx.success();
+		tx.finish();
+	}
 
 	@Test
 	public void importRoutes() throws Exception {
-		database.beginTx();
-		EditableLayer rails = (EditableLayer) db
-				.getOrCreateEditableLayer("railway");
+		DynamicLayer rails = (DynamicLayer) db
+				.createLayer("railway",SimpleGraphEncoder.class, DynamicLayer.class );
 		EditableLayer stations = (EditableLayer) db
 				.getOrCreateEditableLayer("stations");
 		String[] names = new String[] { "name", "railway", "description" };
@@ -93,7 +104,6 @@ public class ImportRoutesTest {
 				stations.getName(), results.getName() };
 		imageExporter.saveLayerImage(layerNames, "geosnappr.sld.xml", new File(
 				"all.png"), null);
-
 	}
 
 	private void snap(EditableLayer layer2, EditableLayer results,
