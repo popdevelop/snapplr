@@ -1,0 +1,3027 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<station>
+<namn>Stockholm C</namn>
+<url>http://xn--tg-yia.info/Stockholm C</url>
+<lat>59.3299</lat>
+<lon>18.0564</lon>
+<avgaende>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>222</nr>
+		<datum>20101014</datum>
+		<fran>Linköping C</fran>
+		<till>Gävle C</till>
+		<url>http://xn--tg-yia.info/222,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>09:30</tid>
+		<spar>19</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>429</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Göteborg C</till>
+		<url>http://xn--tg-yia.info/429,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>10:10</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>820</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Uppsala C</till>
+		<url>http://xn--tg-yia.info/820,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>10:11</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>529</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Malmö C</till>
+		<url>http://xn--tg-yia.info/529,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>10:21</tid>
+		<spar>10</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>629</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Karlstad C</till>
+		<url>http://xn--tg-yia.info/629,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>10:25</tid>
+		<spar>12</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>568</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Sundsvall C</till>
+		<url>http://xn--tg-yia.info/568,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>10:30</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>229</nr>
+		<datum>20101014</datum>
+		<fran>Gävle C</fran>
+		<till>Linköping C</till>
+		<url>http://xn--tg-yia.info/229,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>10:40</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>927</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Eskilstuna C</till>
+		<url>http://xn--tg-yia.info/927,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>10:55</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>170</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Göteborg C</till>
+		<url>http://xn--tg-yia.info/170,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>11:07</tid>
+		<spar>6</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>824</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Uppsala C</till>
+		<url>http://xn--tg-yia.info/824,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>11:11</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>531</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Malmö C</till>
+		<url>http://xn--tg-yia.info/531,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>11:21</tid>
+		<spar>10</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>226</nr>
+		<datum>20101014</datum>
+		<fran>Linköping C</fran>
+		<till>Gävle C</till>
+		<url>http://xn--tg-yia.info/226,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>11:30</tid>
+		<spar>19a</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>22</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Falun C</till>
+		<url>http://xn--tg-yia.info/22,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>11:45</tid>
+		<spar>7</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>732</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Örebro C</till>
+		<url>http://xn--tg-yia.info/732,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>12:07</tid>
+		<spar>4</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>433</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Göteborg C</till>
+		<url>http://xn--tg-yia.info/433,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>12:10</tid>
+		<spar>10</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>828</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Uppsala C</till>
+		<url>http://xn--tg-yia.info/828,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>12:11</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>533</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Malmö C</till>
+		<url>http://xn--tg-yia.info/533,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>12:21</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>633</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Karlstad C</till>
+		<url>http://xn--tg-yia.info/633,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>12:25</tid>
+		<spar>12a</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>572</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Sundsvall C</till>
+		<url>http://xn--tg-yia.info/572,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>12:30</tid>
+		<spar>8</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>233</nr>
+		<datum>20101014</datum>
+		<fran>Gävle C</fran>
+		<till>Linköping C</till>
+		<url>http://xn--tg-yia.info/233,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>12:40</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>935</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Eskilstuna C</till>
+		<url>http://xn--tg-yia.info/935,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>12:51</tid>
+		<spar>12a</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>174</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Göteborg C</till>
+		<url>http://xn--tg-yia.info/174,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>13:07</tid>
+		<spar>5</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>832</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Uppsala C</till>
+		<url>http://xn--tg-yia.info/832,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>13:11</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>435</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Göteborg C</till>
+		<url>http://xn--tg-yia.info/435,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>13:15</tid>
+		<spar>10</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>230</nr>
+		<datum>20101014</datum>
+		<fran>Linköping C</fran>
+		<till>Gävle C</till>
+		<url>http://xn--tg-yia.info/230,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>13:30</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>26</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Falun C</till>
+		<url>http://xn--tg-yia.info/26,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>13:45</tid>
+		<spar>5</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>939</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Eskilstuna C</till>
+		<url>http://xn--tg-yia.info/939,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>13:51</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>740</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Örebro C</till>
+		<url>http://xn--tg-yia.info/740,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>14:07</tid>
+		<spar>5</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>437</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Göteborg C</till>
+		<url>http://xn--tg-yia.info/437,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>14:10</tid>
+		<spar>10</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>836</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Uppsala C</till>
+		<url>http://xn--tg-yia.info/836,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>14:11</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>455</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Karlstad C</till>
+		<url>http://xn--tg-yia.info/455,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>14:15</tid>
+		<spar>17a</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>537</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Malmö C</till>
+		<url>http://xn--tg-yia.info/537,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>14:21</tid>
+		<spar>10</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>637</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Charlottenberg</till>
+		<url>http://xn--tg-yia.info/637,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>14:25</tid>
+		<spar>12</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>576</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Sundsvall C</till>
+		<url>http://xn--tg-yia.info/576,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>14:30</tid>
+		<spar>8</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>237</nr>
+		<datum>20101014</datum>
+		<fran>Gävle C</fran>
+		<till>Linköping C</till>
+		<url>http://xn--tg-yia.info/237,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>14:40</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>838</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Uppsala C</till>
+		<url>http://xn--tg-yia.info/838,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>14:41</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>943</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Eskilstuna C</till>
+		<url>http://xn--tg-yia.info/943,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>14:47</tid>
+		<spar>12a</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>289</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Linköping C</till>
+		<url>http://xn--tg-yia.info/289,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>14:51</tid>
+		<spar>10</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>178</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Göteborg C</till>
+		<url>http://xn--tg-yia.info/178,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>15:07</tid>
+		<spar>6</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>840</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Uppsala C</till>
+		<url>http://xn--tg-yia.info/840,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>15:11</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>439</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Göteborg C</till>
+		<url>http://xn--tg-yia.info/439,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>15:15</tid>
+		<spar>10</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>539</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Malmö C</till>
+		<url>http://xn--tg-yia.info/539,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>15:21</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>105</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Göteborg C</till>
+		<url>http://xn--tg-yia.info/105,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>15:25</tid>
+		<spar>12</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>234</nr>
+		<datum>20101014</datum>
+		<fran>Linköping C</fran>
+		<till>Gävle C</till>
+		<url>http://xn--tg-yia.info/234,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>15:28</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>639</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Karlstad C</till>
+		<url>http://xn--tg-yia.info/639,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>15:30</tid>
+		<spar>10</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>790</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Västerås C</till>
+		<url>http://xn--tg-yia.info/790,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>15:37</tid>
+		<spar>19b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>Veolia Transport</foretag>
+		<nr>7143</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Svågertorp / Malmö Syd</till>
+		<url>http://xn--tg-yia.info/7143,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>15:38</tid>
+		<spar>12</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>842</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Uppsala C</till>
+		<url>http://xn--tg-yia.info/842,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>15:41</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>947</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Eskilstuna C</till>
+		<url>http://xn--tg-yia.info/947,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>15:44</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>30</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Falun C</till>
+		<url>http://xn--tg-yia.info/30,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>15:45</tid>
+		<spar>7</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>291</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Linköping C</till>
+		<url>http://xn--tg-yia.info/291,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>15:51</tid>
+		<spar>10</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>261</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Nyköping C</till>
+		<url>http://xn--tg-yia.info/261,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>15:55</tid>
+		<spar>12</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>578</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Östersund C</till>
+		<url>http://xn--tg-yia.info/578,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>16:00</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>748</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Örebro C</till>
+		<url>http://xn--tg-yia.info/748,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>16:07</tid>
+		<spar>7</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>441</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Göteborg C</till>
+		<url>http://xn--tg-yia.info/441,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>16:10</tid>
+		<spar>12</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>844</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Uppsala C</till>
+		<url>http://xn--tg-yia.info/844,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>16:11</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>203</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Svågertorp / Malmö Syd</till>
+		<url>http://xn--tg-yia.info/203,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>16:15</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>284</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Ljusdal</till>
+		<url>http://xn--tg-yia.info/284,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>16:21</tid>
+		<spar>6</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>541</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Malmö C</till>
+		<url>http://xn--tg-yia.info/541,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>16:21</tid>
+		<spar>10</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>641</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Hallsberg</till>
+		<url>http://xn--tg-yia.info/641,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>16:25</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>580</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Sundsvall C</till>
+		<url>http://xn--tg-yia.info/580,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>16:28</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>991</nr>
+		<datum>20101014</datum>
+		<fran>Uppsala C</fran>
+		<till>Hallsberg</till>
+		<url>http://xn--tg-yia.info/991,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>16:30</tid>
+		<spar>12</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>792</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Köping</till>
+		<url>http://xn--tg-yia.info/792,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>16:37</tid>
+		<spar>4</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>241</nr>
+		<datum>20101014</datum>
+		<fran>Gävle C</fran>
+		<till>Linköping C</till>
+		<url>http://xn--tg-yia.info/241,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>16:40</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>846</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Uppsala C</till>
+		<url>http://xn--tg-yia.info/846,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>16:41</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>293</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Linköping C</till>
+		<url>http://xn--tg-yia.info/293,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>16:44</tid>
+		<spar>12</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>590</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Falun C</till>
+		<url>http://xn--tg-yia.info/590,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>16:50</tid>
+		<spar>7</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>473</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Uddevalla C</till>
+		<url>http://xn--tg-yia.info/473,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>16:51</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>951</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Arboga</till>
+		<url>http://xn--tg-yia.info/951,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>16:55</tid>
+		<spar>10</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>798</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Västerås C</till>
+		<url>http://xn--tg-yia.info/798,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>16:56</tid>
+		<spar>19</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>894</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Uppsala C</till>
+		<url>http://xn--tg-yia.info/894,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>17:00</tid>
+		<spar>4</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>503</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Malmö C</till>
+		<url>http://xn--tg-yia.info/503,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>17:06</tid>
+		<spar>10</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>182</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Göteborg C</till>
+		<url>http://xn--tg-yia.info/182,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>17:07</tid>
+		<spar>5</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>443</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Göteborg C</till>
+		<url>http://xn--tg-yia.info/443,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>17:10</tid>
+		<spar>12</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>848</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Uppsala C</till>
+		<url>http://xn--tg-yia.info/848,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>17:11</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>459</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Arvika</till>
+		<url>http://xn--tg-yia.info/459,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>17:15</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>513</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Jönköping C</till>
+		<url>http://xn--tg-yia.info/513,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>17:21</tid>
+		<spar>10</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>582</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Sundsvall C</till>
+		<url>http://xn--tg-yia.info/582,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>17:21</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>995</nr>
+		<datum>20101014</datum>
+		<fran>Uppsala C</fran>
+		<till>Eskilstuna C</till>
+		<url>http://xn--tg-yia.info/995,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>17:25</tid>
+		<spar>12</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>238</nr>
+		<datum>20101014</datum>
+		<fran>Linköping C</fran>
+		<till>Sandviken</till>
+		<url>http://xn--tg-yia.info/238,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>17:28</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>643</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Hallsberg</till>
+		<url>http://xn--tg-yia.info/643,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>17:30</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>405</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Göteborg C</till>
+		<url>http://xn--tg-yia.info/405,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>17:36</tid>
+		<spar>12a</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>794</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Västerås C</till>
+		<url>http://xn--tg-yia.info/794,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>17:37</tid>
+		<spar>6</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>505</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Malmö C</till>
+		<url>http://xn--tg-yia.info/505,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>17:40</tid>
+		<spar>12b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>850</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Uppsala C</till>
+		<url>http://xn--tg-yia.info/850,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>17:41</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>48</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Mora</till>
+		<url>http://xn--tg-yia.info/48,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>17:45</tid>
+		<spar>8</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>263</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Norrköping C</till>
+		<url>http://xn--tg-yia.info/263,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>17:45</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>955</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Arboga</till>
+		<url>http://xn--tg-yia.info/955,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>17:51</tid>
+		<spar>12a</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>756</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Hallsberg</till>
+		<url>http://xn--tg-yia.info/756,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>17:53</tid>
+		<spar>7</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>445</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Halmstad C</till>
+		<url>http://xn--tg-yia.info/445,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>18:10</tid>
+		<spar>10</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>852</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Uppsala C</till>
+		<url>http://xn--tg-yia.info/852,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>18:11</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>94</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Riksgränsen</till>
+		<url>http://xn--tg-yia.info/94,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>18:12</tid>
+		<spar>4</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>545</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Malmö C</till>
+		<url>http://xn--tg-yia.info/545,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>18:21</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>584</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Sundsvall C</till>
+		<url>http://xn--tg-yia.info/584,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>18:30</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>796</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Västerås C</till>
+		<url>http://xn--tg-yia.info/796,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>18:37</tid>
+		<spar>18</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>245</nr>
+		<datum>20101014</datum>
+		<fran>Gävle C</fran>
+		<till>Linköping C</till>
+		<url>http://xn--tg-yia.info/245,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>18:40</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>854</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Uppsala C</till>
+		<url>http://xn--tg-yia.info/854,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>18:41</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>959</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Arboga</till>
+		<url>http://xn--tg-yia.info/959,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>18:51</tid>
+		<spar>12a</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>186</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Hallsberg</till>
+		<url>http://xn--tg-yia.info/186,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>19:07</tid>
+		<spar>6</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>447</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Göteborg C</till>
+		<url>http://xn--tg-yia.info/447,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>19:10</tid>
+		<spar>10</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>856</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Uppsala C</till>
+		<url>http://xn--tg-yia.info/856,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>19:11</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>647</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Karlstad C</till>
+		<url>http://xn--tg-yia.info/647,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>19:15</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>242</nr>
+		<datum>20101014</datum>
+		<fran>Linköping C</fran>
+		<till>Gävle C</till>
+		<url>http://xn--tg-yia.info/242,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>19:30</tid>
+		<spar>19</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>299</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Linköping C</till>
+		<url>http://xn--tg-yia.info/299,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>19:30</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>38</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Falun C</till>
+		<url>http://xn--tg-yia.info/38,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>19:45</tid>
+		<spar>8</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>442</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Gävle C</till>
+		<url>http://xn--tg-yia.info/442,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>20:00</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>764</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Hallsberg</till>
+		<url>http://xn--tg-yia.info/764,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>20:07</tid>
+		<spar>5</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>449</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Göteborg C</till>
+		<url>http://xn--tg-yia.info/449,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>20:10</tid>
+		<spar>10</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>860</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Uppsala C</till>
+		<url>http://xn--tg-yia.info/860,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>20:11</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>249</nr>
+		<datum>20101014</datum>
+		<fran>Gävle C</fran>
+		<till>Linköping C</till>
+		<url>http://xn--tg-yia.info/249,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>20:40</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>92</nr>
+		<datum>20101014</datum>
+		<fran>Stockholm C</fran>
+		<till>Luleå C</till>
+		<url>http://xn--tg-yia.info/92,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>20:42</tid>
+		<spar>4</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>967</nr>
+		<datum>20101014</datum>
+		<fran>Arlanda C</fran>
+		<till>Örebro C</till>
+		<url>http://xn--tg-yia.info/967,20101014.xml</url>
+		<avgDatum>20101014</avgDatum>
+		<tid>20:51</tid>
+		<spar>10</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+</avgaende>
+<ankommande>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>452</nr>
+		<datum>20101014</datum>
+		<fran>Arvika</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/452,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>08:50</tid>
+		<spar>17b</spar>
+		<berTid>09:16</berTid>
+		<info>Tåg före</info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>622</nr>
+		<datum>20101014</datum>
+		<fran>Karlstad C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/622,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>09:15</tid>
+		<spar>17</spar>
+		<berTid>09:25</berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>272</nr>
+		<datum>20101014</datum>
+		<fran>Linköping C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/272,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>09:20</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>511</nr>
+		<datum>20101014</datum>
+		<fran>Jönköping C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/511,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>09:23</tid>
+		<spar>18a</spar>
+		<berTid>09:26</berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>787</nr>
+		<datum>20101014</datum>
+		<fran>Västerås C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/787,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>09:23</tid>
+		<spar>6</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>471</nr>
+		<datum>20101014</datum>
+		<fran>Uddevalla C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/471,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>09:30</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>563</nr>
+		<datum>20101014</datum>
+		<fran>Sundsvall C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/563,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>09:30</tid>
+		<spar>8</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>522</nr>
+		<datum>20101014</datum>
+		<fran>Malmö C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/522,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>09:39</tid>
+		<spar>18b</spar>
+		<berTid>09:49</berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>821</nr>
+		<datum>20101014</datum>
+		<fran>Uppsala C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/821,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>09:49</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>422</nr>
+		<datum>20101014</datum>
+		<fran>Halmstad C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/422,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>09:50</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>718</nr>
+		<datum>20101014</datum>
+		<fran>Örebro C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/718,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>09:53</tid>
+		<spar>7</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>918</nr>
+		<datum>20101014</datum>
+		<fran>Eskilstuna C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/918,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>10:09</tid>
+		<spar>19b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>41</nr>
+		<datum>20101014</datum>
+		<fran>Mora</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/41,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>10:16</tid>
+		<spar>7</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>229</nr>
+		<datum>20101014</datum>
+		<fran>Gävle C</fran>
+		<till>Linköping C</till>
+		<url>http://xn--tg-yia.info/229,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>10:30</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>524</nr>
+		<datum>20101014</datum>
+		<fran>Malmö C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/524,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>10:39</tid>
+		<spar>18b</spar>
+		<berTid>11:25</berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>424</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/424,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>10:45</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>825</nr>
+		<datum>20101014</datum>
+		<fran>Uppsala C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/825,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>10:49</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>164</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/164,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>10:53</tid>
+		<spar>5</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>565</nr>
+		<datum>20101014</datum>
+		<fran>Östersund C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/565,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>11:00</tid>
+		<spar>8</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>922</nr>
+		<datum>20101014</datum>
+		<fran>Eskilstuna C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/922,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>11:09</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>226</nr>
+		<datum>20101014</datum>
+		<fran>Linköping C</fran>
+		<till>Gävle C</till>
+		<url>http://xn--tg-yia.info/226,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>11:15</tid>
+		<spar>19a</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>567</nr>
+		<datum>20101014</datum>
+		<fran>Sundsvall C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/567,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>11:30</tid>
+		<spar>8</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>626</nr>
+		<datum>20101014</datum>
+		<fran>Karlstad C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/626,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>11:30</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>526</nr>
+		<datum>20101014</datum>
+		<fran>Malmö C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/526,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>11:39</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>829</nr>
+		<datum>20101014</datum>
+		<fran>Uppsala C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/829,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>11:49</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>426</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/426,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>11:50</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>726</nr>
+		<datum>20101014</datum>
+		<fran>Örebro C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/726,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>11:53</tid>
+		<spar>7</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>100</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/100,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>12:14</tid>
+		<spar>17</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>19</nr>
+		<datum>20101014</datum>
+		<fran>Falun C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/19,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>12:16</tid>
+		<spar>7</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>233</nr>
+		<datum>20101014</datum>
+		<fran>Gävle C</fran>
+		<till>Linköping C</till>
+		<url>http://xn--tg-yia.info/233,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>12:30</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>528</nr>
+		<datum>20101014</datum>
+		<fran>Malmö C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/528,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>12:39</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>428</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/428,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>12:45</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>833</nr>
+		<datum>20101014</datum>
+		<fran>Uppsala C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/833,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>12:49</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>168</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/168,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>12:53</tid>
+		<spar>6</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>930</nr>
+		<datum>20101014</datum>
+		<fran>Eskilstuna C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/930,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>13:09</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>230</nr>
+		<datum>20101014</datum>
+		<fran>Linköping C</fran>
+		<till>Gävle C</till>
+		<url>http://xn--tg-yia.info/230,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>13:15</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>571</nr>
+		<datum>20101014</datum>
+		<fran>Sundsvall C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/571,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>13:30</tid>
+		<spar>8</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>630</nr>
+		<datum>20101014</datum>
+		<fran>Charlottenberg</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/630,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>13:30</tid>
+		<spar>19b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>202</nr>
+		<datum>20101014</datum>
+		<fran>Malmö C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/202,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>13:35</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>530</nr>
+		<datum>20101014</datum>
+		<fran>Malmö C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/530,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>13:39</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>837</nr>
+		<datum>20101014</datum>
+		<fran>Uppsala C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/837,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>13:49</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>430</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/430,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>13:50</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>23</nr>
+		<datum>20101014</datum>
+		<fran>Falun C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/23,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>14:16</tid>
+		<spar>5</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>237</nr>
+		<datum>20101014</datum>
+		<fran>Gävle C</fran>
+		<till>Linköping C</till>
+		<url>http://xn--tg-yia.info/237,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>14:30</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>841</nr>
+		<datum>20101014</datum>
+		<fran>Uppsala C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/841,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>14:49</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>172</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/172,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>14:53</tid>
+		<spar>5</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>938</nr>
+		<datum>20101014</datum>
+		<fran>Eskilstuna C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/938,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>15:09</tid>
+		<spar>19b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>234</nr>
+		<datum>20101014</datum>
+		<fran>Linköping C</fran>
+		<till>Gävle C</till>
+		<url>http://xn--tg-yia.info/234,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>15:15</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>636</nr>
+		<datum>20101014</datum>
+		<fran>Hallsberg</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/636,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>15:24</tid>
+		<spar>19b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>575</nr>
+		<datum>20101014</datum>
+		<fran>Sundsvall C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/575,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>15:30</tid>
+		<spar>8</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>534</nr>
+		<datum>20101014</datum>
+		<fran>Malmö C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/534,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>15:39</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>456</nr>
+		<datum>20101014</datum>
+		<fran>Karlstad C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/456,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>15:45</tid>
+		<spar>19b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>845</nr>
+		<datum>20101014</datum>
+		<fran>Uppsala C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/845,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>15:49</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>434</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/434,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>15:50</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>742</nr>
+		<datum>20101014</datum>
+		<fran>Örebro C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/742,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>15:53</tid>
+		<spar>4</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>942</nr>
+		<datum>20101014</datum>
+		<fran>Eskilstuna C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/942,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>16:09</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>45</nr>
+		<datum>20101014</datum>
+		<fran>Mora</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/45,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>16:16</tid>
+		<spar>8</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>991</nr>
+		<datum>20101014</datum>
+		<fran>Uppsala C</fran>
+		<till>Hallsberg</till>
+		<url>http://xn--tg-yia.info/991,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>16:20</tid>
+		<spar>12</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>241</nr>
+		<datum>20101014</datum>
+		<fran>Gävle C</fran>
+		<till>Linköping C</till>
+		<url>http://xn--tg-yia.info/241,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>16:30</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>536</nr>
+		<datum>20101014</datum>
+		<fran>Malmö C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/536,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>16:39</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>436</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/436,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>16:45</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>849</nr>
+		<datum>20101014</datum>
+		<fran>Uppsala C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/849,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>16:49</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>176</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/176,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>16:53</tid>
+		<spar>6</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>946</nr>
+		<datum>20101014</datum>
+		<fran>Eskilstuna C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/946,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>17:09</tid>
+		<spar>19b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>238</nr>
+		<datum>20101014</datum>
+		<fran>Linköping C</fran>
+		<till>Sandviken</till>
+		<url>http://xn--tg-yia.info/238,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>17:15</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>995</nr>
+		<datum>20101014</datum>
+		<fran>Uppsala C</fran>
+		<till>Eskilstuna C</till>
+		<url>http://xn--tg-yia.info/995,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>17:19</tid>
+		<spar>12</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>795</nr>
+		<datum>20101014</datum>
+		<fran>Västerås C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/795,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>17:23</tid>
+		<spar>7</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>579</nr>
+		<datum>20101014</datum>
+		<fran>Sundsvall C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/579,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>17:30</tid>
+		<spar>10</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>638</nr>
+		<datum>20101014</datum>
+		<fran>Karlstad C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/638,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>17:31</tid>
+		<spar>19</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>538</nr>
+		<datum>20101014</datum>
+		<fran>Malmö C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/538,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>17:39</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>438</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/438,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>17:45</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>853</nr>
+		<datum>20101014</datum>
+		<fran>Uppsala C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/853,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>17:49</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>750</nr>
+		<datum>20101014</datum>
+		<fran>Örebro C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/750,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>17:53</tid>
+		<spar>6</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>290</nr>
+		<datum>20101014</datum>
+		<fran>Linköping C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/290,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>18:05</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>950</nr>
+		<datum>20101014</datum>
+		<fran>Eskilstuna C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/950,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>18:09</tid>
+		<spar>19</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>31</nr>
+		<datum>20101014</datum>
+		<fran>Falun C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/31,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>18:16</tid>
+		<spar>8</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>855</nr>
+		<datum>20101014</datum>
+		<fran>Uppsala C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/855,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>18:19</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>797</nr>
+		<datum>20101014</datum>
+		<fran>Västerås C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/797,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>18:23</tid>
+		<spar>5</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>262</nr>
+		<datum>20101014</datum>
+		<fran>Nyköping C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/262,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>18:24</tid>
+		<spar>18</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>245</nr>
+		<datum>20101014</datum>
+		<fran>Gävle C</fran>
+		<till>Linköping C</till>
+		<url>http://xn--tg-yia.info/245,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>18:30</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>540</nr>
+		<datum>20101014</datum>
+		<fran>Malmö C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/540,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>18:39</tid>
+		<spar>19b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>440</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/440,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>18:45</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>857</nr>
+		<datum>20101014</datum>
+		<fran>Uppsala C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/857,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>18:49</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>180</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/180,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>18:53</tid>
+		<spar>5</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>106</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/106,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>19:00</tid>
+		<spar>18</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>292</nr>
+		<datum>20101014</datum>
+		<fran>Linköping C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/292,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>19:05</tid>
+		<spar>19</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>406</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/406,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>19:09</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>859</nr>
+		<datum>20101014</datum>
+		<fran>Uppsala C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/859,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>19:19</tid>
+		<spar>6</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>242</nr>
+		<datum>20101014</datum>
+		<fran>Linköping C</fran>
+		<till>Gävle C</till>
+		<url>http://xn--tg-yia.info/242,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>19:20</tid>
+		<spar>19</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>954</nr>
+		<datum>20101014</datum>
+		<fran>Eskilstuna C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/954,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>19:24</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>583</nr>
+		<datum>20101014</datum>
+		<fran>Sundsvall C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/583,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>19:32</tid>
+		<spar>4</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>642</nr>
+		<datum>20101014</datum>
+		<fran>Karlstad C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/642,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>19:35</tid>
+		<spar>17</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>542</nr>
+		<datum>20101014</datum>
+		<fran>Malmö C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/542,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>19:39</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>458</nr>
+		<datum>20101014</datum>
+		<fran>Karlstad C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/458,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>19:45</tid>
+		<spar>19b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>861</nr>
+		<datum>20101014</datum>
+		<fran>Uppsala C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/861,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>19:49</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>442</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Gävle C</till>
+		<url>http://xn--tg-yia.info/442,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>19:50</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>758</nr>
+		<datum>20101014</datum>
+		<fran>Örebro C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/758,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>19:53</tid>
+		<spar>8</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>35</nr>
+		<datum>20101014</datum>
+		<fran>Falun C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/35,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>20:18</tid>
+		<spar>6</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>249</nr>
+		<datum>20101014</datum>
+		<fran>Gävle C</fran>
+		<till>Linköping C</till>
+		<url>http://xn--tg-yia.info/249,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>20:30</tid>
+		<spar>11</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>646</nr>
+		<datum>20101014</datum>
+		<fran>Hallsberg</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/646,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>20:31</tid>
+		<spar>19b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>544</nr>
+		<datum>20101014</datum>
+		<fran>Malmö C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/544,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>20:39</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>967</nr>
+		<datum>20101014</datum>
+		<fran>Arlanda C</fran>
+		<till>Örebro C</till>
+		<url>http://xn--tg-yia.info/967,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>20:45</tid>
+		<spar>10</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>865</nr>
+		<datum>20101014</datum>
+		<fran>Uppsala C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/865,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>20:49</tid>
+		<spar>3</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>444</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/444,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>20:50</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>Veolia Transport</foretag>
+		<nr>7142</nr>
+		<datum>20101014</datum>
+		<fran>Svågertorp / Malmö Syd</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/7142,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>20:52</tid>
+		<spar>19b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>184</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/184,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>21:05</tid>
+		<spar>6</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>961</nr>
+		<datum>20101014</datum>
+		<fran>Arboga</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/961,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>21:09</tid>
+		<spar>19b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>246</nr>
+		<datum>20101014</datum>
+		<fran>Linköping C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/246,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>21:15</tid>
+		<spar>18b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>587</nr>
+		<datum>20101014</datum>
+		<fran>Sundsvall C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/587,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>21:30</tid>
+		<spar>7</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>546</nr>
+		<datum>20101014</datum>
+		<fran>Malmö C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/546,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>21:39</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>206</nr>
+		<datum>20101014</datum>
+		<fran>Svågertorp / Malmö Syd</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/206,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>21:45</tid>
+		<spar>19</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>446</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/446,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>21:50</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>648</nr>
+		<datum>20101014</datum>
+		<fran>Charlottenberg</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/648,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>22:06</tid>
+		<spar>17</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>39</nr>
+		<datum>20101014</datum>
+		<fran>Falun C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/39,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>22:16</tid>
+		<spar>5</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>85</nr>
+		<datum>20101014</datum>
+		<fran>Östersund C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/85,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>22:37</tid>
+		<spar>4</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>188</nr>
+		<datum>20101014</datum>
+		<fran>Göteborg C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/188,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>22:53</tid>
+		<spar>7</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>550</nr>
+		<datum>20101014</datum>
+		<fran>Malmö C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/550,20101014.xml</url>
+		<ankDatum>20101014</ankDatum>
+		<tid>23:39</tid>
+		<spar>17b</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>87</nr>
+		<datum>20101014</datum>
+		<fran>Storlien</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/87,20101014.xml</url>
+		<ankDatum>20101015</ankDatum>
+		<tid>03:37</tid>
+		<spar>10</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>7089</nr>
+		<datum>20101014</datum>
+		<fran>Boden C</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/7089,20101014.xml</url>
+		<ankDatum>20101015</ankDatum>
+		<tid>06:45</tid>
+		<spar>5</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+	<tag>
+		<foretag>SJ</foretag>
+		<nr>93</nr>
+		<datum>20101014</datum>
+		<fran>Riksgränsen</fran>
+		<till>Stockholm C</till>
+		<url>http://xn--tg-yia.info/93,20101014.xml</url>
+		<ankDatum>20101015</ankDatum>
+		<tid>09:15</tid>
+		<spar>4</spar>
+		<berTid></berTid>
+		<info></info>
+	</tag>
+</ankommande>
+</station>

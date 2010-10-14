@@ -1,0 +1,2799 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stationer>
+<station>
+	<namn>Södertälje Syd</namn>
+	<url>http://xn--tg-yia.info/Södertälje Syd.xml</url>
+<lat>59.1925</lat>
+<lon>17.6268</lon>
+</station>
+<station>
+	<namn>Stockholm C</namn>
+	<url>http://xn--tg-yia.info/Stockholm C.xml</url>
+<lat>59.3299</lat>
+<lon>18.0564</lon>
+</station>
+<station>
+	<namn>Krokom</namn>
+	<url>http://xn--tg-yia.info/Krokom.xml</url>
+<lat>63.326</lat>
+<lon>14.4483</lon>
+</station>
+<station>
+	<namn>Ånn</namn>
+	<url>http://xn--tg-yia.info/Ånn.xml</url>
+<lat>63.3213</lat>
+<lon>12.5388</lon>
+</station>
+<station>
+	<namn>Enafors</namn>
+	<url>http://xn--tg-yia.info/Enafors.xml</url>
+<lat>63.2899</lat>
+<lon>12.3372</lon>
+</station>
+<station>
+	<namn>Storlien</namn>
+	<url>http://xn--tg-yia.info/Storlien.xml</url>
+<lat>63.3162</lat>
+<lon>12.0991</lon>
+</station>
+<station>
+	<namn>Jörn</namn>
+	<url>http://xn--tg-yia.info/Jörn.xml</url>
+<lat>65.0544</lat>
+<lon>20.0303</lon>
+</station>
+<station>
+	<namn>Älvsbyn</namn>
+	<url>http://xn--tg-yia.info/Älvsbyn.xml</url>
+<lat>65.6783</lat>
+<lon>20.9944</lon>
+</station>
+<station>
+	<namn>Boden C</namn>
+	<url>http://xn--tg-yia.info/Boden C.xml</url>
+<lat>65.8287</lat>
+<lon>21.7077</lon>
+</station>
+<station>
+	<namn>Sunderby sjukhus</namn>
+	<url>http://xn--tg-yia.info/Sunderby sjukhus.xml</url>
+<lat>65.6751</lat>
+<lon>21.9312</lon>
+</station>
+<station>
+	<namn>Luleå C</namn>
+	<url>http://xn--tg-yia.info/Luleå C.xml</url>
+<lat>65.5842</lat>
+<lon>22.1652</lon>
+</station>
+<station>
+	<namn>Riksgränsen</namn>
+	<url>http://xn--tg-yia.info/Riksgränsen.xml</url>
+<lat>68.4258</lat>
+<lon>18.1273</lon>
+</station>
+<station>
+	<namn>Katterjåkk</namn>
+	<url>http://xn--tg-yia.info/Katterjåkk.xml</url>
+<lat>68.4194</lat>
+<lon>18.1632</lon>
+</station>
+<station>
+	<namn>Abisko turiststation</namn>
+	<url>http://xn--tg-yia.info/Abisko turiststation.xml</url>
+<lat>68.3569</lat>
+<lon>18.7861</lon>
+</station>
+<station>
+	<namn>Kiruna C</namn>
+	<url>http://xn--tg-yia.info/Kiruna C.xml</url>
+<lat>67.8546</lat>
+<lon>20.215</lon>
+</station>
+<station>
+	<namn>Abisko Östra</namn>
+	<url>http://xn--tg-yia.info/Abisko Östra.xml</url>
+<lat>68.3487</lat>
+<lon>18.8296</lon>
+</station>
+<station>
+	<namn>Björkliden</namn>
+	<url>http://xn--tg-yia.info/Björkliden.xml</url>
+<lat>68.4066</lat>
+<lon>18.6866</lon>
+</station>
+<station>
+	<namn>Lund C</namn>
+	<url>http://xn--tg-yia.info/Lund C.xml</url>
+<lat>55.7052</lat>
+<lon>13.1868</lon>
+</station>
+<station>
+	<namn>Vallåkra</namn>
+	<url>http://xn--tg-yia.info/Vallåkra.xml</url>
+<lat>55.9635</lat>
+<lon>12.8627</lon>
+</station>
+<station>
+	<namn>Malmö C</namn>
+	<url>http://xn--tg-yia.info/Malmö C.xml</url>
+<lat>55.6093</lat>
+<lon>13.0009</lon>
+</station>
+<station>
+	<namn>Köpingebro</namn>
+	<url>http://xn--tg-yia.info/Köpingebro.xml</url>
+<lat>55.457</lat>
+<lon>13.9353</lon>
+</station>
+<station>
+	<namn>Lunnarp</namn>
+	<url>http://xn--tg-yia.info/Lunnarp.xml</url>
+<lat>55.5412</lat>
+<lon>14.0419</lon>
+</station>
+<station>
+	<namn>Smedstorp</namn>
+	<url>http://xn--tg-yia.info/Smedstorp.xml</url>
+<lat>55.5496</lat>
+<lon>14.1176</lon>
+</station>
+<station>
+	<namn>Gärsnäs</namn>
+	<url>http://xn--tg-yia.info/Gärsnäs.xml</url>
+<lat>55.5464</lat>
+<lon>14.181</lon>
+</station>
+<station>
+	<namn>Simrishamn</namn>
+	<url>http://xn--tg-yia.info/Simrishamn.xml</url>
+<lat>55.554</lat>
+<lon>14.3519</lon>
+</station>
+<station>
+	<namn>Tomelilla</namn>
+	<url>http://xn--tg-yia.info/Tomelilla.xml</url>
+<lat>55.5466</lat>
+<lon>13.9489</lon>
+</station>
+<station>
+	<namn>Uppsala C</namn>
+	<url>http://xn--tg-yia.info/Uppsala C.xml</url>
+<lat>59.8587</lat>
+<lon>17.6463</lon>
+</station>
+<station>
+	<namn>Morgongåva</namn>
+	<url>http://xn--tg-yia.info/Morgongåva.xml</url>
+<lat>59.9325</lat>
+<lon>16.9607</lon>
+</station>
+<station>
+	<namn>Göteborg C</namn>
+	<url>http://xn--tg-yia.info/Göteborg C.xml</url>
+<lat>57.709</lat>
+<lon>11.9734</lon>
+</station>
+<station>
+	<namn>Örebro C</namn>
+	<url>http://xn--tg-yia.info/Örebro C.xml</url>
+<lat>59.2791</lat>
+<lon>15.2109</lon>
+</station>
+<station>
+	<namn>Frövi</namn>
+	<url>http://xn--tg-yia.info/Frövi.xml</url>
+<lat>59.4677</lat>
+<lon>15.3628</lon>
+</station>
+<station>
+	<namn>Lindesberg</namn>
+	<url>http://xn--tg-yia.info/Lindesberg.xml</url>
+<lat>59.5944</lat>
+<lon>15.2283</lon>
+</station>
+<station>
+	<namn>Storå</namn>
+	<url>http://xn--tg-yia.info/Storå.xml</url>
+<lat>59.7135</lat>
+<lon>15.1424</lon>
+</station>
+<station>
+	<namn>Kopparberg</namn>
+	<url>http://xn--tg-yia.info/Kopparberg.xml</url>
+<lat>59.8729</lat>
+<lon>14.9862</lon>
+</station>
+<station>
+	<namn>Ställdalen</namn>
+	<url>http://xn--tg-yia.info/Ställdalen.xml</url>
+<lat>59.9337</lat>
+<lon>14.9427</lon>
+</station>
+<station>
+	<namn>Örebro Södra</namn>
+	<url>http://xn--tg-yia.info/Örebro Södra.xml</url>
+<lat>59.2703</lat>
+<lon>15.2027</lon>
+</station>
+<station>
+	<namn>Kumla</namn>
+	<url>http://xn--tg-yia.info/Kumla.xml</url>
+<lat>59.1267</lat>
+<lon>15.1403</lon>
+</station>
+<station>
+	<namn>Hallsberg</namn>
+	<url>http://xn--tg-yia.info/Hallsberg.xml</url>
+<lat>59.0671</lat>
+<lon>15.1103</lon>
+</station>
+<station>
+	<namn>Motala C</namn>
+	<url>http://xn--tg-yia.info/Motala C.xml</url>
+<lat>58.538</lat>
+<lon>15.0494</lon>
+</station>
+<station>
+	<namn>Mjölby</namn>
+	<url>http://xn--tg-yia.info/Mjölby.xml</url>
+<lat>58.3228</lat>
+<lon>15.1317</lon>
+</station>
+<station>
+	<namn>Grängesberg</namn>
+	<url>http://xn--tg-yia.info/Grängesberg.xml</url>
+<lat>60.0763</lat>
+<lon>15.0052</lon>
+</station>
+<station>
+	<namn>Vattholma</namn>
+	<url>http://xn--tg-yia.info/Vattholma.xml</url>
+<lat>60.0257</lat>
+<lon>17.7311</lon>
+</station>
+<station>
+	<namn>Skyttorp</namn>
+	<url>http://xn--tg-yia.info/Skyttorp.xml</url>
+<lat>60.0797</lat>
+<lon>17.737</lon>
+</station>
+<station>
+	<namn>Mehedeby</namn>
+	<url>http://xn--tg-yia.info/Mehedeby.xml</url>
+<lat>60.4501</lat>
+<lon>17.4004</lon>
+</station>
+<station>
+	<namn>Marma</namn>
+	<url>http://xn--tg-yia.info/Marma.xml</url>
+<lat>60.4913</lat>
+<lon>17.4286</lon>
+</station>
+<station>
+	<namn>Älvkarleby</namn>
+	<url>http://xn--tg-yia.info/Älvkarleby.xml</url>
+<lat>60.5553</lat>
+<lon>17.4281</lon>
+</station>
+<station>
+	<namn>Skutskär</namn>
+	<url>http://xn--tg-yia.info/Skutskär.xml</url>
+<lat>60.6258</lat>
+<lon>17.4046</lon>
+</station>
+<station>
+	<namn>Ås</namn>
+	<url>http://xn--tg-yia.info/Ås.xml</url>
+<lat>59.8575</lat>
+<lon>12.3424</lon>
+</station>
+<station>
+	<namn>Lerot</namn>
+	<url>http://xn--tg-yia.info/Lerot.xml</url>
+<lat>59.8263</lat>
+<lon>12.3629</lon>
+</station>
+<station>
+	<namn>Ottebol</namn>
+	<url>http://xn--tg-yia.info/Ottebol.xml</url>
+<lat>59.696</lat>
+<lon>12.4699</lon>
+</station>
+<station>
+	<namn>Brunsberg</namn>
+	<url>http://xn--tg-yia.info/Brunsberg.xml</url>
+<lat>59.6172</lat>
+<lon>12.9627</lon>
+</station>
+<station>
+	<namn>Lene</namn>
+	<url>http://xn--tg-yia.info/Lene.xml</url>
+<lat>59.544</lat>
+<lon>13.1229</lon>
+</station>
+<station>
+	<namn>Fagerås</namn>
+	<url>http://xn--tg-yia.info/Fagerås.xml</url>
+<lat>59.5193</lat>
+<lon>13.2202</lon>
+</station>
+<station>
+	<namn>Kristinehamn</namn>
+	<url>http://xn--tg-yia.info/Kristinehamn.xml</url>
+<lat>59.3166</lat>
+<lon>14.1087</lon>
+</station>
+<station>
+	<namn>Lysvik</namn>
+	<url>http://xn--tg-yia.info/Lysvik.xml</url>
+<lat>60.0161</lat>
+<lon>13.1378</lon>
+</station>
+<station>
+	<namn>Västra Ämtervik</namn>
+	<url>http://xn--tg-yia.info/Västra Ämtervik.xml</url>
+<lat>59.7284</lat>
+<lon>13.1472</lon>
+</station>
+<station>
+	<namn>Bäckebron</namn>
+	<url>http://xn--tg-yia.info/Bäckebron.xml</url>
+<lat>59.6614</lat>
+<lon>13.1662</lon>
+</station>
+<station>
+	<namn>Frykåsen</namn>
+	<url>http://xn--tg-yia.info/Frykåsen.xml</url>
+<lat>59.6261</lat>
+<lon>13.1851</lon>
+</station>
+<station>
+	<namn>Tolita</namn>
+	<url>http://xn--tg-yia.info/Tolita.xml</url>
+<lat>59.5778</lat>
+<lon>13.2399</lon>
+</station>
+<station>
+	<namn>Karlstad C</namn>
+	<url>http://xn--tg-yia.info/Karlstad C.xml</url>
+<lat>59.3777</lat>
+<lon>13.4993</lon>
+</station>
+<station>
+	<namn>Välsviken</namn>
+	<url>http://xn--tg-yia.info/Välsviken.xml</url>
+<lat>59.3913</lat>
+<lon>13.5829</lon>
+</station>
+<station>
+	<namn>Väse</namn>
+	<url>http://xn--tg-yia.info/Väse.xml</url>
+<lat>59.3816</lat>
+<lon>13.8536</lon>
+</station>
+<station>
+	<namn>Åmål</namn>
+	<url>http://xn--tg-yia.info/Åmål.xml</url>
+<lat>59.0465</lat>
+<lon>12.6981</lon>
+</station>
+<station>
+	<namn>Sala</namn>
+	<url>http://xn--tg-yia.info/Sala.xml</url>
+<lat>59.9251</lat>
+<lon>16.6065</lon>
+</station>
+<station>
+	<namn>Avesta Krylbo</namn>
+	<url>http://xn--tg-yia.info/Avesta Krylbo.xml</url>
+<lat>60.1295</lat>
+<lon>16.2162</lon>
+</station>
+<station>
+	<namn>Borlänge C</namn>
+	<url>http://xn--tg-yia.info/Borlänge C.xml</url>
+<lat>60.4834</lat>
+<lon>15.4262</lon>
+</station>
+<station>
+	<namn>Falun C</namn>
+	<url>http://xn--tg-yia.info/Falun C.xml</url>
+<lat>60.6031</lat>
+<lon>15.6424</lon>
+</station>
+<station>
+	<namn>Säter</namn>
+	<url>http://xn--tg-yia.info/Säter.xml</url>
+<lat>60.3466</lat>
+<lon>15.7571</lon>
+</station>
+<station>
+	<namn>Hedemora</namn>
+	<url>http://xn--tg-yia.info/Hedemora.xml</url>
+<lat>60.274</lat>
+<lon>15.9801</lon>
+</station>
+<station>
+	<namn>Arlanda C</namn>
+	<url>http://xn--tg-yia.info/Arlanda C.xml</url>
+<lat>59.6496</lat>
+<lon>17.9292</lon>
+</station>
+<station>
+	<namn>Djurås</namn>
+	<url>http://xn--tg-yia.info/Djurås.xml</url>
+<lat>60.5602</lat>
+<lon>15.1385</lon>
+</station>
+<station>
+	<namn>Gagnef</namn>
+	<url>http://xn--tg-yia.info/Gagnef.xml</url>
+<lat>60.5989</lat>
+<lon>15.0812</lon>
+</station>
+<station>
+	<namn>Insjön</namn>
+	<url>http://xn--tg-yia.info/Insjön.xml</url>
+<lat>60.6753</lat>
+<lon>15.0945</lon>
+</station>
+<station>
+	<namn>Leksand</namn>
+	<url>http://xn--tg-yia.info/Leksand.xml</url>
+<lat>60.7337</lat>
+<lon>15.0033</lon>
+</station>
+<station>
+	<namn>Tällberg</namn>
+	<url>http://xn--tg-yia.info/Tällberg.xml</url>
+<lat>60.8181</lat>
+<lon>15.0179</lon>
+</station>
+<station>
+	<namn>Rättvik</namn>
+	<url>http://xn--tg-yia.info/Rättvik.xml</url>
+<lat>60.8852</lat>
+<lon>15.1146</lon>
+</station>
+<station>
+	<namn>Mora</namn>
+	<url>http://xn--tg-yia.info/Mora.xml</url>
+<lat>61.0089</lat>
+<lon>14.5587</lon>
+</station>
+<station>
+	<namn>Herrljunga</namn>
+	<url>http://xn--tg-yia.info/Herrljunga.xml</url>
+<lat>58.0793</lat>
+<lon>13.0216</lon>
+</station>
+<station>
+	<namn>Skövde C</namn>
+	<url>http://xn--tg-yia.info/Skövde C.xml</url>
+<lat>58.3892</lat>
+<lon>13.852</lon>
+</station>
+<station>
+	<namn>Västerås C</namn>
+	<url>http://xn--tg-yia.info/Västerås C.xml</url>
+<lat>59.607</lat>
+<lon>16.5515</lon>
+</station>
+<station>
+	<namn>Gävle C</namn>
+	<url>http://xn--tg-yia.info/Gävle C.xml</url>
+<lat>60.676</lat>
+<lon>17.1509</lon>
+</station>
+<station>
+	<namn>Bollnäs</namn>
+	<url>http://xn--tg-yia.info/Bollnäs.xml</url>
+<lat>61.3502</lat>
+<lon>16.3917</lon>
+</station>
+<station>
+	<namn>Ljusdal</namn>
+	<url>http://xn--tg-yia.info/Ljusdal.xml</url>
+<lat>61.8269</lat>
+<lon>16.0968</lon>
+</station>
+<station>
+	<namn>Ånge</namn>
+	<url>http://xn--tg-yia.info/Ånge.xml</url>
+<lat>62.5233</lat>
+<lon>15.658</lon>
+</station>
+<station>
+	<namn>Bräcke</namn>
+	<url>http://xn--tg-yia.info/Bräcke.xml</url>
+<lat>62.7501</lat>
+<lon>15.4171</lon>
+</station>
+<station>
+	<namn>Östersund C</namn>
+	<url>http://xn--tg-yia.info/Östersund C.xml</url>
+<lat>63.1705</lat>
+<lon>14.6377</lon>
+</station>
+<station>
+	<namn>Duved</namn>
+	<url>http://xn--tg-yia.info/Duved.xml</url>
+<lat>63.39</lat>
+<lon>12.9175</lon>
+</station>
+<station>
+	<namn>Åre</namn>
+	<url>http://xn--tg-yia.info/Åre.xml</url>
+<lat>63.3994</lat>
+<lon>13.0744</lon>
+</station>
+<station>
+	<namn>Undersåker</namn>
+	<url>http://xn--tg-yia.info/Undersåker.xml</url>
+<lat>63.3151</lat>
+<lon>13.238</lon>
+</station>
+<station>
+	<namn>Järpen</namn>
+	<url>http://xn--tg-yia.info/Järpen.xml</url>
+<lat>63.3426</lat>
+<lon>13.4718</lon>
+</station>
+<station>
+	<namn>Sundsvall C</namn>
+	<url>http://xn--tg-yia.info/Sundsvall C.xml</url>
+<lat>62.3866</lat>
+<lon>17.3154</lon>
+</station>
+<station>
+	<namn>Hudiksvall</namn>
+	<url>http://xn--tg-yia.info/Hudiksvall.xml</url>
+<lat>61.7244</lat>
+<lon>17.109</lon>
+</station>
+<station>
+	<namn>Långsele</namn>
+	<url>http://xn--tg-yia.info/Långsele.xml</url>
+<lat>63.1765</lat>
+<lon>17.067</lon>
+</station>
+<station>
+	<namn>Mellansel</namn>
+	<url>http://xn--tg-yia.info/Mellansel.xml</url>
+<lat>63.4285</lat>
+<lon>18.3076</lon>
+</station>
+<station>
+	<namn>Vännäs</namn>
+	<url>http://xn--tg-yia.info/Vännäs.xml</url>
+<lat>63.9086</lat>
+<lon>19.7489</lon>
+</station>
+<station>
+	<namn>Örnsköldsvik C</namn>
+	<url>http://xn--tg-yia.info/Örnsköldsvik C.xml</url>
+<lat>63.2899</lat>
+<lon>18.6205</lon>
+</station>
+<station>
+	<namn>Umeå Östra</namn>
+	<url>http://xn--tg-yia.info/Umeå Östra.xml</url>
+<lat>63.838</lat>
+<lon>20.248</lon>
+</station>
+<station>
+	<namn>Vindeln</namn>
+	<url>http://xn--tg-yia.info/Vindeln.xml</url>
+<lat>64.2029</lat>
+<lon>19.7126</lon>
+</station>
+<station>
+	<namn>Bastuträsk</namn>
+	<url>http://xn--tg-yia.info/Bastuträsk.xml</url>
+<lat>64.7906</lat>
+<lon>20.0401</lon>
+</station>
+<station>
+	<namn>Gällivare</namn>
+	<url>http://xn--tg-yia.info/Gällivare.xml</url>
+<lat>67.1334</lat>
+<lon>20.6507</lon>
+</station>
+<station>
+	<namn>Murjek</namn>
+	<url>http://xn--tg-yia.info/Murjek.xml</url>
+<lat>66.4841</lat>
+<lon>20.8805</lon>
+</station>
+<station>
+	<namn>Nattavaara</namn>
+	<url>http://xn--tg-yia.info/Nattavaara.xml</url>
+<lat>66.754</lat>
+<lon>20.9505</lon>
+</station>
+<station>
+	<namn>Låktatjåkka</namn>
+	<url>http://xn--tg-yia.info/Låktatjåkka.xml</url>
+<lat>68.4234</lat>
+<lon>18.3264</lon>
+</station>
+<station>
+	<namn>Vassijaure</namn>
+	<url>http://xn--tg-yia.info/Vassijaure.xml</url>
+<lat>68.4289</lat>
+<lon>18.2604</lon>
+</station>
+<station>
+	<namn>Björnfjell</namn>
+	<url>http://xn--tg-yia.info/Björnfjell.xml</url>
+<lat>68.444</lat>
+<lon>18.0458</lon>
+</station>
+<station>
+	<namn>Katrineholm C</namn>
+	<url>http://xn--tg-yia.info/Katrineholm C.xml</url>
+<lat>58.9967</lat>
+<lon>16.2092</lon>
+</station>
+<station>
+	<namn>Falköping C</namn>
+	<url>http://xn--tg-yia.info/Falköping C.xml</url>
+<lat>58.1757</lat>
+<lon>13.5516</lon>
+</station>
+<station>
+	<namn>Alingsås</namn>
+	<url>http://xn--tg-yia.info/Alingsås.xml</url>
+<lat>57.9268</lat>
+<lon>12.5333</lon>
+</station>
+<station>
+	<namn>Stenstorp</namn>
+	<url>http://xn--tg-yia.info/Stenstorp.xml</url>
+<lat>58.2738</lat>
+<lon>13.7148</lon>
+</station>
+<station>
+	<namn>Floby</namn>
+	<url>http://xn--tg-yia.info/Floby.xml</url>
+<lat>58.1395</lat>
+<lon>13.3375</lon>
+</station>
+<station>
+	<namn>Vårgårda</namn>
+	<url>http://xn--tg-yia.info/Vårgårda.xml</url>
+<lat>58.0313</lat>
+<lon>12.8102</lon>
+</station>
+<station>
+	<namn>Töreboda</namn>
+	<url>http://xn--tg-yia.info/Töreboda.xml</url>
+<lat>58.706</lat>
+<lon>14.1284</lon>
+</station>
+<station>
+	<namn>Laxå</namn>
+	<url>http://xn--tg-yia.info/Laxå.xml</url>
+<lat>58.9894</lat>
+<lon>14.6166</lon>
+</station>
+<station>
+	<namn>Arboga</namn>
+	<url>http://xn--tg-yia.info/Arboga.xml</url>
+<lat>59.3971</lat>
+<lon>15.8418</lon>
+</station>
+<station>
+	<namn>Köping</namn>
+	<url>http://xn--tg-yia.info/Köping.xml</url>
+<lat>59.5067</lat>
+<lon>16.0045</lon>
+</station>
+<station>
+	<namn>Enköping</namn>
+	<url>http://xn--tg-yia.info/Enköping.xml</url>
+<lat>59.6448</lat>
+<lon>17.0881</lon>
+</station>
+<station>
+	<namn>Bålsta</namn>
+	<url>http://xn--tg-yia.info/Bålsta.xml</url>
+<lat>59.5694</lat>
+<lon>17.5312</lon>
+</station>
+<station>
+	<namn>Sundbyberg</namn>
+	<url>http://xn--tg-yia.info/Sundbyberg.xml</url>
+<lat>59.3611</lat>
+<lon>17.9709</lon>
+</station>
+<station>
+	<namn>Norrköping C</namn>
+	<url>http://xn--tg-yia.info/Norrköping C.xml</url>
+<lat>58.5969</lat>
+<lon>16.1831</lon>
+</station>
+<station>
+	<namn>Linköping C</namn>
+	<url>http://xn--tg-yia.info/Linköping C.xml</url>
+<lat>58.416</lat>
+<lon>15.627</lon>
+</station>
+<station>
+	<namn>Nässjö C</namn>
+	<url>http://xn--tg-yia.info/Nässjö C.xml</url>
+<lat>57.6524</lat>
+<lon>14.6937</lon>
+</station>
+<station>
+	<namn>Sävsjö</namn>
+	<url>http://xn--tg-yia.info/Sävsjö.xml</url>
+<lat>57.4029</lat>
+<lon>14.6653</lon>
+</station>
+<station>
+	<namn>Alvesta</namn>
+	<url>http://xn--tg-yia.info/Alvesta.xml</url>
+<lat>56.8989</lat>
+<lon>14.5576</lon>
+</station>
+<station>
+	<namn>Hässleholm</namn>
+	<url>http://xn--tg-yia.info/Hässleholm.xml</url>
+<lat>56.1578</lat>
+<lon>13.7629</lon>
+</station>
+<station>
+	<namn>Svågertorp / Malmö Syd</namn>
+	<url>http://xn--tg-yia.info/Svågertorp / Malmö Syd.xml</url>
+<lat>55.5473</lat>
+<lon>12.9905</lon>
+</station>
+<station>
+	<namn>Nyköping C</namn>
+	<url>http://xn--tg-yia.info/Nyköping C.xml</url>
+<lat>58.7559</lat>
+<lon>16.9933</lon>
+</station>
+<station>
+	<namn>Kolmården</namn>
+	<url>http://xn--tg-yia.info/Kolmården.xml</url>
+<lat>58.6756</lat>
+<lon>16.3624</lon>
+</station>
+<station>
+	<namn>Vagnhärad</namn>
+	<url>http://xn--tg-yia.info/Vagnhärad.xml</url>
+<lat>58.9454</lat>
+<lon>17.4967</lon>
+</station>
+<station>
+	<namn>Flemingsberg</namn>
+	<url>http://xn--tg-yia.info/Flemingsberg.xml</url>
+<lat>59.218</lat>
+<lon>17.9457</lon>
+</station>
+<station>
+	<namn>Tierp</namn>
+	<url>http://xn--tg-yia.info/Tierp.xml</url>
+<lat>60.3454</lat>
+<lon>17.5141</lon>
+</station>
+<station>
+	<namn>Sandviken</namn>
+	<url>http://xn--tg-yia.info/Sandviken.xml</url>
+<lat>60.6139</lat>
+<lon>16.7781</lon>
+</station>
+<station>
+	<namn>Ockelbo</namn>
+	<url>http://xn--tg-yia.info/Ockelbo.xml</url>
+<lat>60.8911</lat>
+<lon>16.7209</lon>
+</station>
+<station>
+	<namn>Järvsö</namn>
+	<url>http://xn--tg-yia.info/Järvsö.xml</url>
+<lat>61.7158</lat>
+<lon>16.1721</lon>
+</station>
+<station>
+	<namn>Lessebo</namn>
+	<url>http://xn--tg-yia.info/Lessebo.xml</url>
+<lat>56.7496</lat>
+<lon>15.2589</lon>
+</station>
+<station>
+	<namn>Emmaboda</namn>
+	<url>http://xn--tg-yia.info/Emmaboda.xml</url>
+<lat>56.6298</lat>
+<lon>15.535</lon>
+</station>
+<station>
+	<namn>Nybro</namn>
+	<url>http://xn--tg-yia.info/Nybro.xml</url>
+<lat>56.7423</lat>
+<lon>15.9087</lon>
+</station>
+<station>
+	<namn>Kalmar C</namn>
+	<url>http://xn--tg-yia.info/Kalmar C.xml</url>
+<lat>56.6615</lat>
+<lon>16.3594</lon>
+</station>
+<station>
+	<namn>Mölnlycke</namn>
+	<url>http://xn--tg-yia.info/Mölnlycke.xml</url>
+<lat>57.6579</lat>
+<lon>12.1224</lon>
+</station>
+<station>
+	<namn>Borås C</namn>
+	<url>http://xn--tg-yia.info/Borås C.xml</url>
+<lat>57.7207</lat>
+<lon>12.9315</lon>
+</station>
+<station>
+	<namn>Limmared</namn>
+	<url>http://xn--tg-yia.info/Limmared.xml</url>
+<lat>57.5367</lat>
+<lon>13.3525</lon>
+</station>
+<station>
+	<namn>Hestra</namn>
+	<url>http://xn--tg-yia.info/Hestra.xml</url>
+<lat>57.4436</lat>
+<lon>13.5955</lon>
+</station>
+<station>
+	<namn>Gnosjö</namn>
+	<url>http://xn--tg-yia.info/Gnosjö.xml</url>
+<lat>57.3582</lat>
+<lon>13.7353</lon>
+</station>
+<station>
+	<namn>Värnamo</namn>
+	<url>http://xn--tg-yia.info/Värnamo.xml</url>
+<lat>57.1867</lat>
+<lon>14.0355</lon>
+</station>
+<station>
+	<namn>Växjö</namn>
+	<url>http://xn--tg-yia.info/Växjö.xml</url>
+<lat>56.8765</lat>
+<lon>14.8078</lon>
+</station>
+<station>
+	<namn>Östersund Västra</namn>
+	<url>http://xn--tg-yia.info/Östersund Västra.xml</url>
+<lat>63.1786</lat>
+<lon>14.6312</lon>
+</station>
+<station>
+	<namn>Ed</namn>
+	<url>http://xn--tg-yia.info/Ed.xml</url>
+<lat>58.9134</lat>
+<lon>11.9329</lon>
+</station>
+<station>
+	<namn>Öxnered</namn>
+	<url>http://xn--tg-yia.info/Öxnered.xml</url>
+<lat>58.3592</lat>
+<lon>12.2737</lon>
+</station>
+<station>
+	<namn>Trollhättan C</namn>
+	<url>http://xn--tg-yia.info/Trollhättan C.xml</url>
+<lat>58.2876</lat>
+<lon>12.2993</lon>
+</station>
+<station>
+	<namn>Mölndal</namn>
+	<url>http://xn--tg-yia.info/Mölndal.xml</url>
+<lat>57.656</lat>
+<lon>12.0183</lon>
+</station>
+<station>
+	<namn>Kungsbacka</namn>
+	<url>http://xn--tg-yia.info/Kungsbacka.xml</url>
+<lat>57.4897</lat>
+<lon>12.0798</lon>
+</station>
+<station>
+	<namn>Varberg</namn>
+	<url>http://xn--tg-yia.info/Varberg.xml</url>
+<lat>57.1094</lat>
+<lon>12.2481</lon>
+</station>
+<station>
+	<namn>Falkenberg</namn>
+	<url>http://xn--tg-yia.info/Falkenberg.xml</url>
+<lat>56.9017</lat>
+<lon>12.4875</lon>
+</station>
+<station>
+	<namn>Halmstad C</namn>
+	<url>http://xn--tg-yia.info/Halmstad C.xml</url>
+<lat>56.6692</lat>
+<lon>12.8643</lon>
+</station>
+<station>
+	<namn>Degerfors</namn>
+	<url>http://xn--tg-yia.info/Degerfors.xml</url>
+<lat>59.2291</lat>
+<lon>14.44</lon>
+</station>
+<station>
+	<namn>Kil</namn>
+	<url>http://xn--tg-yia.info/Kil.xml</url>
+<lat>59.5052</lat>
+<lon>13.3163</lon>
+</station>
+<station>
+	<namn>Arvika</namn>
+	<url>http://xn--tg-yia.info/Arvika.xml</url>
+<lat>59.6536</lat>
+<lon>12.5912</lon>
+</station>
+<station>
+	<namn>Vara</namn>
+	<url>http://xn--tg-yia.info/Vara.xml</url>
+<lat>58.2607</lat>
+<lon>12.952</lon>
+</station>
+<station>
+	<namn>Vänersborg C</namn>
+	<url>http://xn--tg-yia.info/Vänersborg C.xml</url>
+<lat>58.3776</lat>
+<lon>12.3174</lon>
+</station>
+<station>
+	<namn>Uddevalla C</namn>
+	<url>http://xn--tg-yia.info/Uddevalla C.xml</url>
+<lat>58.3543</lat>
+<lon>11.9231</lon>
+</station>
+<station>
+	<namn>Jönköping C</namn>
+	<url>http://xn--tg-yia.info/Jönköping C.xml</url>
+<lat>57.7847</lat>
+<lon>14.1633</lon>
+</station>
+<station>
+	<namn>Tranås</namn>
+	<url>http://xn--tg-yia.info/Tranås.xml</url>
+<lat>58.038</lat>
+<lon>14.975</lon>
+</station>
+<station>
+	<namn>Älmhult</namn>
+	<url>http://xn--tg-yia.info/Älmhult.xml</url>
+<lat>56.5513</lat>
+<lon>14.1367</lon>
+</station>
+<station>
+	<namn>Söderhamn</namn>
+	<url>http://xn--tg-yia.info/Söderhamn.xml</url>
+<lat>61.3002</lat>
+<lon>17.0356</lon>
+</station>
+<station>
+	<namn>Helsingborg C</namn>
+	<url>http://xn--tg-yia.info/Helsingborg C.xml</url>
+<lat>56.0445</lat>
+<lon>12.6941</lon>
+</station>
+<station>
+	<namn>Gnesta</namn>
+	<url>http://xn--tg-yia.info/Gnesta.xml</url>
+<lat>59.0487</lat>
+<lon>17.3117</lon>
+</station>
+<station>
+	<namn>Flen</namn>
+	<url>http://xn--tg-yia.info/Flen.xml</url>
+<lat>59.0577</lat>
+<lon>16.5891</lon>
+</station>
+<station>
+	<namn>Vingåker</namn>
+	<url>http://xn--tg-yia.info/Vingåker.xml</url>
+<lat>59.0421</lat>
+<lon>15.8747</lon>
+</station>
+<station>
+	<namn>Charlottenberg</namn>
+	<url>http://xn--tg-yia.info/Charlottenberg.xml</url>
+<lat>59.8841</lat>
+<lon>12.2979</lon>
+</station>
+<station>
+	<namn>Grums</namn>
+	<url>http://xn--tg-yia.info/Grums.xml</url>
+<lat>59.3525</lat>
+<lon>13.1135</lon>
+</station>
+<station>
+	<namn>Säffle</namn>
+	<url>http://xn--tg-yia.info/Säffle.xml</url>
+<lat>59.1325</lat>
+<lon>12.9164</lon>
+</station>
+<station>
+	<namn>Mellerud</namn>
+	<url>http://xn--tg-yia.info/Mellerud.xml</url>
+<lat>58.702</lat>
+<lon>12.4646</lon>
+</station>
+<station>
+	<namn>Märsta</namn>
+	<url>http://xn--tg-yia.info/Märsta.xml</url>
+<lat>59.6282</lat>
+<lon>17.8616</lon>
+</station>
+<station>
+	<namn>Knivsta</namn>
+	<url>http://xn--tg-yia.info/Knivsta.xml</url>
+<lat>59.7257</lat>
+<lon>17.7869</lon>
+</station>
+<station>
+	<namn>Eskilstuna C</namn>
+	<url>http://xn--tg-yia.info/Eskilstuna C.xml</url>
+<lat>59.3692</lat>
+<lon>16.506</lon>
+</station>
+<station>
+	<namn>Strängnäs</namn>
+	<url>http://xn--tg-yia.info/Strängnäs.xml</url>
+<lat>59.371</lat>
+<lon>17.0298</lon>
+</station>
+<station>
+	<namn>Läggesta</namn>
+	<url>http://xn--tg-yia.info/Läggesta.xml</url>
+<lat>59.2461</lat>
+<lon>17.174</lon>
+</station>
+<station>
+	<namn>Nykvarn</namn>
+	<url>http://xn--tg-yia.info/Nykvarn.xml</url>
+<lat>59.1793</lat>
+<lon>17.4309</lon>
+</station>
+<station>
+	<namn>Kungsör</namn>
+	<url>http://xn--tg-yia.info/Kungsör.xml</url>
+<lat>59.4276</lat>
+<lon>16.1005</lon>
+</station>
+<station>
+	<namn>Karlskrona C</namn>
+	<url>http://xn--tg-yia.info/Karlskrona C.xml</url>
+<lat>56.1664</lat>
+<lon>15.5853</lon>
+</station>
+<station>
+	<namn>Mörrum</namn>
+	<url>http://xn--tg-yia.info/Mörrum.xml</url>
+<lat>56.1869</lat>
+<lon>14.7446</lon>
+</station>
+<station>
+	<namn>Karlshamn</namn>
+	<url>http://xn--tg-yia.info/Karlshamn.xml</url>
+<lat>56.1768</lat>
+<lon>14.8681</lon>
+</station>
+<station>
+	<namn>Bräkne-Hoby</namn>
+	<url>http://xn--tg-yia.info/Bräkne-Hoby.xml</url>
+<lat>56.2308</lat>
+<lon>15.1159</lon>
+</station>
+<station>
+	<namn>Ronneby</namn>
+	<url>http://xn--tg-yia.info/Ronneby.xml</url>
+<lat>56.207</lat>
+<lon>15.2829</lon>
+</station>
+<station>
+	<namn>Bergåsa</namn>
+	<url>http://xn--tg-yia.info/Bergåsa.xml</url>
+<lat>56.1824</lat>
+<lon>15.6009</lon>
+</station>
+<station>
+	<namn>Hovmantorp</namn>
+	<url>http://xn--tg-yia.info/Hovmantorp.xml</url>
+<lat>56.7859</lat>
+<lon>15.1405</lon>
+</station>
+<station>
+	<namn>Ängelholm</namn>
+	<url>http://xn--tg-yia.info/Ängelholm.xml</url>
+<lat>56.2453</lat>
+<lon>12.854</lon>
+</station>
+<station>
+	<namn>Båstad</namn>
+	<url>http://xn--tg-yia.info/Båstad.xml</url>
+<lat>56.4251</lat>
+<lon>12.8702</lon>
+</station>
+<station>
+	<namn>Laholm</namn>
+	<url>http://xn--tg-yia.info/Laholm.xml</url>
+<lat>56.502</lat>
+<lon>12.9988</lon>
+</station>
+<station>
+	<namn>Kristianstad C</namn>
+	<url>http://xn--tg-yia.info/Kristianstad C.xml</url>
+<lat>56.0315</lat>
+<lon>14.1513</lon>
+</station>
+<station>
+	<namn>Bromölla</namn>
+	<url>http://xn--tg-yia.info/Bromölla.xml</url>
+<lat>56.0672</lat>
+<lon>14.4794</lon>
+</station>
+<station>
+	<namn>Sölvesborg</namn>
+	<url>http://xn--tg-yia.info/Sölvesborg.xml</url>
+<lat>56.0496</lat>
+<lon>14.5834</lon>
+</station>
+<station>
+	<namn>Eslöv</namn>
+	<url>http://xn--tg-yia.info/Eslöv.xml</url>
+<lat>55.8374</lat>
+<lon>13.305</lon>
+</station>
+<station>
+	<namn>Höör</namn>
+	<url>http://xn--tg-yia.info/Höör.xml</url>
+<lat>55.9371</lat>
+<lon>13.5412</lon>
+</station>
+<station>
+	<namn>Osby</namn>
+	<url>http://xn--tg-yia.info/Osby.xml</url>
+<lat>56.3799</lat>
+<lon>13.9944</lon>
+</station>
+<station>
+	<namn>Landskrona</namn>
+	<url>http://xn--tg-yia.info/Landskrona.xml</url>
+<lat>55.8792</lat>
+<lon>12.8577</lon>
+</station>
+<station>
+	<namn>Kävlinge</namn>
+	<url>http://xn--tg-yia.info/Kävlinge.xml</url>
+<lat>55.7946</lat>
+<lon>13.1116</lon>
+</station>
+<station>
+	<namn>Stångby</namn>
+	<url>http://xn--tg-yia.info/Stångby.xml</url>
+<lat>55.7532</lat>
+<lon>13.2022</lon>
+</station>
+<station>
+	<namn>Örtofta</namn>
+	<url>http://xn--tg-yia.info/Örtofta.xml</url>
+<lat>55.7789</lat>
+<lon>13.2441</lon>
+</station>
+<station>
+	<namn>Stehag</namn>
+	<url>http://xn--tg-yia.info/Stehag.xml</url>
+<lat>55.9008</lat>
+<lon>13.3952</lon>
+</station>
+<station>
+	<namn>Hjärup</namn>
+	<url>http://xn--tg-yia.info/Hjärup.xml</url>
+<lat>55.6741</lat>
+<lon>13.1367</lon>
+</station>
+<station>
+	<namn>Åkarp</namn>
+	<url>http://xn--tg-yia.info/Åkarp.xml</url>
+<lat>55.6574</lat>
+<lon>13.1082</lon>
+</station>
+<station>
+	<namn>Burlöv</namn>
+	<url>http://xn--tg-yia.info/Burlöv.xml</url>
+<lat>55.6408</lat>
+<lon>13.08</lon>
+</station>
+<station>
+	<namn>Gantofta</namn>
+	<url>http://xn--tg-yia.info/Gantofta.xml</url>
+<lat>55.9907</lat>
+<lon>12.8062</lon>
+</station>
+<station>
+	<namn>Ramlösa</namn>
+	<url>http://xn--tg-yia.info/Ramlösa.xml</url>
+<lat>56.0207</lat>
+<lon>12.7505</lon>
+</station>
+<station>
+	<namn>Gunnesbo</namn>
+	<url>http://xn--tg-yia.info/Gunnesbo.xml</url>
+<lat>55.7264</lat>
+<lon>13.1682</lon>
+</station>
+<station>
+	<namn>Teckomatorp</namn>
+	<url>http://xn--tg-yia.info/Teckomatorp.xml</url>
+<lat>55.8708</lat>
+<lon>13.0847</lon>
+</station>
+<station>
+	<namn>Billeberga</namn>
+	<url>http://xn--tg-yia.info/Billeberga.xml</url>
+<lat>55.884</lat>
+<lon>12.9958</lon>
+</station>
+<station>
+	<namn>Tågarp</namn>
+	<url>http://xn--tg-yia.info/Tågarp.xml</url>
+<lat>55.9265</lat>
+<lon>12.9515</lon>
+</station>
+<station>
+	<namn>Oxie</namn>
+	<url>http://xn--tg-yia.info/Oxie.xml</url>
+<lat>55.5418</lat>
+<lon>13.0958</lon>
+</station>
+<station>
+	<namn>Persborg</namn>
+	<url>http://xn--tg-yia.info/Persborg.xml</url>
+<lat>55.5805</lat>
+<lon>13.0294</lon>
+</station>
+<station>
+	<namn>Svarte</namn>
+	<url>http://xn--tg-yia.info/Svarte.xml</url>
+<lat>55.4285</lat>
+<lon>13.7171</lon>
+</station>
+<station>
+	<namn>Ystad</namn>
+	<url>http://xn--tg-yia.info/Ystad.xml</url>
+<lat>55.4274</lat>
+<lon>13.8254</lon>
+</station>
+<station>
+	<namn>Rydsgård</namn>
+	<url>http://xn--tg-yia.info/Rydsgård.xml</url>
+<lat>55.4744</lat>
+<lon>13.5871</lon>
+</station>
+<station>
+	<namn>Skurup</namn>
+	<url>http://xn--tg-yia.info/Skurup.xml</url>
+<lat>55.4799</lat>
+<lon>13.5003</lon>
+</station>
+<station>
+	<namn>Svedala</namn>
+	<url>http://xn--tg-yia.info/Svedala.xml</url>
+<lat>55.5069</lat>
+<lon>13.2319</lon>
+</station>
+<station>
+	<namn>Ödåkra</namn>
+	<url>http://xn--tg-yia.info/Ödåkra.xml</url>
+<lat>56.1048</lat>
+<lon>12.7451</lon>
+</station>
+<station>
+	<namn>Häljarp</namn>
+	<url>http://xn--tg-yia.info/Häljarp.xml</url>
+<lat>55.8625</lat>
+<lon>12.9021</lon>
+</station>
+<station>
+	<namn>Dösjebro</namn>
+	<url>http://xn--tg-yia.info/Dösjebro.xml</url>
+<lat>55.8226</lat>
+<lon>13.0329</lon>
+</station>
+<station>
+	<namn>Kattarp</namn>
+	<url>http://xn--tg-yia.info/Kattarp.xml</url>
+<lat>56.1412</lat>
+<lon>12.7781</lon>
+</station>
+<station>
+	<namn>Maria</namn>
+	<url>http://xn--tg-yia.info/Maria.xml</url>
+<lat>56.0758</lat>
+<lon>12.7111</lon>
+</station>
+<station>
+	<namn>Rydebäck</namn>
+	<url>http://xn--tg-yia.info/Rydebäck.xml</url>
+<lat>55.9662</lat>
+<lon>12.7837</lon>
+</station>
+<station>
+	<namn>Glumslöv</namn>
+	<url>http://xn--tg-yia.info/Glumslöv.xml</url>
+<lat>55.9456</lat>
+<lon>12.8118</lon>
+</station>
+<station>
+	<namn>Åstorp</namn>
+	<url>http://xn--tg-yia.info/Åstorp.xml</url>
+<lat>56.1334</lat>
+<lon>12.9482</lon>
+</station>
+<station>
+	<namn>Bjuv</namn>
+	<url>http://xn--tg-yia.info/Bjuv.xml</url>
+<lat>56.083</lat>
+<lon>12.9123</lon>
+</station>
+<station>
+	<namn>Mörarp</namn>
+	<url>http://xn--tg-yia.info/Mörarp.xml</url>
+<lat>56.0556</lat>
+<lon>12.8731</lon>
+</station>
+<station>
+	<namn>Påarp</namn>
+	<url>http://xn--tg-yia.info/Påarp.xml</url>
+<lat>56.0293</lat>
+<lon>12.817</lon>
+</station>
+<station>
+	<namn>Perstorp</namn>
+	<url>http://xn--tg-yia.info/Perstorp.xml</url>
+<lat>56.1363</lat>
+<lon>13.3975</lon>
+</station>
+<station>
+	<namn>Tyringe</namn>
+	<url>http://xn--tg-yia.info/Tyringe.xml</url>
+<lat>56.1599</lat>
+<lon>13.5982</lon>
+</station>
+<station>
+	<namn>Vinslöv</namn>
+	<url>http://xn--tg-yia.info/Vinslöv.xml</url>
+<lat>56.105</lat>
+<lon>13.9167</lon>
+</station>
+<station>
+	<namn>Klippan</namn>
+	<url>http://xn--tg-yia.info/Klippan.xml</url>
+<lat>56.1308</lat>
+<lon>13.1282</lon>
+</station>
+<station>
+	<namn>Heby</namn>
+	<url>http://xn--tg-yia.info/Heby.xml</url>
+<lat>59.9405</lat>
+<lon>16.8529</lon>
+</station>
+<station>
+	<namn>Ransta</namn>
+	<url>http://xn--tg-yia.info/Ransta.xml</url>
+<lat>59.81</lat>
+<lon>16.6402</lon>
+</station>
+<station>
+	<namn>Kvicksund</namn>
+	<url>http://xn--tg-yia.info/Kvicksund.xml</url>
+<lat>59.4509</lat>
+<lon>16.3205</lon>
+</station>
+<station>
+	<namn>Kolbäck</namn>
+	<url>http://xn--tg-yia.info/Kolbäck.xml</url>
+<lat>59.5641</lat>
+<lon>16.233</lon>
+</station>
+<station>
+	<namn>Hälleforsnäs</namn>
+	<url>http://xn--tg-yia.info/Hälleforsnäs.xml</url>
+<lat>59.162</lat>
+<lon>16.5031</lon>
+</station>
+<station>
+	<namn>Liseberg</namn>
+	<url>http://xn--tg-yia.info/Liseberg.xml</url>
+<lat>57.6982</lat>
+<lon>11.9953</lon>
+</station>
+<station>
+	<namn>Kungsbacka Hede</namn>
+	<url>http://xn--tg-yia.info/Kungsbacka Hede.xml</url>
+<lat>57.5138</lat>
+<lon>12.084</lon>
+</station>
+<station>
+	<namn>Anneberg</namn>
+	<url>http://xn--tg-yia.info/Anneberg.xml</url>
+<lat>57.5399</lat>
+<lon>12.1017</lon>
+</station>
+<station>
+	<namn>Lindome</namn>
+	<url>http://xn--tg-yia.info/Lindome.xml</url>
+<lat>57.5762</lat>
+<lon>12.0786</lon>
+</station>
+<station>
+	<namn>Kållered</namn>
+	<url>http://xn--tg-yia.info/Kållered.xml</url>
+<lat>57.6098</lat>
+<lon>12.0486</lon>
+</station>
+<station>
+	<namn>Älvängen</namn>
+	<url>http://xn--tg-yia.info/Älvängen.xml</url>
+<lat>57.9599</lat>
+<lon>12.1204</lon>
+</station>
+<station>
+	<namn>Hova</namn>
+	<url>http://xn--tg-yia.info/Hova.xml</url>
+<lat>58.855</lat>
+<lon>14.216</lon>
+</station>
+<station>
+	<namn>Torved</namn>
+	<url>http://xn--tg-yia.info/Torved.xml</url>
+<lat>58.8261</lat>
+<lon>14.1003</lon>
+</station>
+<station>
+	<namn>Lyrestad</namn>
+	<url>http://xn--tg-yia.info/Lyrestad.xml</url>
+<lat>58.8054</lat>
+<lon>14.0575</lon>
+</station>
+<station>
+	<namn>Hasslerör</namn>
+	<url>http://xn--tg-yia.info/Hasslerör.xml</url>
+<lat>58.75</lat>
+<lon>13.9391</lon>
+</station>
+<station>
+	<namn>Lugnås</namn>
+	<url>http://xn--tg-yia.info/Lugnås.xml</url>
+<lat>58.6447</lat>
+<lon>13.7023</lon>
+</station>
+<station>
+	<namn>Äskekärr</namn>
+	<url>http://xn--tg-yia.info/Äskekärr.xml</url>
+<lat>58.6262</lat>
+<lon>13.6085</lon>
+</station>
+<station>
+	<namn>Österäng</namn>
+	<url>http://xn--tg-yia.info/Österäng.xml</url>
+<lat>58.6338</lat>
+<lon>13.56</lon>
+</station>
+<station>
+	<namn>Hällekis</namn>
+	<url>http://xn--tg-yia.info/Hällekis.xml</url>
+<lat>58.6302</lat>
+<lon>13.4328</lon>
+</station>
+<station>
+	<namn>Råbäck</namn>
+	<url>http://xn--tg-yia.info/Råbäck.xml</url>
+<lat>58.6106</lat>
+<lon>13.3763</lon>
+</station>
+<station>
+	<namn>Trolmen</namn>
+	<url>http://xn--tg-yia.info/Trolmen.xml</url>
+<lat>58.5945</lat>
+<lon>13.3471</lon>
+</station>
+<station>
+	<namn>Blomberg</namn>
+	<url>http://xn--tg-yia.info/Blomberg.xml</url>
+<lat>58.5402</lat>
+<lon>13.3202</lon>
+</station>
+<station>
+	<namn>Källby</namn>
+	<url>http://xn--tg-yia.info/Källby.xml</url>
+<lat>58.5104</lat>
+<lon>13.3018</lon>
+</station>
+<station>
+	<namn>Filsbäck</namn>
+	<url>http://xn--tg-yia.info/Filsbäck.xml</url>
+<lat>58.4933</lat>
+<lon>13.2471</lon>
+</station>
+<station>
+	<namn>Framnäs city</namn>
+	<url>http://xn--tg-yia.info/Framnäs city.xml</url>
+<lat>58.5077</lat>
+<lon>13.147</lon>
+</station>
+<station>
+	<namn>Lovene</namn>
+	<url>http://xn--tg-yia.info/Lovene.xml</url>
+<lat>58.4403</lat>
+<lon>13.0467</lon>
+</station>
+<station>
+	<namn>Järpås</namn>
+	<url>http://xn--tg-yia.info/Järpås.xml</url>
+<lat>58.3795</lat>
+<lon>12.9705</lon>
+</station>
+<station>
+	<namn>Stora Levene</namn>
+	<url>http://xn--tg-yia.info/Stora Levene.xml</url>
+<lat>58.326</lat>
+<lon>12.9254</lon>
+</station>
+<station>
+	<namn>Håkantorp</namn>
+	<url>http://xn--tg-yia.info/Håkantorp.xml</url>
+<lat>58.3071</lat>
+<lon>12.907</lon>
+</station>
+<station>
+	<namn>Vedum</namn>
+	<url>http://xn--tg-yia.info/Vedum.xml</url>
+<lat>58.1689</lat>
+<lon>12.9987</lon>
+</station>
+<station>
+	<namn>Lidköping</namn>
+	<url>http://xn--tg-yia.info/Lidköping.xml</url>
+<lat>58.5045</lat>
+<lon>13.1639</lon>
+</station>
+<station>
+	<namn>Gårdsjö</namn>
+	<url>http://xn--tg-yia.info/Gårdsjö.xml</url>
+<lat>58.8719</lat>
+<lon>14.3332</lon>
+</station>
+<station>
+	<namn>Mariestad</namn>
+	<url>http://xn--tg-yia.info/Mariestad.xml</url>
+<lat>58.7107</lat>
+<lon>13.8253</lon>
+</station>
+<station>
+	<namn>Forshem</namn>
+	<url>http://xn--tg-yia.info/Forshem.xml</url>
+<lat>58.618</lat>
+<lon>13.491</lon>
+</station>
+<station>
+	<namn>Hindås</namn>
+	<url>http://xn--tg-yia.info/Hindås.xml</url>
+<lat>57.7045</lat>
+<lon>12.4517</lon>
+</station>
+<station>
+	<namn>Rävlanda</namn>
+	<url>http://xn--tg-yia.info/Rävlanda.xml</url>
+<lat>57.6544</lat>
+<lon>12.4999</lon>
+</station>
+<station>
+	<namn>Bollebygd</namn>
+	<url>http://xn--tg-yia.info/Bollebygd.xml</url>
+<lat>57.6672</lat>
+<lon>12.5686</lon>
+</station>
+<station>
+	<namn>Sandared</namn>
+	<url>http://xn--tg-yia.info/Sandared.xml</url>
+<lat>57.7095</lat>
+<lon>12.7928</lon>
+</station>
+<station>
+	<namn>Västra Bodarna</namn>
+	<url>http://xn--tg-yia.info/Västra Bodarna.xml</url>
+<lat>57.8877</lat>
+<lon>12.4739</lon>
+</station>
+<station>
+	<namn>Norsesund</namn>
+	<url>http://xn--tg-yia.info/Norsesund.xml</url>
+<lat>57.8621</lat>
+<lon>12.4398</lon>
+</station>
+<station>
+	<namn>Stenkullen</namn>
+	<url>http://xn--tg-yia.info/Stenkullen.xml</url>
+<lat>57.7919</lat>
+<lon>12.3146</lon>
+</station>
+<station>
+	<namn>Aspedalen</namn>
+	<url>http://xn--tg-yia.info/Aspedalen.xml</url>
+<lat>57.7632</lat>
+<lon>12.2593</lon>
+</station>
+<station>
+	<namn>Aspen</namn>
+	<url>http://xn--tg-yia.info/Aspen.xml</url>
+<lat>57.7544</lat>
+<lon>12.2416</lon>
+</station>
+<station>
+	<namn>Jonsered</namn>
+	<url>http://xn--tg-yia.info/Jonsered.xml</url>
+<lat>57.7499</lat>
+<lon>12.1736</lon>
+</station>
+<station>
+	<namn>Sävenäs</namn>
+	<url>http://xn--tg-yia.info/Sävenäs.xml</url>
+<lat>57.725</lat>
+<lon>12.0253</lon>
+</station>
+<station>
+	<namn>Floda</namn>
+	<url>http://xn--tg-yia.info/Floda.xml</url>
+<lat>57.8099</lat>
+<lon>12.361</lon>
+</station>
+<station>
+	<namn>Lerum</namn>
+	<url>http://xn--tg-yia.info/Lerum.xml</url>
+<lat>57.7693</lat>
+<lon>12.2723</lon>
+</station>
+<station>
+	<namn>Partille</namn>
+	<url>http://xn--tg-yia.info/Partille.xml</url>
+<lat>57.741</lat>
+<lon>12.1029</lon>
+</station>
+<station>
+	<namn>Ljungskile</namn>
+	<url>http://xn--tg-yia.info/Ljungskile.xml</url>
+<lat>58.2252</lat>
+<lon>11.9208</lon>
+</station>
+<station>
+	<namn>Uddevalla Östra</namn>
+	<url>http://xn--tg-yia.info/Uddevalla Östra.xml</url>
+<lat>58.3507</lat>
+<lon>11.9448</lon>
+</station>
+<station>
+	<namn>Dingle</namn>
+	<url>http://xn--tg-yia.info/Dingle.xml</url>
+<lat>58.5296</lat>
+<lon>11.5792</lon>
+</station>
+<station>
+	<namn>Hällevadsholm</namn>
+	<url>http://xn--tg-yia.info/Hällevadsholm.xml</url>
+<lat>58.5799</lat>
+<lon>11.5358</lon>
+</station>
+<station>
+	<namn>Rabbalshede</namn>
+	<url>http://xn--tg-yia.info/Rabbalshede.xml</url>
+<lat>58.61</lat>
+<lon>11.4709</lon>
+</station>
+<station>
+	<namn>Tanum</namn>
+	<url>http://xn--tg-yia.info/Tanum.xml</url>
+<lat>58.7138</lat>
+<lon>11.2954</lon>
+</station>
+<station>
+	<namn>Överby</namn>
+	<url>http://xn--tg-yia.info/Överby.xml</url>
+<lat>58.8432</lat>
+<lon>11.2598</lon>
+</station>
+<station>
+	<namn>Skee</namn>
+	<url>http://xn--tg-yia.info/Skee.xml</url>
+<lat>58.9233</lat>
+<lon>11.262</lon>
+</station>
+<station>
+	<namn>Stora Höga</namn>
+	<url>http://xn--tg-yia.info/Stora Höga.xml</url>
+<lat>58.0183</lat>
+<lon>11.8355</lon>
+</station>
+<station>
+	<namn>Kode</namn>
+	<url>http://xn--tg-yia.info/Kode.xml</url>
+<lat>57.9445</lat>
+<lon>11.8508</lon>
+</station>
+<station>
+	<namn>Ytterby</namn>
+	<url>http://xn--tg-yia.info/Ytterby.xml</url>
+<lat>57.8625</lat>
+<lon>11.9174</lon>
+</station>
+<station>
+	<namn>Stenungsund</namn>
+	<url>http://xn--tg-yia.info/Stenungsund.xml</url>
+<lat>58.0729</lat>
+<lon>11.8247</lon>
+</station>
+<station>
+	<namn>Svenshögen</namn>
+	<url>http://xn--tg-yia.info/Svenshögen.xml</url>
+<lat>58.1446</lat>
+<lon>11.936</lon>
+</station>
+<station>
+	<namn>Munkedal</namn>
+	<url>http://xn--tg-yia.info/Munkedal.xml</url>
+<lat>58.4651</lat>
+<lon>11.6776</lon>
+</station>
+<station>
+	<namn>Ljung</namn>
+	<url>http://xn--tg-yia.info/Ljung.xml</url>
+<lat>57.9863</lat>
+<lon>13.0532</lon>
+</station>
+<station>
+	<namn>Torpåkra</namn>
+	<url>http://xn--tg-yia.info/Torpåkra.xml</url>
+<lat>57.9408</lat>
+<lon>13.0296</lon>
+</station>
+<station>
+	<namn>Mollaryd</namn>
+	<url>http://xn--tg-yia.info/Mollaryd.xml</url>
+<lat>57.9058</lat>
+<lon>13.0226</lon>
+</station>
+<station>
+	<namn>Borgstena</namn>
+	<url>http://xn--tg-yia.info/Borgstena.xml</url>
+<lat>57.8829</lat>
+<lon>13.0147</lon>
+</station>
+<station>
+	<namn>Fristad</namn>
+	<url>http://xn--tg-yia.info/Fristad.xml</url>
+<lat>57.8274</lat>
+<lon>13.0086</lon>
+</station>
+<station>
+	<namn>Knalleland</namn>
+	<url>http://xn--tg-yia.info/Knalleland.xml</url>
+<lat>57.7348</lat>
+<lon>12.9428</lon>
+</station>
+<station>
+	<namn>Viskafors</namn>
+	<url>http://xn--tg-yia.info/Viskafors.xml</url>
+<lat>57.6289</lat>
+<lon>12.8444</lon>
+</station>
+<station>
+	<namn>Fritsla</namn>
+	<url>http://xn--tg-yia.info/Fritsla.xml</url>
+<lat>57.5579</lat>
+<lon>12.7897</lon>
+</station>
+<station>
+	<namn>Kinna</namn>
+	<url>http://xn--tg-yia.info/Kinna.xml</url>
+<lat>57.506</lat>
+<lon>12.6982</lon>
+</station>
+<station>
+	<namn>Assberg</namn>
+	<url>http://xn--tg-yia.info/Assberg.xml</url>
+<lat>57.4948</lat>
+<lon>12.6695</lon>
+</station>
+<station>
+	<namn>Skene</namn>
+	<url>http://xn--tg-yia.info/Skene.xml</url>
+<lat>57.4882</lat>
+<lon>12.6487</lon>
+</station>
+<station>
+	<namn>Berghem</namn>
+	<url>http://xn--tg-yia.info/Berghem.xml</url>
+<lat>57.467</lat>
+<lon>12.5983</lon>
+</station>
+<station>
+	<namn>Björketorp</namn>
+	<url>http://xn--tg-yia.info/Björketorp.xml</url>
+<lat>57.4274</lat>
+<lon>12.5231</lon>
+</station>
+<station>
+	<namn>Horred</namn>
+	<url>http://xn--tg-yia.info/Horred.xml</url>
+<lat>57.3531</lat>
+<lon>12.4773</lon>
+</station>
+<station>
+	<namn>Veddige</namn>
+	<url>http://xn--tg-yia.info/Veddige.xml</url>
+<lat>57.2669</lat>
+<lon>12.3374</lon>
+</station>
+<station>
+	<namn>Derome</namn>
+	<url>http://xn--tg-yia.info/Derome.xml</url>
+<lat>57.2301</lat>
+<lon>12.32</lon>
+</station>
+<station>
+	<namn>Tofta</namn>
+	<url>http://xn--tg-yia.info/Tofta.xml</url>
+<lat>57.1742</lat>
+<lon>12.3009</lon>
+</station>
+<station>
+	<namn>Vargön</namn>
+	<url>http://xn--tg-yia.info/Vargön.xml</url>
+<lat>58.3593</lat>
+<lon>12.3925</lon>
+</station>
+<station>
+	<namn>Grästorp</namn>
+	<url>http://xn--tg-yia.info/Grästorp.xml</url>
+<lat>58.335</lat>
+<lon>12.6847</lon>
+</station>
+<station>
+	<namn>Fjällåsen</namn>
+	<url>http://xn--tg-yia.info/Fjällåsen.xml</url>
+<lat>67.5184</lat>
+<lon>20.0933</lon>
+</station>
+<station>
+	<namn>Kaitum</namn>
+	<url>http://xn--tg-yia.info/Kaitum.xml</url>
+<lat>67.5441</lat>
+<lon>20.1077</lon>
+</station>
+<station>
+	<namn>Sjisjka</namn>
+	<url>http://xn--tg-yia.info/Sjisjka.xml</url>
+<lat>67.6244</lat>
+<lon>20.234</lon>
+</station>
+<station>
+	<namn>Älvsjö</namn>
+	<url>http://xn--tg-yia.info/Älvsjö.xml</url>
+<lat>59.2786</lat>
+<lon>18.011</lon>
+</station>
+<station>
+	<namn>Forserum</namn>
+	<url>http://xn--tg-yia.info/Forserum.xml</url>
+<lat>57.6979</lat>
+<lon>14.4741</lon>
+</station>
+<station>
+	<namn>Tenhult</namn>
+	<url>http://xn--tg-yia.info/Tenhult.xml</url>
+<lat>57.7052</lat>
+<lon>14.3266</lon>
+</station>
+<station>
+	<namn>Huskvarna</namn>
+	<url>http://xn--tg-yia.info/Huskvarna.xml</url>
+<lat>57.7824</lat>
+<lon>14.2655</lon>
+</station>
+<station>
+	<namn>Bankeryd</namn>
+	<url>http://xn--tg-yia.info/Bankeryd.xml</url>
+<lat>57.8608</lat>
+<lon>14.1287</lon>
+</station>
+<station>
+	<namn>Habo</namn>
+	<url>http://xn--tg-yia.info/Habo.xml</url>
+<lat>57.9062</lat>
+<lon>14.0769</lon>
+</station>
+<station>
+	<namn>Mullsjö</namn>
+	<url>http://xn--tg-yia.info/Mullsjö.xml</url>
+<lat>57.9149</lat>
+<lon>13.8812</lon>
+</station>
+<station>
+	<namn>Sandhem</namn>
+	<url>http://xn--tg-yia.info/Sandhem.xml</url>
+<lat>57.9865</lat>
+<lon>13.7773</lon>
+</station>
+<station>
+	<namn>Skinnskatteberg</namn>
+	<url>http://xn--tg-yia.info/Skinnskatteberg.xml</url>
+<lat>59.8327</lat>
+<lon>15.6912</lon>
+</station>
+<station>
+	<namn>Fagersta C</namn>
+	<url>http://xn--tg-yia.info/Fagersta C.xml</url>
+<lat>59.9908</lat>
+<lon>15.8157</lon>
+</station>
+<station>
+	<namn>Karbenning</namn>
+	<url>http://xn--tg-yia.info/Karbenning.xml</url>
+<lat>60.0366</lat>
+<lon>16.0725</lon>
+</station>
+<station>
+	<namn>Fors</namn>
+	<url>http://xn--tg-yia.info/Fors.xml</url>
+<lat>60.2082</lat>
+<lon>16.3141</lon>
+</station>
+<station>
+	<namn>Horndals Bruk</namn>
+	<url>http://xn--tg-yia.info/Horndals Bruk.xml</url>
+<lat>60.2959</lat>
+<lon>16.4132</lon>
+</station>
+<station>
+	<namn>Torsåker</namn>
+	<url>http://xn--tg-yia.info/Torsåker.xml</url>
+<lat>60.5141</lat>
+<lon>16.4893</lon>
+</station>
+<station>
+	<namn>Storvik</namn>
+	<url>http://xn--tg-yia.info/Storvik.xml</url>
+<lat>60.5822</lat>
+<lon>16.5346</lon>
+</station>
+<station>
+	<namn>Hofors</namn>
+	<url>http://xn--tg-yia.info/Hofors.xml</url>
+<lat>60.5694</lat>
+<lon>16.2663</lon>
+</station>
+<station>
+	<namn>Avesta centrum</namn>
+	<url>http://xn--tg-yia.info/Avesta centrum.xml</url>
+<lat>60.1477</lat>
+<lon>16.1664</lon>
+</station>
+<station>
+	<namn>Ludvika</namn>
+	<url>http://xn--tg-yia.info/Ludvika.xml</url>
+<lat>60.15</lat>
+<lon>15.1821</lon>
+</station>
+<station>
+	<namn>Sundsvall Västra</namn>
+	<url>http://xn--tg-yia.info/Sundsvall Västra.xml</url>
+<lat>62.3894</lat>
+<lon>17.2944</lon>
+</station>
+<station>
+	<namn>Ljungaverk</namn>
+	<url>http://xn--tg-yia.info/Ljungaverk.xml</url>
+<lat>62.4959</lat>
+<lon>16.0592</lon>
+</station>
+<station>
+	<namn>Gällö</namn>
+	<url>http://xn--tg-yia.info/Gällö.xml</url>
+<lat>62.9112</lat>
+<lon>15.229</lon>
+</station>
+<station>
+	<namn>Pilgrimstad</namn>
+	<url>http://xn--tg-yia.info/Pilgrimstad.xml</url>
+<lat>62.955</lat>
+<lon>15.0403</lon>
+</station>
+<station>
+	<namn>Brunflo</namn>
+	<url>http://xn--tg-yia.info/Brunflo.xml</url>
+<lat>63.076</lat>
+<lon>14.8322</lon>
+</station>
+<station>
+	<namn>Stöde</namn>
+	<url>http://xn--tg-yia.info/Stöde.xml</url>
+<lat>62.4199</lat>
+<lon>16.5999</lon>
+</station>
+<station>
+	<namn>Torpshammar</namn>
+	<url>http://xn--tg-yia.info/Torpshammar.xml</url>
+<lat>62.4729</lat>
+<lon>16.3349</lon>
+</station>
+<station>
+	<namn>Fränsta</namn>
+	<url>http://xn--tg-yia.info/Fränsta.xml</url>
+<lat>62.4959</lat>
+<lon>16.1683</lon>
+</station>
+<station>
+	<namn>Erikslund</namn>
+	<url>http://xn--tg-yia.info/Erikslund.xml</url>
+<lat>62.5278</lat>
+<lon>15.9221</lon>
+</station>
+<station>
+	<namn>Stavre</namn>
+	<url>http://xn--tg-yia.info/Stavre.xml</url>
+<lat>62.8298</lat>
+<lon>15.3049</lon>
+</station>
+<station>
+	<namn>Söderbärke</namn>
+	<url>http://xn--tg-yia.info/Söderbärke.xml</url>
+<lat>60.0725</lat>
+<lon>15.5371</lon>
+</station>
+<station>
+	<namn>Vad</namn>
+	<url>http://xn--tg-yia.info/Vad.xml</url>
+<lat>60.0323</lat>
+<lon>15.6422</lon>
+</station>
+<station>
+	<namn>Fagersta Norra</namn>
+	<url>http://xn--tg-yia.info/Fagersta Norra.xml</url>
+<lat>60.0027</lat>
+<lon>15.7877</lon>
+</station>
+<station>
+	<namn>Virsbo</namn>
+	<url>http://xn--tg-yia.info/Virsbo.xml</url>
+<lat>59.8727</lat>
+<lon>16.0842</lon>
+</station>
+<station>
+	<namn>Ramnäs</namn>
+	<url>http://xn--tg-yia.info/Ramnäs.xml</url>
+<lat>59.7696</lat>
+<lon>16.2079</lon>
+</station>
+<station>
+	<namn>Surahammar</namn>
+	<url>http://xn--tg-yia.info/Surahammar.xml</url>
+<lat>59.7065</lat>
+<lon>16.2195</lon>
+</station>
+<station>
+	<namn>Hallstahammar</namn>
+	<url>http://xn--tg-yia.info/Hallstahammar.xml</url>
+<lat>59.6143</lat>
+<lon>16.2207</lon>
+</station>
+<station>
+	<namn>Dingtuna</namn>
+	<url>http://xn--tg-yia.info/Dingtuna.xml</url>
+<lat>59.5737</lat>
+<lon>16.3959</lon>
+</station>
+<station>
+	<namn>Smedjebacken</namn>
+	<url>http://xn--tg-yia.info/Smedjebacken.xml</url>
+<lat>60.1364</lat>
+<lon>15.4058</lon>
+</station>
+<station>
+	<namn>Ängelsberg</namn>
+	<url>http://xn--tg-yia.info/Ängelsberg.xml</url>
+<lat>59.9573</lat>
+<lon>16.0092</lon>
+</station>
+<station>
+	<namn>Mockfjärd</namn>
+	<url>http://xn--tg-yia.info/Mockfjärd.xml</url>
+<lat>60.4958</lat>
+<lon>14.9585</lon>
+</station>
+<station>
+	<namn>Dala-Floda</namn>
+	<url>http://xn--tg-yia.info/Dala-Floda.xml</url>
+<lat>60.4886</lat>
+<lon>14.7898</lon>
+</station>
+<station>
+	<namn>Björbo</namn>
+	<url>http://xn--tg-yia.info/Björbo.xml</url>
+<lat>60.4528</lat>
+<lon>14.73</lon>
+</station>
+<station>
+	<namn>Nås</namn>
+	<url>http://xn--tg-yia.info/Nås.xml</url>
+<lat>60.4628</lat>
+<lon>14.4998</lon>
+</station>
+<station>
+	<namn>Dala-Järna</namn>
+	<url>http://xn--tg-yia.info/Dala-Järna.xml</url>
+<lat>60.5479</lat>
+<lon>14.3622</lon>
+</station>
+<station>
+	<namn>Vansbro</namn>
+	<url>http://xn--tg-yia.info/Vansbro.xml</url>
+<lat>60.5121</lat>
+<lon>14.2267</lon>
+</station>
+<station>
+	<namn>Rågsveden</namn>
+	<url>http://xn--tg-yia.info/Rågsveden.xml</url>
+<lat>60.4792</lat>
+<lon>14.0675</lon>
+</station>
+<station>
+	<namn>Äppelbo</namn>
+	<url>http://xn--tg-yia.info/Äppelbo.xml</url>
+<lat>60.4909</lat>
+<lon>14.0011</lon>
+</station>
+<station>
+	<namn>Yttermalung</namn>
+	<url>http://xn--tg-yia.info/Yttermalung.xml</url>
+<lat>60.5808</lat>
+<lon>13.8239</lon>
+</station>
+<station>
+	<namn>Malung Folkhögskola</namn>
+	<url>http://xn--tg-yia.info/Malung Folkhögskola.xml</url>
+<lat>60.6694</lat>
+<lon>13.7346</lon>
+</station>
+<station>
+	<namn>Malung Gymnasium</namn>
+	<url>http://xn--tg-yia.info/Malung Gymnasium.xml</url>
+<lat>60.6809</lat>
+<lon>13.7195</lon>
+</station>
+<station>
+	<namn>Malung</namn>
+	<url>http://xn--tg-yia.info/Malung.xml</url>
+<lat>60.6837</lat>
+<lon>13.7099</lon>
+</station>
+<station>
+	<namn>Lingbo</namn>
+	<url>http://xn--tg-yia.info/Lingbo.xml</url>
+<lat>61.0435</lat>
+<lon>16.6778</lon>
+</station>
+<station>
+	<namn>Arbrå</namn>
+	<url>http://xn--tg-yia.info/Arbrå.xml</url>
+<lat>61.4716</lat>
+<lon>16.3797</lon>
+</station>
+<station>
+	<namn>Vallsta</namn>
+	<url>http://xn--tg-yia.info/Vallsta.xml</url>
+<lat>61.518</lat>
+<lon>16.3676</lon>
+</station>
+<station>
+	<namn>Holmsveden</namn>
+	<url>http://xn--tg-yia.info/Holmsveden.xml</url>
+<lat>61.1181</lat>
+<lon>16.7218</lon>
+</station>
+<station>
+	<namn>Kilafors</namn>
+	<url>http://xn--tg-yia.info/Kilafors.xml</url>
+<lat>61.2315</lat>
+<lon>16.57</lon>
+</station>
+<station>
+	<namn>Högsby</namn>
+	<url>http://xn--tg-yia.info/Högsby.xml</url>
+<lat>57.1658</lat>
+<lon>16.0277</lon>
+</station>
+<station>
+	<namn>Rimforsa</namn>
+	<url>http://xn--tg-yia.info/Rimforsa.xml</url>
+<lat>58.1354</lat>
+<lon>15.6817</lon>
+</station>
+<station>
+	<namn>Kisa</namn>
+	<url>http://xn--tg-yia.info/Kisa.xml</url>
+<lat>57.9853</lat>
+<lon>15.6338</lon>
+</station>
+<station>
+	<namn>Vimmerby</namn>
+	<url>http://xn--tg-yia.info/Vimmerby.xml</url>
+<lat>57.6635</lat>
+<lon>15.8578</lon>
+</station>
+<station>
+	<namn>Hultsfred</namn>
+	<url>http://xn--tg-yia.info/Hultsfred.xml</url>
+<lat>57.4865</lat>
+<lon>15.8469</lon>
+</station>
+<station>
+	<namn>Berga</namn>
+	<url>http://xn--tg-yia.info/Berga.xml</url>
+<lat>57.2165</lat>
+<lon>16.0328</lon>
+</station>
+<station>
+	<namn>Blomstermåla</namn>
+	<url>http://xn--tg-yia.info/Blomstermåla.xml</url>
+<lat>56.9807</lat>
+<lon>16.3317</lon>
+</station>
+<station>
+	<namn>Tannefors</namn>
+	<url>http://xn--tg-yia.info/Tannefors.xml</url>
+<lat>58.4018</lat>
+<lon>15.6537</lon>
+</station>
+<station>
+	<namn>Iggesund</namn>
+	<url>http://xn--tg-yia.info/Iggesund.xml</url>
+<lat>61.6455</lat>
+<lon>17.0817</lon>
+</station>
+<station>
+	<namn>Ljusne</namn>
+	<url>http://xn--tg-yia.info/Ljusne.xml</url>
+<lat>61.2133</lat>
+<lon>17.1139</lon>
+</station>
+<station>
+	<namn>Gnarp</namn>
+	<url>http://xn--tg-yia.info/Gnarp.xml</url>
+<lat>62.0559</lat>
+<lon>17.2442</lon>
+</station>
+<station>
+	<namn>Furuvik</namn>
+	<url>http://xn--tg-yia.info/Furuvik.xml</url>
+<lat>60.6513</lat>
+<lon>17.3318</lon>
+</station>
+<station>
+	<namn>Örbyhus</namn>
+	<url>http://xn--tg-yia.info/Örbyhus.xml</url>
+<lat>60.2283</lat>
+<lon>17.7061</lon>
+</station>
+<station>
+	<namn>Tobo</namn>
+	<url>http://xn--tg-yia.info/Tobo.xml</url>
+<lat>60.2581</lat>
+<lon>17.6352</lon>
+</station>
+<station>
+	<namn>Storvreta</namn>
+	<url>http://xn--tg-yia.info/Storvreta.xml</url>
+<lat>59.9561</lat>
+<lon>17.706</lon>
+</station>
+<station>
+	<namn>Upplands Väsby</namn>
+	<url>http://xn--tg-yia.info/Upplands Väsby.xml</url>
+<lat>59.5216</lat>
+<lon>17.899</lon>
+</station>
+<station>
+	<namn>Rörstorp</namn>
+	<url>http://xn--tg-yia.info/Rörstorp.xml</url>
+<lat>57.172</lat>
+<lon>14.0651</lon>
+</station>
+<station>
+	<namn>Klevshult</namn>
+	<url>http://xn--tg-yia.info/Klevshult.xml</url>
+<lat>57.3528</lat>
+<lon>14.0973</lon>
+</station>
+<station>
+	<namn>Skillingaryd</namn>
+	<url>http://xn--tg-yia.info/Skillingaryd.xml</url>
+<lat>57.4289</lat>
+<lon>14.0906</lon>
+</station>
+<station>
+	<namn>Vaggeryd</namn>
+	<url>http://xn--tg-yia.info/Vaggeryd.xml</url>
+<lat>57.4986</lat>
+<lon>14.1459</lon>
+</station>
+<station>
+	<namn>Byarum</namn>
+	<url>http://xn--tg-yia.info/Byarum.xml</url>
+<lat>57.5363</lat>
+<lon>14.1438</lon>
+</station>
+<station>
+	<namn>Bratteborg</namn>
+	<url>http://xn--tg-yia.info/Bratteborg.xml</url>
+<lat>57.5779</lat>
+<lon>14.1252</lon>
+</station>
+<station>
+	<namn>Ekeryd</namn>
+	<url>http://xn--tg-yia.info/Ekeryd.xml</url>
+<lat>57.609</lat>
+<lon>14.1061</lon>
+</station>
+<station>
+	<namn>Månsarp</namn>
+	<url>http://xn--tg-yia.info/Månsarp.xml</url>
+<lat>57.6546</lat>
+<lon>14.0704</lon>
+</station>
+<station>
+	<namn>Taberg</namn>
+	<url>http://xn--tg-yia.info/Taberg.xml</url>
+<lat>57.6788</lat>
+<lon>14.0869</lon>
+</station>
+<station>
+	<namn>Norrahammar</namn>
+	<url>http://xn--tg-yia.info/Norrahammar.xml</url>
+<lat>57.7045</lat>
+<lon>14.1156</lon>
+</station>
+<station>
+	<namn>Hovslätt</namn>
+	<url>http://xn--tg-yia.info/Hovslätt.xml</url>
+<lat>57.7351</lat>
+<lon>14.1242</lon>
+</station>
+<station>
+	<namn>Rocksjön</namn>
+	<url>http://xn--tg-yia.info/Rocksjön.xml</url>
+<lat>57.7754</lat>
+<lon>14.1984</lon>
+</station>
+<station>
+	<namn>Bor</namn>
+	<url>http://xn--tg-yia.info/Bor.xml</url>
+<lat>57.1156</lat>
+<lon>14.1694</lon>
+</station>
+<station>
+	<namn>Rydaholm</namn>
+	<url>http://xn--tg-yia.info/Rydaholm.xml</url>
+<lat>56.988</lat>
+<lon>14.3092</lon>
+</station>
+<station>
+	<namn>Sannarp</namn>
+	<url>http://xn--tg-yia.info/Sannarp.xml</url>
+<lat>56.6863</lat>
+<lon>12.8927</lon>
+</station>
+<station>
+	<namn>Oskarström</namn>
+	<url>http://xn--tg-yia.info/Oskarström.xml</url>
+<lat>56.8062</lat>
+<lon>12.9719</lon>
+</station>
+<station>
+	<namn>Kinnared</namn>
+	<url>http://xn--tg-yia.info/Kinnared.xml</url>
+<lat>57.0255</lat>
+<lon>13.107</lon>
+</station>
+<station>
+	<namn>Landeryd</namn>
+	<url>http://xn--tg-yia.info/Landeryd.xml</url>
+<lat>57.0769</lat>
+<lon>13.2658</lon>
+</station>
+<station>
+	<namn>Smålandsstenar</namn>
+	<url>http://xn--tg-yia.info/Smålandsstenar.xml</url>
+<lat>57.1617</lat>
+<lon>13.4148</lon>
+</station>
+<station>
+	<namn>Reftele</namn>
+	<url>http://xn--tg-yia.info/Reftele.xml</url>
+<lat>57.1761</lat>
+<lon>13.5926</lon>
+</station>
+<station>
+	<namn>Bredaryd</namn>
+	<url>http://xn--tg-yia.info/Bredaryd.xml</url>
+<lat>57.1762</lat>
+<lon>13.7381</lon>
+</station>
+<station>
+	<namn>Forsheda</namn>
+	<url>http://xn--tg-yia.info/Forsheda.xml</url>
+<lat>57.1635</lat>
+<lon>13.832</lon>
+</station>
+<station>
+	<namn>Torup</namn>
+	<url>http://xn--tg-yia.info/Torup.xml</url>
+<lat>56.9576</lat>
+<lon>13.079</lon>
+</station>
+<station>
+	<namn>Hok</namn>
+	<url>http://xn--tg-yia.info/Hok.xml</url>
+<lat>57.5153</lat>
+<lon>14.2746</lon>
+</station>
+<station>
+	<namn>Malmbäck</namn>
+	<url>http://xn--tg-yia.info/Malmbäck.xml</url>
+<lat>57.578</lat>
+<lon>14.4602</lon>
+</station>
+<station>
+	<namn>Aneby</namn>
+	<url>http://xn--tg-yia.info/Aneby.xml</url>
+<lat>57.8365</lat>
+<lon>14.8108</lon>
+</station>
+<station>
+	<namn>Äng</namn>
+	<url>http://xn--tg-yia.info/Äng.xml</url>
+<lat>57.6918</lat>
+<lon>14.5681</lon>
+</station>
+<station>
+	<namn>Vetlanda</namn>
+	<url>http://xn--tg-yia.info/Vetlanda.xml</url>
+<lat>57.4258</lat>
+<lon>15.082</lon>
+</station>
+<station>
+	<namn>Ekenässjön</namn>
+	<url>http://xn--tg-yia.info/Ekenässjön.xml</url>
+<lat>57.4898</lat>
+<lon>15.019</lon>
+</station>
+<station>
+	<namn>Tjunnaryd</namn>
+	<url>http://xn--tg-yia.info/Tjunnaryd.xml</url>
+<lat>57.5047</lat>
+<lon>14.975</lon>
+</station>
+<station>
+	<namn>Björköby</namn>
+	<url>http://xn--tg-yia.info/Björköby.xml</url>
+<lat>57.5208</lat>
+<lon>14.9176</lon>
+</station>
+<station>
+	<namn>Stensjön</namn>
+	<url>http://xn--tg-yia.info/Stensjön.xml</url>
+<lat>57.5792</lat>
+<lon>14.8348</lon>
+</station>
+<station>
+	<namn>Åtvidaberg</namn>
+	<url>http://xn--tg-yia.info/Åtvidaberg.xml</url>
+<lat>58.2037</lat>
+<lon>16.0023</lon>
+</station>
+<station>
+	<namn>Falerum</namn>
+	<url>http://xn--tg-yia.info/Falerum.xml</url>
+<lat>58.1432</lat>
+<lon>16.2081</lon>
+</station>
+<station>
+	<namn>Överums bruk</namn>
+	<url>http://xn--tg-yia.info/Överums bruk.xml</url>
+<lat>57.9901</lat>
+<lon>16.3194</lon>
+</station>
+<station>
+	<namn>Gamleby</namn>
+	<url>http://xn--tg-yia.info/Gamleby.xml</url>
+<lat>57.897</lat>
+<lon>16.4102</lon>
+</station>
+<station>
+	<namn>Västervik</namn>
+	<url>http://xn--tg-yia.info/Västervik.xml</url>
+<lat>57.7555</lat>
+<lon>16.6433</lon>
+</station>
+<station>
+	<namn>Basthagen</namn>
+	<url>http://xn--tg-yia.info/Basthagen.xml</url>
+<lat>58.2055</lat>
+<lon>15.9743</lon>
+</station>
+<station>
+	<namn>Tjustskolan</namn>
+	<url>http://xn--tg-yia.info/Tjustskolan.xml</url>
+<lat>57.7539</lat>
+<lon>16.6336</lon>
+</station>
+<station>
+	<namn>Linghem</namn>
+	<url>http://xn--tg-yia.info/Linghem.xml</url>
+<lat>58.4367</lat>
+<lon>15.7875</lon>
+</station>
+<station>
+	<namn>Kimstad</namn>
+	<url>http://xn--tg-yia.info/Kimstad.xml</url>
+<lat>58.546</lat>
+<lon>15.9719</lon>
+</station>
+<station>
+	<namn>Vikingstad</namn>
+	<url>http://xn--tg-yia.info/Vikingstad.xml</url>
+<lat>58.3834</lat>
+<lon>15.4327</lon>
+</station>
+<station>
+	<namn>Mantorp</namn>
+	<url>http://xn--tg-yia.info/Mantorp.xml</url>
+<lat>58.3485</lat>
+<lon>15.29</lon>
+</station>
+<station>
+	<namn>Boxholm</namn>
+	<url>http://xn--tg-yia.info/Boxholm.xml</url>
+<lat>58.1935</lat>
+<lon>15.0541</lon>
+</station>
+<station>
+	<namn>Högboda</namn>
+	<url>http://xn--tg-yia.info/Högboda.xml</url>
+<lat>59.5576</lat>
+<lon>13.0515</lon>
+</station>
+<station>
+	<namn>Edane</namn>
+	<url>http://xn--tg-yia.info/Edane.xml</url>
+<lat>59.6269</lat>
+<lon>12.8294</lon>
+</station>
+<station>
+	<namn>Åmotfors</namn>
+	<url>http://xn--tg-yia.info/Åmotfors.xml</url>
+<lat>59.769</lat>
+<lon>12.3664</lon>
+</station>
+<station>
+	<namn>Sunne</namn>
+	<url>http://xn--tg-yia.info/Sunne.xml</url>
+<lat>59.8355</lat>
+<lon>13.1492</lon>
+</station>
+<station>
+	<namn>Torsby</namn>
+	<url>http://xn--tg-yia.info/Torsby.xml</url>
+<lat>60.1364</lat>
+<lon>13.0025</lon>
+</station>
+<station>
+	<namn>Trångstad</namn>
+	<url>http://xn--tg-yia.info/Trångstad.xml</url>
+<lat>59.5549</lat>
+<lon>13.2583</lon>
+</station>
+<station>
+	<namn>Ivarsbjörke</namn>
+	<url>http://xn--tg-yia.info/Ivarsbjörke.xml</url>
+<lat>59.9599</lat>
+<lon>13.144</lon>
+</station>
+<station>
+	<namn>Öjervik</namn>
+	<url>http://xn--tg-yia.info/Öjervik.xml</url>
+<lat>59.7738</lat>
+<lon>13.1227</lon>
+</station>
+<station>
+	<namn>Rottneros</namn>
+	<url>http://xn--tg-yia.info/Rottneros.xml</url>
+<lat>59.7954</lat>
+<lon>13.1291</lon>
+</station>
+<station>
+	<namn>Stjerneskolan</namn>
+	<url>http://xn--tg-yia.info/Stjerneskolan.xml</url>
+<lat>60.1392</lat>
+<lon>13.0112</lon>
+</station>
+<station>
+	<namn>Oleby</namn>
+	<url>http://xn--tg-yia.info/Oleby.xml</url>
+<lat>60.1298</lat>
+<lon>13.0383</lon>
+</station>
+<station>
+	<namn>Badabruk</namn>
+	<url>http://xn--tg-yia.info/Badabruk.xml</url>
+<lat>60.0621</lat>
+<lon>13.0961</lon>
+</station>
+<station>
+	<namn>Edsbjörke</namn>
+	<url>http://xn--tg-yia.info/Edsbjörke.xml</url>
+<lat>59.9029</lat>
+<lon>13.1709</lon>
+</station>
+<station>
+	<namn>Ingmår</namn>
+	<url>http://xn--tg-yia.info/Ingmår.xml</url>
+<lat>59.8787</lat>
+<lon>13.1753</lon>
+</station>
+<station>
+	<namn>Holmsjö</namn>
+	<url>http://xn--tg-yia.info/Holmsjö.xml</url>
+<lat>56.4203</lat>
+<lon>15.5435</lon>
+</station>
+<station>
+	<namn>Örnsköldsvik Norra</namn>
+	<url>http://xn--tg-yia.info/Örnsköldsvik Norra.xml</url>
+<lat>63.2899</lat>
+<lon>18.6205</lon>
+</station>
+<station>
+	<namn>Husum</namn>
+	<url>http://xn--tg-yia.info/Husum.xml</url>
+<lat>63.3356</lat>
+<lon>19.1606</lon>
+</station>
+<station>
+	<namn>Nordmaling</namn>
+	<url>http://xn--tg-yia.info/Nordmaling.xml</url>
+<lat>63.5685</lat>
+<lon>19.5023</lon>
+</station>
+<station>
+	<namn>Hörnefors</namn>
+	<url>http://xn--tg-yia.info/Hörnefors.xml</url>
+<lat>63.6271</lat>
+<lon>19.8978</lon>
+</station>
+<station>
+	<namn>Storfors</namn>
+	<url>http://xn--tg-yia.info/Storfors.xml</url>
+<lat>59.5331</lat>
+<lon>14.2712</lon>
+</station>
+<station>
+	<namn>Nykroppa</namn>
+	<url>http://xn--tg-yia.info/Nykroppa.xml</url>
+<lat>59.6239</lat>
+<lon>14.3075</lon>
+</station>
+<station>
+	<namn>Grythyttan</namn>
+	<url>http://xn--tg-yia.info/Grythyttan.xml</url>
+<lat>59.7043</lat>
+<lon>14.5302</lon>
+</station>
+<station>
+	<namn>Hällefors</namn>
+	<url>http://xn--tg-yia.info/Hällefors.xml</url>
+<lat>59.7828</lat>
+<lon>14.5187</lon>
+</station>
+<station>
+	<namn>Bredsjö</namn>
+	<url>http://xn--tg-yia.info/Bredsjö.xml</url>
+<lat>59.833</lat>
+<lon>14.7342</lon>
+</station>
+<station>
+	<namn>Stockaryd</namn>
+	<url>http://xn--tg-yia.info/Stockaryd.xml</url>
+<lat>57.3174</lat>
+<lon>14.5916</lon>
+</station>
+<station>
+	<namn>Bodafors</namn>
+	<url>http://xn--tg-yia.info/Bodafors.xml</url>
+<lat>57.5043</lat>
+<lon>14.6924</lon>
+</station>
+<station>
+	<namn>Brinellskolan</namn>
+	<url>http://xn--tg-yia.info/Brinellskolan.xml</url>
+<lat>57.6696</lat>
+<lon>14.7022</lon>
+</station>
+<station>
+	<namn>Ormaryd</namn>
+	<url>http://xn--tg-yia.info/Ormaryd.xml</url>
+<lat>57.6647</lat>
+<lon>14.8332</lon>
+</station>
+<station>
+	<namn>Eksjö</namn>
+	<url>http://xn--tg-yia.info/Eksjö.xml</url>
+<lat>57.6637</lat>
+<lon>14.9756</lon>
+</station>
+<station>
+	<namn>Hult</namn>
+	<url>http://xn--tg-yia.info/Hult.xml</url>
+<lat>57.6441</lat>
+<lon>15.1299</lon>
+</station>
+<station>
+	<namn>Bruzaholm</namn>
+	<url>http://xn--tg-yia.info/Bruzaholm.xml</url>
+<lat>57.6418</lat>
+<lon>15.2746</lon>
+</station>
+<station>
+	<namn>Hjältevad</namn>
+	<url>http://xn--tg-yia.info/Hjältevad.xml</url>
+<lat>57.6291</lat>
+<lon>15.3443</lon>
+</station>
+<station>
+	<namn>Ingatorp</namn>
+	<url>http://xn--tg-yia.info/Ingatorp.xml</url>
+<lat>57.6347</lat>
+<lon>15.4168</lon>
+</station>
+<station>
+	<namn>Mariannelund</namn>
+	<url>http://xn--tg-yia.info/Mariannelund.xml</url>
+<lat>57.6161</lat>
+<lon>15.5852</lon>
+</station>
+<station>
+	<namn>Lönneberga</namn>
+	<url>http://xn--tg-yia.info/Lönneberga.xml</url>
+<lat>57.5521</lat>
+<lon>15.7202</lon>
+</station>
+<station>
+	<namn>Silverdalen</namn>
+	<url>http://xn--tg-yia.info/Silverdalen.xml</url>
+<lat>57.5368</lat>
+<lon>15.7578</lon>
+</station>
+<station>
+	<namn>Värmlands Bro</namn>
+	<url>http://xn--tg-yia.info/Värmlands Bro.xml</url>
+<lat>59.1878</lat>
+<lon>13.0161</lon>
+</station>
+</stationer>

@@ -19,8 +19,6 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathFactory;
 
 import org.apache.commons.io.FileUtils;
-import org.geotools.data.DataStore;
-import org.geotools.data.simple.SimpleFeatureSource;
 import org.junit.Before;
 import org.junit.Test;
 import org.neo4j.gis.spatial.DefaultLayer;
@@ -32,7 +30,6 @@ import org.neo4j.gis.spatial.SpatialDatabaseRecord;
 import org.neo4j.gis.spatial.SpatialDatabaseService;
 import org.neo4j.gis.spatial.SpatialTopologyUtils;
 import org.neo4j.gis.spatial.SpatialTopologyUtils.PointResult;
-import org.neo4j.gis.spatial.geotools.data.Neo4jSpatialDataStore;
 import org.neo4j.gis.spatial.geotools.data.StyledImageExporter;
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.neo4j.kernel.EmbeddedGraphDatabase;
@@ -89,7 +86,8 @@ public class ImportRoutesTest {
 		// exporter.exportLayer(stations.getName());
 		StyledImageExporter imageExporter = new StyledImageExporter(database);
 		imageExporter.setExportDir("target/export");
-		imageExporter.setZoom(1.0);
+		//imageExporter.setZoom(3.0);
+		//imageExporter.setOffset(0.1, 0.1);
 		imageExporter.setSize(3000, 3000);
 		String[] layerNames = new String[] { rails.getName(),
 				stations.getName(), results.getName() };
@@ -141,7 +139,7 @@ public class ImportRoutesTest {
 		database.beginTx();
 		try {
 			InputStreamReader in = new InputStreamReader(new FileInputStream(
-					"rail-points.csv"));
+					"data/rail-points.csv"));
 			BufferedReader buf = new BufferedReader(in);
 			String line;
 			int trainId = 0;
@@ -191,21 +189,20 @@ public class ImportRoutesTest {
 			DocumentBuilder db = dbf.newDocumentBuilder();
 
 			// parse using builder to get DOM representation of the XML file
-			dom = db.parse("Transportverkets_koordinater.kml");
+			dom = db.parse("data/stationer.xml");
 
 			XPath xpath = XPathFactory.newInstance().newXPath();
-			NodeList nodes = (NodeList) xpath.evaluate("//Placemark", dom,
+			NodeList nodes = (NodeList) xpath.evaluate("//stationer/station", dom,
 					XPathConstants.NODESET);
 			for (int i = 0; i < nodes.getLength(); i++) {
 				Node station = nodes.item(i);
 
-				String name = (String) xpath.evaluate("name", station,
+				String name = (String) xpath.evaluate("namn", station,
 						XPathConstants.STRING);
-				StringTokenizer coord = new StringTokenizer(
-						(String) xpath.evaluate("Point/coordinates", station,
-								XPathConstants.STRING), ",");
-				Double lon = Double.parseDouble(coord.nextToken());
-				Double lat = Double.parseDouble(coord.nextToken());
+				Double lon = Double.parseDouble( (String)xpath.evaluate("lon", station,
+								XPathConstants.STRING));
+				Double lat = Double.parseDouble( (String)xpath.evaluate("lat", station,
+						XPathConstants.STRING));
 				String[] keys = new String[] { "name" };
 				Object[] values = new String[] { name };
 				layer.add(
