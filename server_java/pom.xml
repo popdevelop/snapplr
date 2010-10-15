@@ -54,6 +54,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.neo4j</groupId>
+			<artifactId>neo4j-utils</artifactId>
+			<version>1.2-1.2.M01</version>
+		</dependency>
+		<dependency>
+			<groupId>org.neo4j</groupId>
 			<artifactId>neo4j-spatial</artifactId>
 			<version>0.2-SNAPSHOT</version>
 		</dependency>
@@ -100,6 +105,14 @@
 			<id>neo4j-public-repository</id>
 			<name>Publically available Maven 2 repository for Neo4j</name>
 			<url>http://m2.neo4j.org</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>m2-central</id>
+			<name>Maven 2 </name>
+			<url>http://repo2.maven.org/maven2/</url>
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>

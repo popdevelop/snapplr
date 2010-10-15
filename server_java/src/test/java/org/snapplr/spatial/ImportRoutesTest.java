@@ -76,8 +76,8 @@ public class ImportRoutesTest {
 	public void importRoutes() throws Exception {
 		DynamicLayer rails = (DynamicLayer) db
 				.createLayer("railway",SimpleGraphEncoder.class, DynamicLayer.class );
-		EditableLayer stations = (EditableLayer) db
-				.getOrCreateEditableLayer("stations");
+		DynamicLayer stations = (DynamicLayer) db
+				.createLayer("stations", StationsEncoder.class, DynamicLayer.class);
 		String[] names = new String[] { "name", "railway", "description" };
 		((DefaultLayer) stations).setExtraPropertyNames(names);
 		((DefaultLayer) rails).setExtraPropertyNames(names);
