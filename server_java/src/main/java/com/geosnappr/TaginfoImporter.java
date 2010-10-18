@@ -3,10 +3,13 @@ package com.geosnappr;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Iterator;
 import java.util.List;
 
-import javax.measure.quantity.Length;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -20,7 +23,6 @@ import org.neo4j.gis.spatial.ShapefileExporter;
 import org.neo4j.gis.spatial.SpatialDatabaseRecord;
 import org.neo4j.gis.spatial.SpatialDatabaseService;
 import org.neo4j.gis.spatial.SpatialIndexReader;
-import org.neo4j.gis.spatial.query.SearchIntersectWindow;
 import org.neo4j.gis.spatial.query.SearchPointsWithinOrthodromicDistance;
 import org.neo4j.graphdb.Direction;
 import org.neo4j.graphdb.DynamicRelationshipType;
@@ -43,7 +45,6 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import com.vividsolutions.jts.geom.Coordinate;
-import com.vividsolutions.jts.geom.Envelope;
 import com.vividsolutions.jts.geom.Point;
 
 public class TaginfoImporter {
@@ -52,6 +53,7 @@ public class TaginfoImporter {
 	private GraphDatabaseService database;
 	private Transaction tx;
 	private LuceneIndexService index;
+	SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd H:mm");
 
 	public TaginfoImporter(EmbeddedGraphDatabase database2,
 			LuceneIndexService index2) {
@@ -59,8 +61,7 @@ public class TaginfoImporter {
 		// TODO Auto-generated constructor stub
 		index = index2;
 
-		db = new SpatialDatabaseService(
-				database);
+		db = new SpatialDatabaseService(database);
 	}
 
 	public void importRoutes() throws Exception {
@@ -166,15 +167,19 @@ public class TaginfoImporter {
 		NodeList stations = (NodeList) xpath.evaluate("//stationer/station",
 				dom, XPathConstants.NODESET);
 		org.neo4j.graphdb.Node previous = trainNode;
-		String ordDeparture = null;
+		long ordDeparture = 0;
 		DynamicRelationshipType relType = DynamicRelationshipType
-				.withName("TRAIN-" + (String) trainNode.getProperty("number"));
+				.withName("TRAIN-"
+						+ (String) trainNode.getProperty(Const.NUMBER));
+
 		for (int i = 0; i < stations.getLength(); i++) {
 			Node sn = stations.item(i);
 			String stationName = (String) xpath.evaluate("namn", sn,
 					XPathConstants.STRING);
 			String ordArrival = (String) xpath.evaluate("ordAnkomst", sn,
 					XPathConstants.STRING);
+			String ordArrivalDate = (String) xpath.evaluate("ordAnkomstDatum",
+					sn, XPathConstants.STRING);
 
 			org.neo4j.graphdb.Node station = index.getSingleNode("name",
 					stationName);
@@ -185,13 +190,25 @@ public class TaginfoImporter {
 				Relationship to = previous.createRelationshipTo(station,
 						relType);
 
-				if (ordDeparture != null) {
-					to.setProperty("ordDeparture", ordDeparture);
+				if (ordDeparture != 0) {
+					to.setProperty(Const.ORD_DEPARTURE, ordDeparture);
 				}
-				to.setProperty("ordArrival", ordArrival);
-				ordDeparture = (String) xpath.evaluate("ordAvgang", sn,
-						XPathConstants.STRING);
-
+				if (!ordArrival.equals("")) {
+					to.setProperty(Const.ORD_ARRIVAL,
+							df.parse(ordArrivalDate + " " + ordArrival)
+									.getTime());
+				}
+				String ordDepartureTime = (String) xpath.evaluate("ordAvgang",
+						sn, XPathConstants.STRING);
+				String ordDepartureDate = (String) xpath.evaluate(
+						"ordAvgangDatum", sn, XPathConstants.STRING);
+				if (!ordDepartureTime.equals("")) {
+					ordDeparture = df.parse(
+							ordDepartureDate + " " + ordDepartureTime)
+							.getTime();
+				} else {
+					ordDeparture = 0;
+				}
 				previous = station;
 			}
 		}
@@ -254,8 +271,8 @@ public class TaginfoImporter {
 
 	public void buildStationLayer() {
 		tx = database.beginTx();
-		StationsLayer layer = (StationsLayer) db.getOrCreateLayer(
-				STATIONS2, StationsEncoder.class, StationsLayer.class);
+		StationsLayer layer = (StationsLayer) db.getOrCreateLayer(STATIONS2,
+				StationsEncoder.class, StationsLayer.class);
 		layer.clear();
 		String[] keys = new String[] { "name" };
 		layer.setExtraPropertyNames(keys);
@@ -263,49 +280,70 @@ public class TaginfoImporter {
 				.description()
 				.expand(Traversal.expanderForTypes(RelTypes.STATIONS,
 						Direction.OUTGOING, RelTypes.STATION,
-						Direction.OUTGOING))
-				.filter(new Predicate<Path>() {
-					
+						Direction.OUTGOING)).filter(new Predicate<Path>() {
+
 					@Override
 					public boolean accept(Path path) {
 						return path.length() == 2;
 					}
 				}).traverse(database.getReferenceNode());
-		for(org.neo4j.graphdb.Node station : stations.nodes()) {
-			System.out.println("indexing " + station
-					.getProperty("name"));
-			layer.addStation(station );
+		for (org.neo4j.graphdb.Node station : stations.nodes()) {
+			System.out.println("indexing " + station.getProperty(Const.NAME));
+			layer.addStation(station);
 		}
 		System.out.println("finished");
 		tx.success();
 		tx.finish();
 	}
-	
-	public void getStations(double lon, double lat, int km) {
+
+	public void getStations(double lon, double lat, int km, long from, int minutesForward) {
 		Layer layer = db.getLayer(STATIONS2);
 		SpatialIndexReader spatialIndex = layer.getIndex();
-		Point startingPoint = layer.getGeometryFactory().createPoint(new Coordinate(lon, lat));
-		Search searchQuery = new SearchPointsWithinOrthodromicDistance(startingPoint, km);
-        spatialIndex.executeSearch(searchQuery);
-        List<SpatialDatabaseRecord> results = searchQuery.getResults();
-        for (Iterator iterator = results.iterator(); iterator.hasNext();) {
+		Point startingPoint = layer.getGeometryFactory().createPoint(
+				new Coordinate(lon, lat));
+		Search searchQuery = new SearchPointsWithinOrthodromicDistance(
+				startingPoint, km);
+		spatialIndex.executeSearch(searchQuery);
+		List<SpatialDatabaseRecord> results = searchQuery.getResults();
+		for (Iterator iterator = results.iterator(); iterator.hasNext();) {
+			Calendar calendar = GregorianCalendar.getInstance();
+			calendar.setTime(new Date(from));
+			calendar.add(Calendar.MINUTE, minutesForward);
+			System.out.println("requested: " + df.format(from) + " + " + minutesForward + "min");
 			SpatialDatabaseRecord spatialDatabaseRecord = (SpatialDatabaseRecord) iterator
 					.next();
-			System.out.println("Found " + spatialDatabaseRecord.getGeomNode().getProperty("name"));
-			
+			org.neo4j.graphdb.Node stationNode = spatialDatabaseRecord
+					.getGeomNode();
+			System.out.println("Found " + stationNode.getProperty(Const.NAME));
+
+			for (Relationship rel : stationNode
+					.getRelationships(Direction.OUTGOING)) {
+				if (rel.hasProperty(Const.ORD_DEPARTURE)) {
+					long departure = new Date(
+							(Long) rel.getProperty(Const.ORD_DEPARTURE))
+							.getTime();
+					Date dep = new Date(departure);
+					if (calendar.getTimeInMillis() > departure && departure > from) {
+						System.out.println(rel.getType() + " departing at "
+								+ df.format(departure) + " to " + rel.getEndNode().getProperty(Const.NAME));
+						System.out.println(" - valid.");
+					}
+				}
+			}
+
 		}
 
 	}
-	
+
 	public void exportToPng(String layername) {
-		 ShapefileExporter shpExporter = new ShapefileExporter(database);
-		 shpExporter.setExportDir("target/export");
-		 try {
-		 shpExporter.exportLayer(layername);
-		 } catch (Exception e) {
-		 // TODO Auto-generated catch block
-		 e.printStackTrace();
-		 }
+		ShapefileExporter shpExporter = new ShapefileExporter(database);
+		shpExporter.setExportDir("target/export");
+		try {
+			shpExporter.exportLayer(layername);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

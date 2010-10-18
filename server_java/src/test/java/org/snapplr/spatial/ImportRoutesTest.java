@@ -1,9 +1,12 @@
 package org.snapplr.spatial;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.neo4j.gis.spatial.geotools.data.StyledImageExporter;
 import org.neo4j.index.lucene.LuceneIndexService;
 import org.neo4j.kernel.EmbeddedGraphDatabase;
 
@@ -32,17 +35,18 @@ public class ImportRoutesTest {
 	@Test
 	public void testImport() throws Exception {
 		TaginfoImporter importer = new TaginfoImporter(database, index);
-		importer.importRoutes();
-		importer.buildStationLayer();
+		//importer.importRoutes();
+		//importer.buildStationLayer();
 		//search around Malmo
-		importer.getStations(13.0009, 55.6093, 10);
+		SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd H:mm");
+		importer.getStations(13.0009, 55.6093, 10, System.currentTimeMillis(), 10);
+		
+//		importer.getStations(11.4709, 58.61, 1, df.parse("20101019 8:38").getTime(), 10);
 		//importer.exportToPng("stations");
-		StyledImageExporter imageExporter = new StyledImageExporter(database);
-		imageExporter.setExportDir("target/export");
-		//imageExporter.setZoom(3.0);
-		//imageExporter.setOffset(-0.05, -0.05);
-		imageExporter.setSize(1024, 768);
-		imageExporter.saveLayerImage("stations", "geosnappr.sld.xml");
+		//StyledImageExporter imageExporter = new StyledImageExporter(database);
+		//imageExporter.setExportDir("target/export");
+		//imageExporter.setSize(1024, 768);
+		//imageExporter.saveLayerImage("stations", "geosnappr.sld.xml");
 	}
 
 	@After
