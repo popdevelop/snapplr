@@ -3,7 +3,10 @@ package com.geosnappr;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Iterator;
+import java.util.List;
 
+import javax.measure.quantity.Length;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -11,21 +14,40 @@ import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathFactory;
 
+import org.neo4j.gis.spatial.Layer;
+import org.neo4j.gis.spatial.Search;
+import org.neo4j.gis.spatial.ShapefileExporter;
+import org.neo4j.gis.spatial.SpatialDatabaseRecord;
 import org.neo4j.gis.spatial.SpatialDatabaseService;
+import org.neo4j.gis.spatial.SpatialIndexReader;
+import org.neo4j.gis.spatial.query.SearchIntersectWindow;
+import org.neo4j.gis.spatial.query.SearchPointsWithinOrthodromicDistance;
+import org.neo4j.graphdb.Direction;
 import org.neo4j.graphdb.DynamicRelationshipType;
 import org.neo4j.graphdb.GraphDatabaseService;
+import org.neo4j.graphdb.Path;
 import org.neo4j.graphdb.Relationship;
 import org.neo4j.graphdb.Transaction;
+import org.neo4j.graphdb.traversal.Traverser;
+import org.neo4j.helpers.Predicate;
 import org.neo4j.index.lucene.LuceneIndexService;
 import org.neo4j.kernel.EmbeddedGraphDatabase;
+import org.neo4j.kernel.Traversal;
 import org.neo4j.util.GraphDatabaseUtil;
 import org.snapplr.spatial.RelTypes;
+import org.snapplr.spatial.StationsEncoder;
+import org.snapplr.spatial.StationsLayer;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import com.vividsolutions.jts.geom.Coordinate;
+import com.vividsolutions.jts.geom.Envelope;
+import com.vividsolutions.jts.geom.Point;
+
 public class TaginfoImporter {
+	private static final String STATIONS2 = "stations";
 	private SpatialDatabaseService db;
 	private GraphDatabaseService database;
 	private Transaction tx;
@@ -36,6 +58,9 @@ public class TaginfoImporter {
 		database = database2;
 		// TODO Auto-generated constructor stub
 		index = index2;
+
+		db = new SpatialDatabaseService(
+				database);
 	}
 
 	public void importRoutes() throws Exception {
@@ -226,9 +251,61 @@ public class TaginfoImporter {
 			ioe.printStackTrace();
 		}
 	}
-	
+
 	public void buildStationLayer() {
-		
+		tx = database.beginTx();
+		StationsLayer layer = (StationsLayer) db.getOrCreateLayer(
+				STATIONS2, StationsEncoder.class, StationsLayer.class);
+		layer.clear();
+		String[] keys = new String[] { "name" };
+		layer.setExtraPropertyNames(keys);
+		Traverser stations = Traversal
+				.description()
+				.expand(Traversal.expanderForTypes(RelTypes.STATIONS,
+						Direction.OUTGOING, RelTypes.STATION,
+						Direction.OUTGOING))
+				.filter(new Predicate<Path>() {
+					
+					@Override
+					public boolean accept(Path path) {
+						return path.length() == 2;
+					}
+				}).traverse(database.getReferenceNode());
+		for(org.neo4j.graphdb.Node station : stations.nodes()) {
+			System.out.println("indexing " + station
+					.getProperty("name"));
+			layer.addStation(station );
+		}
+		System.out.println("finished");
+		tx.success();
+		tx.finish();
+	}
+	
+	public void getStations(double lon, double lat, int km) {
+		Layer layer = db.getLayer(STATIONS2);
+		SpatialIndexReader spatialIndex = layer.getIndex();
+		Point startingPoint = layer.getGeometryFactory().createPoint(new Coordinate(lon, lat));
+		Search searchQuery = new SearchPointsWithinOrthodromicDistance(startingPoint, km);
+        spatialIndex.executeSearch(searchQuery);
+        List<SpatialDatabaseRecord> results = searchQuery.getResults();
+        for (Iterator iterator = results.iterator(); iterator.hasNext();) {
+			SpatialDatabaseRecord spatialDatabaseRecord = (SpatialDatabaseRecord) iterator
+					.next();
+			System.out.println("Found " + spatialDatabaseRecord.getGeomNode().getProperty("name"));
+			
+		}
+
+	}
+	
+	public void exportToPng(String layername) {
+		 ShapefileExporter shpExporter = new ShapefileExporter(database);
+		 shpExporter.setExportDir("target/export");
+		 try {
+		 shpExporter.exportLayer(layername);
+		 } catch (Exception e) {
+		 // TODO Auto-generated catch block
+		 e.printStackTrace();
+		 }
 	}
 
 }

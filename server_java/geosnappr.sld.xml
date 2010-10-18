@@ -45,7 +45,7 @@
 					</TextSymbolizer>
 				</Rule>
 			</FeatureTypeStyle>
-			<FeatureTypeStyle>
+			<!-- FeatureTypeStyle>
 				<Rule>
 					<ogc:Filter>
 						<ogc:Not>
@@ -135,7 +135,7 @@
 					</TextSymbolizer>
 
 				</Rule>
-			</FeatureTypeStyle>
+			</FeatureTypeStyle-->
 		</UserStyle>
 	</NamedLayer>
 </StyledLayerDescriptor>
