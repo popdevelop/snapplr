@@ -36,11 +36,10 @@ public class ImportRoutesTest {
 	public void testImport() throws Exception {
 		TaginfoImporter importer = new TaginfoImporter(database, index);
 		//importer.importRoutes();
-		//importer.buildStationLayer();
 		//search around Malmo
-		SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd H:mm");
-		importer.getStations(13.0009, 55.6093, 10, System.currentTimeMillis(), 10);
-		
+		//SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd H:mm");
+		String result = importer.getStations(13.0009, 55.6093, 10, System.currentTimeMillis(), 30);
+		System.out.println(result);
 //		importer.getStations(11.4709, 58.61, 1, df.parse("20101019 8:38").getTime(), 10);
 		//importer.exportToPng("stations");
 		//StyledImageExporter imageExporter = new StyledImageExporter(database);
@@ -51,7 +50,8 @@ public class ImportRoutesTest {
 
 	@After
 	public void shutdown() {
-		System.out.println("test");
+		index.shutdown();
+		database.shutdown();
 		//tx.success();
 		// tx.finish();
 	}

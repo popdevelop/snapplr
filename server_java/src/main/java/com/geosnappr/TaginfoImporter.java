@@ -7,8 +7,10 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -35,6 +37,7 @@ import org.neo4j.helpers.Predicate;
 import org.neo4j.index.lucene.LuceneIndexService;
 import org.neo4j.kernel.EmbeddedGraphDatabase;
 import org.neo4j.kernel.Traversal;
+import org.neo4j.shell.util.json.JSONObject;
 import org.neo4j.util.GraphDatabaseUtil;
 import org.snapplr.spatial.RelTypes;
 import org.snapplr.spatial.StationsEncoder;
@@ -87,6 +90,11 @@ public class TaginfoImporter {
 		importSegments();
 		tx.success();
 		tx.finish();
+		tx = database.beginTx();
+		buildStationLayer();
+		tx.success();
+		tx.finish();
+
 		// snap(rails, results, fieldsNames);
 		// ShapefileExporter exporter = new ShapefileExporter(database);
 		// exporter.setExportDir("target/export");
@@ -121,21 +129,27 @@ public class TaginfoImporter {
 			dom = db.parse(remote.openStream());
 			XPath xpath = XPathFactory.newInstance().newXPath();
 			NodeList nodes = (NodeList) xpath.evaluate("//tagLista/tag", dom,
-					XPathConstants.NODESET);
+				XPathConstants.NODESET);
 			GraphDatabaseUtil util = new GraphDatabaseUtil(database);
 			for (int i = 0; i < nodes.getLength(); i++) {
 				Node station = nodes.item(i);
 
 				String number = (String) xpath.evaluate("nr", station,
 						XPathConstants.STRING);
-				String url = (String) xpath.evaluate("url", station,
-						XPathConstants.STRING);
-				org.neo4j.graphdb.Node trainNode = database.createNode();
-				org.neo4j.graphdb.Node trainsNode = util
-						.getOrCreateSubReferenceNode(RelTypes.TRAINS);
-				trainsNode.createRelationshipTo(trainNode, RelTypes.TRAIN);
-				trainNode.setProperty("number", number);
-				parseTrain(url, trainNode);
+				if (index.getSingleNode(Const.NUMBER, number) != null) {
+					System.err.println("Found existing entry for train, skipping "
+							+ number);
+				} else {
+					String url = (String) xpath.evaluate("url", station,
+							XPathConstants.STRING);
+					org.neo4j.graphdb.Node trainNode = database.createNode();
+					org.neo4j.graphdb.Node trainsNode = util
+							.getOrCreateSubReferenceNode(RelTypes.TRAINS);
+					trainsNode.createRelationshipTo(trainNode, RelTypes.TRAIN);
+					trainNode.setProperty(Const.NUMBER, number);
+					index.index(trainNode, Const.NUMBER, number);
+					parseTrain(url, trainNode);
+				}
 			}
 
 			// }
@@ -162,7 +176,7 @@ public class TaginfoImporter {
 		// parse using builder to get DOM representation of the XML file
 		dom = db.parse(remote.openStream());
 		XPath xpath = XPathFactory.newInstance().newXPath();
-		trainNode.setProperty("till", (String) xpath.evaluate("//tag/till",
+		trainNode.setProperty(Const.TO, (String) xpath.evaluate("//tag/till",
 				dom, XPathConstants.STRING));
 		NodeList stations = (NodeList) xpath.evaluate("//stationer/station",
 				dom, XPathConstants.NODESET);
@@ -270,7 +284,6 @@ public class TaginfoImporter {
 	}
 
 	public void buildStationLayer() {
-		tx = database.beginTx();
 		StationsLayer layer = (StationsLayer) db.getOrCreateLayer(STATIONS2,
 				StationsEncoder.class, StationsLayer.class);
 		layer.clear();
@@ -292,12 +305,12 @@ public class TaginfoImporter {
 			layer.addStation(station);
 		}
 		System.out.println("finished");
-		tx.success();
-		tx.finish();
 	}
 
-	public void getStations(double lon, double lat, int km, long from, int minutesForward) {
+	public String getStations(double lon, double lat, int km, long from,
+			int minutesForward) {
 		Layer layer = db.getLayer(STATIONS2);
+		Map<String, Object> result = new HashMap<String, Object>();
 		SpatialIndexReader spatialIndex = layer.getIndex();
 		Point startingPoint = layer.getGeometryFactory().createPoint(
 				new Coordinate(lon, lat));
@@ -309,12 +322,14 @@ public class TaginfoImporter {
 			Calendar calendar = GregorianCalendar.getInstance();
 			calendar.setTime(new Date(from));
 			calendar.add(Calendar.MINUTE, minutesForward);
-			System.out.println("requested: " + df.format(from) + " + " + minutesForward + "min");
+			System.out.println("requested: " + "within " + +km
+					+ "km departing at " + df.format(from) + " + "
+					+ minutesForward + "min");
 			SpatialDatabaseRecord spatialDatabaseRecord = (SpatialDatabaseRecord) iterator
 					.next();
 			org.neo4j.graphdb.Node stationNode = spatialDatabaseRecord
 					.getGeomNode();
-			System.out.println("Found " + stationNode.getProperty(Const.NAME));
+			System.out.println("From: " + stationNode.getProperty(Const.NAME));
 
 			for (Relationship rel : stationNode
 					.getRelationships(Direction.OUTGOING)) {
@@ -322,16 +337,30 @@ public class TaginfoImporter {
 					long departure = new Date(
 							(Long) rel.getProperty(Const.ORD_DEPARTURE))
 							.getTime();
-					Date dep = new Date(departure);
-					if (calendar.getTimeInMillis() > departure && departure > from) {
+					if (calendar.getTimeInMillis() > departure
+							&& departure > from) {
+						String nextStation = (String) rel.getEndNode()
+								.getProperty(Const.NAME);
 						System.out.println(rel.getType() + " departing at "
-								+ df.format(departure) + " to " + rel.getEndNode().getProperty(Const.NAME));
-						System.out.println(" - valid.");
+								+ df.format(departure) + " to " + nextStation);
+						String reltype = rel.getType().toString();
+						String trainNumber = reltype.substring(reltype
+								.indexOf("-") + 1);
+						org.neo4j.graphdb.Node trainNode = index.getSingleNode(
+								Const.NUMBER, trainNumber);
+						Map details = new HashMap<String, String>();
+						details.put("to", trainNode.getProperty(Const.TO));
+						details.put("departure", df.format(departure));
+						details.put("next", nextStation);
+						result.put(
+								trainNumber,
+								details);
 					}
 				}
 			}
 
 		}
+		return new JSONObject(result).toString();
 
 	}
 
