@@ -1,0 +1,10 @@
+README
+
+Simple tornado chat with simple plugins support.
+
+* Place plugins under /plugins to load them.
+
+
+
+
+

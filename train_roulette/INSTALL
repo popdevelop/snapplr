@@ -1,0 +1,10 @@
+Add popchat.conf in /src that contains:
+
+        active_plugins = []
+        #active_plugins = ["TwitterStream"]
+
+Add twitter.conf in /src/plugins that contains:
+
+        TWITTER_USER = 'secret'
+        TWITTER_PASS = 'secret'
+

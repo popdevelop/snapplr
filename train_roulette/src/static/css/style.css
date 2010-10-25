@@ -1,0 +1,355 @@
+$html {
+    height: 100%;
+}
+
+a {
+    color: #8b0000;
+}
+
+body { 
+    font:bold 18px Helvetica, Arial, Sans-serif; 
+    color: #FFF;
+    margin: 0;
+    padding: 0;
+    text-shadow: #777 0px 1px 0;
+    height: 100%;
+    background-color: #E5E5E5;
+}
+ul, li { margin: 0; padding: 0; list-style-type: none;}
+
+h1, h2, h3 { margin:0; padding: 0; }
+
+textarea {
+    font: 14px normal Monaco,
+        "Bitstream Vera Sans Mono",
+        "Lucida Console",
+        Terminal,
+        monospace;
+}
+
+input.button {
+    border: 0;
+    padding: 3px 10px;
+    margin: 3px 5px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;    
+}
+
+#errorIndicator {
+    position: fixed;
+    left: 27%;
+    top: 3px;
+    background-color: #8b0000;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: normal;
+
+    text-shadow: none;
+    padding: 5px 15px;
+
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+}
+
+#msgAlert {
+    position: fixed;
+    left: 130px;
+    top: 30%;
+    width: 400px;
+    background-color: #8b0000;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: normal;
+
+    text-shadow: none;
+    padding: 5px 15px;
+
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;    
+}
+
+#msgAlert h2 {
+    font-size: 14px;
+}
+
+#msgAlert a {
+    color: #FFF;
+    cursor: pointer;
+    float: right;
+    text-decoration: underline;
+}
+
+#newMessageIndicator {
+    position: fixed;
+    left: 27%;
+    bottom: 80px;
+    background-color: #0aa;
+    color: #fff;
+    font-size: 12px;
+    font-weight: normal;
+
+    text-shadow: none;
+    padding: 5px 15px;
+
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+#left {
+    width: 60%;
+    height: 100%;
+    position: relative;
+}
+
+#right {
+    width: 40%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url('../img/collab-bg.jpg');
+}
+
+#right h3 {
+    margin-bottom: 10px;
+}
+
+#collab {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    left: 0px;
+    height: 100%; 
+    padding: 20px;
+    background-image: url('../img/shadow-right.png');
+    background-repeat: repeat-y;
+}
+
+#summary h3 {
+    cursor: pointer;
+}
+
+#summary ul li {
+    margin: 3px 10px;
+    font-size: 12px;
+    font-weight: normal;
+    text-shadow: none;
+    color: #555;
+}
+
+#maparea {
+    border: 0;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+    -moz-box-shadow: 2px 2px 4px #555;
+    -webkit-box-shadow: 2px 2px 4px #555;
+}
+
+#collab textarea {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 300px;
+}
+
+#collab_nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    background-color: #666;
+    width: 100%;
+}
+#collab_nav > ul {
+    margin: 1px 0 0 5px;
+    height: 30px;
+}
+#collab_nav > ul > li {
+    background-color: #888;
+    font-size: 12px;
+    margin: 0 5px 0 0;
+    padding: 3px 10px;
+    overflow:hidden;
+    cursor: pointer;
+    display: inline-block;
+    height: 15px;
+
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+
+#collab_nav > ul > li.active {
+    background-color: #ccc;
+}
+
+#urls li {
+    color: #444;
+    margin-bottom: 2px;
+    text-shadow: none;
+    font-weight: normal;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+#urls li a {
+    margin: 3px 10px;
+    display: block;
+}
+
+#urls li span {
+    font-weight: normal;
+    color: #888;
+}
+
+#filters {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    width: 60%;
+    background-color: #fff;
+    text-align: bottom;
+}
+
+#filters input {
+    margin: 0 10px 0 0;
+    padding: 0;
+}
+
+#filters > ul > li {
+    display: inline-block;
+    float: left;
+    background-color: #888;
+    margin-left: 20px;
+    padding: 5px 20px;
+}
+
+#messages {
+    background-color: #FFF;
+    margin: 0;
+    padding: 0 0 100px 0;
+    color: #444;
+    width: 100%;
+}
+
+#messages > ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#messages > ul > li {
+    font-family: 'Lucida Grande', verdana, arial, helvetica, sans-serif;
+    min-height: 40px;
+    font-size: 12px;
+    font-weight: normal;
+    text-shadow: none;
+    margin: 0 20px;
+    padding: 3px 15px;
+    border-top: 1px solid #EEE;
+}
+
+#messages > ul > li div {
+    margin: 5px 0 5px 34px;
+    overflow: hidden;
+}
+
+#messages > ul > li p {
+    margin: 0;
+}
+
+#messages > ul > li b {
+    display: block;
+}
+
+#messages > ul > li span {
+    float: right;
+    display: inline;
+    color: #aaa;
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+#messages > ul > li img {
+    float: left;
+    width: 24px;
+    height: 24px;
+    margin-top: 7px;
+}
+
+#messages > ul > li.event_3 {
+    background-color: #FD7;
+    border-top: 1px solid #DB5;
+}
+
+#messages > ul > li.event_2 {
+    background-color: #D9E7FB;
+    border-top: 1px solid #BCF;
+}
+
+#messages > ul > li.event_1 {
+    background-color: #FFC;
+    border-top: 1px solid #EEB;
+}
+
+
+#sticky {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 60%;
+    background-color: #fff;
+}
+
+#sticky form {
+    font-size: 0.8em;
+    font-weight: normal;
+    position: relative;
+    margin: 0 20px;
+    padding: 10px 20px;
+    background-color: #555;  
+}
+
+#sticky form fieldset {
+    margin: -6px 0 0 0;
+    padding: 0;
+    border: 0;
+    float: right;
+}
+
+#input {
+    background-image: url('../img/input-bg.png');
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    height: 80px;
+}
+
+#sendMessage {
+    padding: 5px 20px;
+    margin: 10px 20px 20px 20px;
+}
+
+#newMessage {
+    width: 100%;
+    display: block;
+    border: 1px solid #888;
+    margin-left: -1px;
+    font: 14px Helvetica, Arial, Sans-serif;;
+    resize: none;
+}

@@ -1,0 +1,124 @@
+/* Quickie Reset */
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: Helvetica;
+}
+
+/* Minimum height on body helps preventDefault */
+body {
+	min-height: 316px;
+}
+
+/* Set our fixed elements above everything else */
+#footer {
+	display: block;
+	width: 100%;
+	height: 44px;
+	background: url("../img/bg.png") repeat-x center top;
+	z-index: 200;
+}
+
+/* Footer */
+#footer {
+	height: 49px;
+	background-position: center bottom;
+}
+
+
+textarea {
+    font: 14px normal Monaco,
+        "Bitstream Vera Sans Mono",
+        "Lucida Console",
+        Terminal,
+        monospace;
+}
+
+input.button {
+    border: 0;
+    padding: 3px 10px;
+    margin: 3px 5px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#left {
+    width: 320px;
+    height: 100%;
+    position: relative;
+}
+
+/* Container */
+
+#content {
+	border-top: 1px solid #e0e0e0;
+}
+
+#content > ul > li {
+    font-family: 'Lucida Grande', verdana, arial, helvetica, sans-serif;
+    min-height: 40px;
+    font-size: 12px;
+    font-weight: normal;
+    text-shadow: none;
+    margin: 0;
+    padding: 3px 5px;
+    border-top: 1px solid #EEE;
+}
+
+#content > ul > li div {
+    margin: 5px 0 5px 34px;
+    overflow: hidden;
+}
+
+#content > ul > li p {
+    margin: 0;
+}
+
+#content > ul > li b {
+    display: block;
+}
+
+#content > ul > li span {
+    float: right;
+    display: inline;
+    color: #aaa;
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+#content > ul > li img {
+    float: left;
+    width: 24px;
+    height: 24px;
+    margin-top: 7px;
+}
+
+#content > ul > li.event_3 {
+    background-color: #FD7;
+    border-top: 1px solid #DB5;
+}
+
+#content > ul > li.event_2 {
+    background-color: #D9E7FB;
+    border-top: 1px solid #BCF;
+}
+
+#content > ul > li.event_1 {
+    background-color: #FFC;
+    border-top: 1px solid #EEB;
+}
+
+#sendMessage {
+    padding: 5px 5px;;
+    margin: 0;
+}
+
+#newMessage {
+    width: 300px;
+    display: block;
+    border: 1px solid #888;
+    font: 14px Helvetica, Arial, Sans-serif;;
+    resize: none;
+}

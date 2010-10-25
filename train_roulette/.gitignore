@@ -1,0 +1,8 @@
+*.pyc
+database.db
+.DS_Store
+src/database.db-journal
+src/popchat.log
+src/popchat.conf
+src/plugins/*.conf
+src/plugins/*.log
