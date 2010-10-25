@@ -8,7 +8,7 @@
             nbrUnread += nbrMessages;
             sound.play();
         }
-        document.title = "Wavlr";
+        document.title = "Train Roulette";
         if (nbrUnread > 0) {
             document.title = "(" + nbrUnread + ") " + document.title;
         }
