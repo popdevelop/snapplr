@@ -1,4 +1,5 @@
 *.pyc
+*.log
 database.db
 .DS_Store
 src/database.db-journal
