@@ -210,7 +210,8 @@ def main():
     http_server.listen(options.port)
 
     cfg = config.load("popchat.conf")
-    LoadPlugins(cfg['active_plugins'])
+    if cfg != {}:
+        LoadPlugins(cfg['active_plugins'])
 
     logging.info ("Starting server")
 
