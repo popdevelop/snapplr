@@ -44,7 +44,8 @@ class Application(tornado.web.Application):
             (r"/trains", TrainHandler),
             (r"/admin/(.*)", admin.AdminHandler),
             (r"/users", UsersHandler),
-            (r"/(.*)", MainHandler),
+            (r"/(.+)", RoomHandler),
+            (r"/", MainHandler),
         ]
 
         if options.test:
@@ -73,6 +74,7 @@ class UsersHandler(base.BaseHandler):
         print "users:",users
         self.write(cjson.encode(users))
 
+
 class TrainHandler(base.BaseHandler):
     @base.authenticated
     def post(self):
@@ -81,36 +83,26 @@ class TrainHandler(base.BaseHandler):
         self.write(cjson.encode(trains))
 
 
+class RoomHandler(base.BaseHandler):
+    @base.authenticated
+    def get(self, key):
+        chat, created = Chat.objects.get_or_create(\
+            key=key, defaults={"name": "New room"})
+        logging.debug("Loaded chat (id=%d, key='%s', name='%s') Created: %d" %
+                      (chat.id, chat.key, chat.name, created))
+
+        if "iPhone" in self.request.headers['User-Agent']:
+            self.render("iphone.html")
+        else:
+            self.render("index.html",
+                        messages=Message.objects.all(), chat_id=chat.id)
+
+
 class MainHandler(base.BaseHandler):
     @base.authenticated
-    def get(self,chatid):
-        if not chatid:
-            created = False
-            while not created:
-                h = random.getrandbits(32)
-                chatid = "%08x" % h
-                logging.info("MainHandler redirect to /%s" % chatid)
-                chat,created = Chat.objects.get_or_create(hash=chatid)
-                print "try to create chat %s, status %s" % (chat,created)
-            chat.name = "random %s" % chat.hash
-            chat.save()
-            self.redirect("/%s" % chatid)
-            return
+    def get(self):
+        self.render("trains.html")
 
-        logging.info("MainHandler chatid=%s" % chatid)
-
-        chat, created = Chat.objects.get_or_create(hash=chatid)
-        print "Created:",created
-        if created:
-            chat.name = "Tåg %s" % chatid
-            chat.save()
-            logging.info("MainHandler created chat with hash=%s name=%s id=%s" % (chat.hash, chat.name, chat.id))
-
-        logging.info("MainHandler with chat with hash=%s name=%s id=%s" % (chat.hash, chat.name, chat.id))
-
-        if(self.request.headers['User-Agent'].find("iPhone") > 0):
-                self.render("iphone.html")
-        self.render("index.html", messages=Message.objects.all(), chat_id=chat.id)
 
 class MessageNewHandler(base.BaseHandler, base.MessageMixin):
     @base.authenticated
@@ -193,7 +185,8 @@ def main():
     print "                                "
 
     logging.basicConfig(format='%(asctime)s %(levelname)s: %(message)s',
-                        datefmt='%Y-%m-%d %H:%M:%S',filename="popchat.log")
+                        datefmt='%Y-%m-%d %H:%M:%S',
+                        level=logging.DEBUG)
 
     tornado.options.parse_command_line()
 
