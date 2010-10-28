@@ -52,8 +52,7 @@ class AdminHandler(base.BaseHandler):
         # Add parameters to update
         args = {}
         for param in self.request.arguments:
-            if param != "first_name" and param != "last_name" and param != "name":
-                args[param] = self.get_argument(param)
+            args[param] = self.get_argument(param)
 
         obj = self.interface['type'].objects.filter(id=id)
 
@@ -69,7 +68,8 @@ class AdminHandler(base.BaseHandler):
         self.finish()
 
     @base.authenticated
-    def post(self, bajje):
+#    def post(self, bajje):
+    def get(self, bajje):
         global admin_interfaces
 
         func = re.split("/", self.request.uri)

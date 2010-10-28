@@ -9,6 +9,7 @@ import database
 class User(models.Model):
     name = models.CharField()
     avatar = models.CharField()
+    google = models.CharField()
     github = models.CharField()
     twitter = models.CharField()
 
@@ -92,12 +93,13 @@ class Message(models.Model):
 
 database.Database()
 Chat.objects.get_or_create(key="info", name="Tåg Information")
-User.objects.get_or_create(name="Johan Brissmyr", defaults=dict(twitter="brissmyr", github="brissmyr", avatar="http://a2.twimg.com/profile_images/1124914810/image_bigger.jpg"))
-User.objects.get_or_create(name="Johan Gyllenspetz", defaults=dict(twitter="gyllen", github="gyllen", avatar="http://a1.twimg.com/profile_images/608078257/johan_bigger.jpg"))
-User.objects.get_or_create(name="Joel Larsson", defaults=dict(twitter="tilljoel", github="tilljoel", avatar="http://a2.twimg.com/profile_images/540757022/joel_300x300_bigger.png"))
-User.objects.get_or_create(name="Peter Neubauer", defaults=dict(twitter="peterneubauer", github="peterneubauer", avatar="http://a1.twimg.com/profile_images/348968437/MyPicture.jpg"))
-User.objects.get_or_create(name="Sebastian Wallin", defaults=dict(twitter="jimtegel", github="wallin", avatar="http://a1.twimg.com/profile_images/1104141977/image_bigger.jpg"))
-User.objects.get_or_create(name="Mr Popdevelop", defaults=dict(twitter="popdevelop", github="popdevelop", avatar="http://a2.twimg.com/profile_images/732520034/popdevelop-avatar.png"))
+
+#User.objects.get_or_create(name="Johan Brissmyr", defaults=dict(twitter="brissmyr", github="brissmyr", avatar="http://a2.twimg.com/profile_images/1124914810/image_bigger.jpg", google="brissmyr@gmail.com"))
+#User.objects.get_or_create(name="Johan Gyllenspetz", defaults=dict(twitter="gyllen", github="gyllen", avatar="http://a1.twimg.com/profile_images/608078257/johan_bigger.jpg", google="johan.gyllenspetz@gmail.com"))
+#User.objects.get_or_create(name="Joel Larsson", defaults=dict(twitter="tilljoel", github="tilljoel", avatar="http://a2.twimg.com/profile_images/540757022/joel_300x300_bigger.png", google="tilljoel@gmail.com"))
+#User.objects.get_or_create(name="Peter Neubauer", defaults=dict(twitter="peterneubauer", github="peterneubauer", avatar="http://a1.twimg.com/profile_images/348968437/MyPicture.jpg", google="peterneubauer@gmail.com"))
+#User.objects.get_or_create(name="Sebastian Wallin", defaults=dict(twitter="jimtegel", github="wallin", avatar="http://a1.twimg.com/profile_images/1104141977/image_bigger.jpg", google="sebastian.wallin@gmail.com"))
+#User.objects.get_or_create(name="Mr Popdevelop", defaults=dict(twitter="popdevelop", github="popdevelop", avatar="http://a2.twimg.com/profile_images/732520034/popdevelop-avatar.png"))
 
 if __name__ == "__main__":
     import database

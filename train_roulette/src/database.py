@@ -11,7 +11,7 @@ class Database():
         self.add_statement("create table if not exists users "
                            "(id INTEGER PRIMARY KEY, name STRING, "
                            "avatar STRING, "
-                           "github STRING, twitter STRING)")
+                           "github STRING, twitter STRING, google STRING)")
         self.add_statement("create table if not exists chats "
                            "(id INTEGER PRIMARY KEY, name STRING, "
                            "key STRING)")

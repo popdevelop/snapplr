@@ -37,11 +37,12 @@ class Application(tornado.web.Application):
         handlers = [
             (r"/auth/login", AuthLoginHandler),
             (r"/auth/logout", AuthLogoutHandler),
+            (r"/config", ConfigHandler),
             (r"/message/new/(.*)", MessageNewHandler),
             (r"/message/updates/(.*)", MessageUpdatesHandler),
             (r"/pad/write", pad.WriteHandler),
             (r"/pad/updates", pad.UpdatesHandler),
-            (r"/trains", TrainHandler),
+            (r"/rooms", RoomsHandler),
             (r"/geotrains", GeoTrainHandler),
             (r"/admin/(.*)", admin.AdminHandler),
             (r"/users", UsersHandler),
@@ -71,12 +72,13 @@ class UsersHandler(base.BaseHandler):
         print "users:",users
         self.write(cjson.encode(users))
 
-class TrainHandler(base.BaseHandler):
+
+class RoomsHandler(base.BaseHandler):
     @base.authenticated
     def post(self):
-        print "fetch all trains"
-        trains = [model_to_dict(u) for u in Chat.objects.all()]
-        self.write(cjson.encode(trains))
+        rooms = [model_to_dict(r) for r in Chat.objects.all()]
+        self.write(cjson.encode(rooms))
+
 
 class GeoTrainHandler(base.BaseHandler):
 #    @base.authenticated
@@ -141,17 +143,22 @@ class RoomHandler(base.BaseHandler):
                         messages=Message.objects.all(), chat_id=chat.id)
 
 
+class ConfigHandler(base.BaseHandler):
+    @base.authenticated
+    def get(self):
+        self.render("config.html", user=User.objects.all()[0])
+
+
 class MainHandler(base.BaseHandler):
     @base.authenticated
     def get(self):
-        self.render("trains.html")
+        self.render("train.html")
 
 
 class MessageNewHandler(base.BaseHandler, base.MessageMixin):
     @base.authenticated
     def post(self, chatid):
         current_user = self.get_current_user()
-        print "new got chatid:",chatid
         chat_id = chatid
         user, created = User.objects.get_or_create(name=current_user)
         message = Message.create_with_type("chat", user=user, chat_id=chat_id,
@@ -194,12 +201,13 @@ class AuthLoginHandler(base.BaseHandler, tornado.auth.GoogleMixin):
         if self.get_argument("openid.mode", None):
             self.get_authenticated_user(self.async_callback(self._on_auth))
             return
-        self.authenticate_redirect(ax_attrs=["name"])
+        self.authenticate_redirect(ax_attrs=["name", "email"])
 
     def _on_auth(self, user):
         if not user:
             raise tornado.web.HTTPError(500, "Google auth failed")
-        self.set_secure_cookie("user", user["name"])
+        print user
+        self.set_secure_cookie("user", user["email"])
         self.redirect("/")
 
 
@@ -207,6 +215,7 @@ class AuthLogoutHandler(base.BaseHandler):
     def get(self):
         self.clear_cookie("user")
         self.write("You are now logged out")
+
 
 def LoadPlugins(active_plugins):
     logging.info("Load plugins: %s" % active_plugins)
@@ -223,10 +232,6 @@ def LoadPlugins(active_plugins):
         pluggo[plugin.__name__] = 1
 
 def main():
-    print "                                "
-    print "    Popdev environment 2010     "
-    print "                                "
-
     logging.basicConfig(format='%(asctime)s %(levelname)s: %(message)s',
                         datefmt='%Y-%m-%d %H:%M:%S',
                         level=logging.DEBUG)
@@ -238,7 +243,7 @@ def main():
 
     database.Database()
 
-    print "    loglevel=%s                 " % options.logging
+    print "loglevel=%s" % options.logging
 
     logging.info ("-- STARTING, logging = %s --", options.logging)
 
@@ -249,7 +254,11 @@ def main():
     if cfg != {}:
         LoadPlugins(cfg['active_plugins'])
 
-    logging.info ("Starting server")
+    print "FlowPad started at port %d" % options.port
+
+
+    from admin import add_admin_interface
+    add_admin_interface("user", User, ["list", "update"])
 
 
     tornado.ioloop.IOLoop.instance().start()

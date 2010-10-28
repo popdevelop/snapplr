@@ -75,6 +75,7 @@ class BaseHandler(tornado.web.RequestHandler, MessageMixin):
             username = self.get_secure_cookie("user")
             if not username: return None
             return username
+
     def active_users(self):
         users = User.objects.filter(name__in=g_active.keys())
         return users
@@ -84,7 +85,7 @@ class BaseHandler(tornado.web.RequestHandler, MessageMixin):
         name = self.get_current_user()
         print "update_active_users with:", name
         global g_active
-        print "g_active",g_active
+        print "g_active", g_active
         updated = name not in g_active
         g_active[name] = now
         new_active = {}
