@@ -18,12 +18,13 @@ class User(models.Model):
         db_table = 'users'
         app_label = "flow"
 
+
 class Chat(models.Model):
     name = models.CharField()
-    hash = models.CharField()
+    key = models.CharField()
 
     def __unicode__(self):
-        return "%s" % self.hash
+        return "%s" % self.key
     class Meta:
         db_table = 'chats'
         app_label = "flow"
@@ -90,7 +91,7 @@ class Message(models.Model):
 
 
 database.Database()
-Chat.objects.get_or_create(hash="info", name="Tåg Information")
+Chat.objects.get_or_create(key="info", name="Tåg Information")
 User.objects.get_or_create(name="Johan Brissmyr", defaults=dict(twitter="brissmyr", github="brissmyr", avatar="http://a2.twimg.com/profile_images/1124914810/image_bigger.jpg"))
 User.objects.get_or_create(name="Johan Gyllenspetz", defaults=dict(twitter="gyllen", github="gyllen", avatar="http://a1.twimg.com/profile_images/608078257/johan_bigger.jpg"))
 User.objects.get_or_create(name="Joel Larsson", defaults=dict(twitter="tilljoel", github="tilljoel", avatar="http://a2.twimg.com/profile_images/540757022/joel_300x300_bigger.png"))

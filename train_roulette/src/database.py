@@ -14,7 +14,7 @@ class Database():
                            "github STRING, twitter STRING)")
         self.add_statement("create table if not exists chats "
                            "(id INTEGER PRIMARY KEY, name STRING, "
-                           "hash STRING)")
+                           "key STRING)")
 #        self.add_statement("create table if not exists common "
 #                           "(id INTEGER PRIMARY KEY, _timestamp INTEGER, "
 #                           "user_id INTEGER)")
