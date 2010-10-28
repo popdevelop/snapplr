@@ -32,11 +32,14 @@ import org.neo4j.graphdb.GraphDatabaseService;
 import org.neo4j.graphdb.Path;
 import org.neo4j.graphdb.Relationship;
 import org.neo4j.graphdb.Transaction;
+import org.neo4j.graphdb.index.Index;
 import org.neo4j.graphdb.traversal.Traverser;
 import org.neo4j.helpers.Predicate;
 import org.neo4j.index.lucene.LuceneIndexService;
 import org.neo4j.kernel.EmbeddedGraphDatabase;
 import org.neo4j.kernel.Traversal;
+import org.neo4j.rest.domain.DatabaseLocator;
+import org.neo4j.shell.util.json.JSONException;
 import org.neo4j.shell.util.json.JSONObject;
 import org.neo4j.util.GraphDatabaseUtil;
 import org.snapplr.spatial.RelTypes;
@@ -55,15 +58,13 @@ public class TaginfoImporter {
 	private SpatialDatabaseService db;
 	private GraphDatabaseService database;
 	private Transaction tx;
-	private LuceneIndexService index;
+	private Index<org.neo4j.graphdb.Node> index;
 	SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd H:mm");
 
-	public TaginfoImporter(EmbeddedGraphDatabase database2,
-			LuceneIndexService index2) {
-		database = database2;
+	public TaginfoImporter() {
+		database = DatabaseLocator.getGraphDatabase();
 		// TODO Auto-generated constructor stub
-		index = index2;
-
+		index = database.index().forNodes("stations");
 		db = new SpatialDatabaseService(database);
 	}
 
@@ -129,16 +130,17 @@ public class TaginfoImporter {
 			dom = db.parse(remote.openStream());
 			XPath xpath = XPathFactory.newInstance().newXPath();
 			NodeList nodes = (NodeList) xpath.evaluate("//tagLista/tag", dom,
-				XPathConstants.NODESET);
+					XPathConstants.NODESET);
 			GraphDatabaseUtil util = new GraphDatabaseUtil(database);
 			for (int i = 0; i < nodes.getLength(); i++) {
 				Node station = nodes.item(i);
 
 				String number = (String) xpath.evaluate("nr", station,
 						XPathConstants.STRING);
-				if (index.getSingleNode(Const.NUMBER, number) != null) {
-					System.err.println("Found existing entry for train, skipping "
-							+ number);
+				if (index.get(Const.NUMBER, number).getSingle() != null) {
+					System.err
+							.println("Found existing entry for train, skipping "
+									+ number);
 				} else {
 					String url = (String) xpath.evaluate("url", station,
 							XPathConstants.STRING);
@@ -147,7 +149,7 @@ public class TaginfoImporter {
 							.getOrCreateSubReferenceNode(RelTypes.TRAINS);
 					trainsNode.createRelationshipTo(trainNode, RelTypes.TRAIN);
 					trainNode.setProperty(Const.NUMBER, number);
-					index.index(trainNode, Const.NUMBER, number);
+					index.add(trainNode, Const.NUMBER, number);
 					parseTrain(url, trainNode);
 				}
 			}
@@ -195,8 +197,8 @@ public class TaginfoImporter {
 			String ordArrivalDate = (String) xpath.evaluate("ordAnkomstDatum",
 					sn, XPathConstants.STRING);
 
-			org.neo4j.graphdb.Node station = index.getSingleNode("name",
-					stationName);
+			org.neo4j.graphdb.Node station = index.get("name", stationName)
+					.getSingle();
 			if (station == null) {
 				System.out.println("Could not find node for staion "
 						+ stationName);
@@ -269,7 +271,7 @@ public class TaginfoImporter {
 				stat.setProperty("lon", lon);
 				stat.setProperty("lat", lat);
 				stat.setProperty("name", name);
-				index.index(stat, "name", name);
+				index.add(stat, "name", name);
 			}
 
 			// }
@@ -307,8 +309,9 @@ public class TaginfoImporter {
 		System.out.println("finished");
 	}
 
-	public String getStations(double lon, double lat, int km, long from,
+	public Map getStations(double lon, double lat, double km, long from,
 			int minutesForward) {
+		System.out.println("database: " + db);
 		Layer layer = db.getLayer(STATIONS2);
 		Map<String, Object> result = new HashMap<String, Object>();
 		SpatialIndexReader spatialIndex = layer.getIndex();
@@ -329,7 +332,8 @@ public class TaginfoImporter {
 					.next();
 			org.neo4j.graphdb.Node stationNode = spatialDatabaseRecord
 					.getGeomNode();
-			System.out.println("From: " + stationNode.getProperty(Const.NAME));
+			Object fromStation = stationNode.getProperty(Const.NAME);
+			System.out.println("From: " + fromStation);
 
 			for (Relationship rel : stationNode
 					.getRelationships(Direction.OUTGOING)) {
@@ -346,21 +350,20 @@ public class TaginfoImporter {
 						String reltype = rel.getType().toString();
 						String trainNumber = reltype.substring(reltype
 								.indexOf("-") + 1);
-						org.neo4j.graphdb.Node trainNode = index.getSingleNode(
-								Const.NUMBER, trainNumber);
-						Map details = new HashMap<String, String>();
+						org.neo4j.graphdb.Node trainNode = index.get(
+								Const.NUMBER, trainNumber).getSingle();
+						Map details = new HashMap();
+						details.put("from", fromStation);
 						details.put("to", trainNode.getProperty(Const.TO));
 						details.put("departure", df.format(departure));
 						details.put("next", nextStation);
-						result.put(
-								trainNumber,
-								details);
+						result.put(trainNumber, details);
 					}
 				}
 			}
 
 		}
-		return new JSONObject(result).toString();
+		return result;
 
 	}
 

@@ -1,0 +1,6 @@
+import routes with
+mvn clean -Dtest=com.geosnappr.backend.ImportRoutesTest test
+
+check a locatoin with
+mvn -Dtest=com.geosnappr.backend.FunctionalTest test
+

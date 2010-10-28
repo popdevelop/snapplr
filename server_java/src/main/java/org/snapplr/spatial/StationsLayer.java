@@ -1,5 +1,7 @@
 package org.snapplr.spatial;
 
+import java.io.File;
+
 import org.neo4j.gis.spatial.DynamicLayer;
 import org.neo4j.gis.spatial.NullListener;
 
@@ -17,6 +19,12 @@ public class StationsLayer extends DynamicLayer{
 	public Integer getGeometryType() {
 			return GTYPE_POINT;
 	}
+
+	public File getStyle() {
+		return new File("geosnappr.sld");
+	}
+	
+	
 	
 	
 }

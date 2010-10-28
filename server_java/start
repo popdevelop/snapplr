@@ -1,0 +1,12 @@
+#!/bin/sh
+# Simple script for running a maven project from the terminal
+
+env MAVEN_OPTS='-Xmx1024M -d64 -server -XX:+UseConcMarkSweepGC -Dcom.sun.management.jmxremote'
+
+
+#for multiple arguments, use something like
+#./start -Dexec.args="-port=8888 -path=/blah/restdb"
+
+
+
+mvn --settings neo4j-repo.xml compile exec:java "$@"
