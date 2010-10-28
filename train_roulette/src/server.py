@@ -152,7 +152,7 @@ class ConfigHandler(base.BaseHandler):
 class MainHandler(base.BaseHandler):
     @base.authenticated
     def get(self):
-        self.render("train.html")
+        self.render("trains.html")
 
 
 class MessageNewHandler(base.BaseHandler, base.MessageMixin):
