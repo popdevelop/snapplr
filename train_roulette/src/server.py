@@ -1,10 +1,10 @@
-# -*- coding: utf-8 -*-
 #
+# -*- coding: utf-8 -*-
 # Copyright 2010 Popdevelop
 #
 
 from tornado.options import define, options
-define("port", default=11000, help="run on the given port", type=int)
+define("port", default=13000, help="run on the given port", type=int)
 define("test", help="Run server in test mode", type=bool)
 
 import admin
@@ -42,15 +42,12 @@ class Application(tornado.web.Application):
             (r"/pad/write", pad.WriteHandler),
             (r"/pad/updates", pad.UpdatesHandler),
             (r"/trains", TrainHandler),
+            (r"/geotrains", GeoTrainHandler),
             (r"/admin/(.*)", admin.AdminHandler),
             (r"/users", UsersHandler),
             (r"/(.+)", RoomHandler),
             (r"/", MainHandler),
         ]
-
-        if options.test:
-            handlers.append((r"/test/database/clean", test.TestDatabaseCleanHandler))
-            handlers.append((r"/test/github/fakecheckin", test.TestGithubFakeCheckInHandler))
 
         cookie = not options.test
 
@@ -74,14 +71,52 @@ class UsersHandler(base.BaseHandler):
         print "users:",users
         self.write(cjson.encode(users))
 
-
 class TrainHandler(base.BaseHandler):
     @base.authenticated
     def post(self):
-        print "fetch trains"
+        print "fetch all trains"
         trains = [model_to_dict(u) for u in Chat.objects.all()]
         self.write(cjson.encode(trains))
 
+class GeoTrainHandler(base.BaseHandler):
+#    @base.authenticated
+    @tornado.web.asynchronous
+    def get(self):
+        print "fetch trains"
+
+        #ms,km and minutes
+        lon = self.get_argument("lon", None)
+        lat = self.get_argument("lat", None)
+        radius = self.get_argument("radius", None)
+        time = self.get_argument("time", None)
+        forward = self.get_argument("forward", None)
+        server = self.get_argument("server", None)
+        self.get_trains(server,lon,lat,radius,time,forward)
+        print "got lon:%s lat:%s" % (lon,lat)
+        print "got radius:%s time:%s" % (radius,time)
+        print "got forward:%s" % (forward)
+        print "got serve:%s" % (server)
+        print "get trains 3"
+
+
+    def get_trains(self,server,lon, lat, radius, time, forward):
+        print "get trains 2"
+        http = tornado.httpclient.AsyncHTTPClient()
+        
+        url = "http://" + server + "/" + lon + "/" + lat + "/" + radius + "/" + time + "/" + forward
+#        url = "http://www.google.com"
+        print "URL",url
+        http.fetch(url, callback=self.on_response)
+
+    def on_response(self, response):
+        print "get trains 2.5"
+        if response.error: raise tornado.web.HTTPError(500)
+        print response.body
+#        trains = [{'name':'joel','id':'233'}, {'name':'peter','id':'213'}, {'name':'brissmyr','id':'223'}, {'name':'achaido','id':'243'}, {'name':'jacob','id':'283'}, {'name':'sebastian','id':'211'}, {'name':'brissmyr','id':'211'}]
+        self.write(cjson.encode(trains))
+        self.finish()
+
+        print "SUCCESS"
 
 class RoomHandler(base.BaseHandler):
     @base.authenticated
