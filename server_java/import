@@ -3,8 +3,4 @@
 
 env MAVEN_OPTS='-Xmx1024M -d64 -server -XX:+UseConcMarkSweepGC -Dcom.sun.management.jmxremote'
 
-
-#for multiple arguments, use something like
-#./start -Dexec.args="-port=8888 -path=/blah/restdb"
-
-mvn --settings neo4j-repo.xml compile exec:java "$@"
+mvn clean -Dtest=com.geosnappr.backend.ImportRoutesTest test
