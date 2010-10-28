@@ -18,7 +18,8 @@ var DEFAULT_PAGE = "trains";
             if(t.hasOwnProperty(i)) {
                 $("<li>").
                     data('id', t[i].id).
-                    text(t[i].name).
+                    html("<a href=\"http://localhost:13000/" + t[i].name  +
+                         "\">Tåg " + t[i].name + " to " + t[i].to + " departs " + t[i].departure + "</a>" ).
                     appendTo($view);
             }
         }
@@ -132,7 +133,7 @@ var Page = (function(){
         updater = false;
     var listeners = { all: []};
     var API = {
-        getTrains: "trains",
+        getTrains: "geotrains?server=0.0.0.0:9999/trains&lon=13.009&lat=55.6093&radius=1&time=1288289295323&forward=30",
         postMessage: "message"
     };
     var defParams = {

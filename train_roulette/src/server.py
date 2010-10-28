@@ -112,7 +112,15 @@ class GeoTrainHandler(base.BaseHandler):
         print "get trains 2.5"
         if response.error: raise tornado.web.HTTPError(500)
         print response.body
-#        trains = [{'name':'joel','id':'233'}, {'name':'peter','id':'213'}, {'name':'brissmyr','id':'223'}, {'name':'achaido','id':'243'}, {'name':'jacob','id':'283'}, {'name':'sebastian','id':'211'}, {'name':'brissmyr','id':'211'}]
+        trains = [{'name':'joel','id':'233'}, {'name':'peter','id':'213'}, {'name':'brissmyr','id':'223'}, {'name':'achaido','id':'243'}, {'name':'jacob','id':'283'}, {'name':'sebastian','id':'211'}, {'name':'brissmyr','id':'211'}]
+        st = cjson.decode(response.body)
+        trains = []
+        print st
+        for a in st:
+            trains.append({'name':a, 'id':1, 'from':st[a]["from"], 'to':st[a]["to"], 'departure':st[a]["departure"]})
+            print a + " is id" 
+
+        print trains
         self.write(cjson.encode(trains))
         self.finish()
 

@@ -1,0 +1,5 @@
+server_java
+
+1) install maven2
+2) run ./import
+3) run ./star
