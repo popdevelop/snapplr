@@ -73,13 +73,6 @@ class BaseHandler(tornado.web.RequestHandler, MessageMixin):
             return self.get_argument("username", "Mr. Test")
         else:
             username = self.get_secure_cookie("user")
-            # Lock other users out
-            if username not in ["Sebastian Wallin",
-                                "Johan Gyllenspetz",
-                                "Joel Larsson",
-                                "Johan Brissmyr"]:
-                return None
-
             if not username: return None
             return username
     def active_users(self):
