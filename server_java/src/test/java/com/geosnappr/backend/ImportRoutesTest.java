@@ -3,6 +3,7 @@ package com.geosnappr.backend;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.neo4j.rest.domain.DatabaseLocator;
 
 import com.geosnappr.Main;
 import com.geosnappr.TaginfoImporter;
@@ -39,6 +40,7 @@ public class ImportRoutesTest {
 
 	@After
 	public void shutdown() {
+		DatabaseLocator.getGraphDatabase().shutdown();
 	}
 
 }
